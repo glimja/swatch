@@ -1350,6 +1350,262 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 .form-check-input:checked {}
 .form-check .form-check-input {margin-right: .5em;}
 .form-check-input {width:1.5em; height:1.5em; margin-top: 0;}
+/*====== text-color, background color css starts ======*/
+.bg-c-blue {
+  background: #04a9f5;
+}
+
+.text-c-blue {
+  color: #04a9f5;
+}
+
+.bg-c-red {
+  background: #f44236;
+}
+
+.text-c-red {
+  color: #f44236;
+}
+
+.bg-c-green {
+  background: #1de9b6;
+}
+
+.text-c-green {
+  color: #1de9b6;
+}
+
+.bg-c-yellow {
+  background: #f4c22b;
+}
+
+.text-c-yellow {
+  color: #f4c22b;
+}
+
+.bg-c-purple {
+  background: #a389d4;
+}
+
+.text-c-purple {
+  color: #a389d4;
+}
+/*====== text-color css ends ======*/
+/*font*/
+.color-white {
+  color: #fff;
+}
+.color-red {
+  color: #f44236 !important;
+}
+.color-blue {
+  color: #04a9f5;
+}
+.color-navy {
+  color: #3f4d67;
+}
+.color-gray {
+  color: #aaaeb3;
+}
+/*====== Card top border css starts ======*/
+.card-border-c-blue {
+  border-top: 4px solid #04a9f5;
+}
+
+.card-border-c-red {
+  border-top: 4px solid #f44236;
+}
+
+.card-border-c-green {
+  border-top: 4px solid #1de9b6;
+}
+
+.card-border-c-yellow {
+  border-top: 4px solid #f4c22b;
+}
+
+.card-border-c-purple {
+  border-top: 4px solid #a389d4;
+}
+
+/*====== Card top border ends ======*/
+/*====== Font-size css starts ======*/
+.f-10 {
+  font-size: 10px;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-22 {
+  font-size: 22px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-26 {
+  font-size: 26px;
+}
+
+.f-28 {
+  font-size: 28px;
+}
+
+.f-30 {
+  font-size: 30px;
+}
+
+.f-32 {
+  font-size: 32px;
+}
+
+.f-34 {
+  font-size: 34px;
+}
+
+.f-36 {
+  font-size: 36px;
+}
+
+.f-38 {
+  font-size: 38px;
+}
+
+.f-40 {
+  font-size: 40px;
+}
+
+.f-42 {
+  font-size: 42px;
+}
+
+.f-44 {
+  font-size: 44px;
+}
+
+.f-46 {
+  font-size: 46px;
+}
+
+.f-48 {
+  font-size: 48px;
+}
+
+.f-50 {
+  font-size: 50px;
+}
+
+.f-52 {
+  font-size: 52px;
+}
+
+.f-54 {
+  font-size: 54px;
+}
+
+.f-56 {
+  font-size: 56px;
+}
+
+.f-58 {
+  font-size: 58px;
+}
+
+.f-60 {
+  font-size: 60px;
+}
+
+.f-62 {
+  font-size: 62px;
+}
+
+.f-64 {
+  font-size: 64px;
+}
+
+.f-66 {
+  font-size: 66px;
+}
+
+.f-68 {
+  font-size: 68px;
+}
+
+.f-70 {
+  font-size: 70px;
+}
+
+.f-72 {
+  font-size: 72px;
+}
+
+.f-74 {
+  font-size: 74px;
+}
+
+.f-76 {
+  font-size: 76px;
+}
+
+.f-78 {
+  font-size: 78px;
+}
+
+.f-80 {
+  font-size: 80px;
+}
+
+/*====== Font-size css ends ======*/
+.nav-pills > li + li {
+  margin-left: 0;
+}
+.nav-pills > li > a {
+  border: 0;
+  border-radius: 0;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: center;
+  color: #555555;
+  position: relative;
+  display: block;
+  padding: 11px 15px;
+}
+.nav-pills > li.active > a {
+  background-color: inherit;
+}
+.nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  background-color: inherit;
+}
+.nav-pills > li > a:focus, .nav-pills > li > a:hover {
+  background-color: inherit;
+}
+.nav-pills > li i {
+  display: block;
+  font-size: 30px;
+  padding: 15px 0;
+}
+.nav-pills a.nav-link {font-size: 16px}
 
 /*--------------------------------------------------------------
 # Add
@@ -1368,9 +1624,10 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 .active>.page-link, .page-link.active {background-color: #3386ff; border-color: #237cff}
 .btn-primary {background-color: #3386ff; border-color: #237cff}
 .btn-info {background-color: #33bbff; border-color: #23a8ff; color:#fff}
+.btn-info:hover {background-color: #68cdff; border-color: #50b9ff;}
 .btn-warning {background-color: #ffbf33; border-color: #ffb623; color:#fff}
 .btn-success {background-color: #1ca163; border-color: #189159}
-.card-body {padding: 20px 10px;}
+.card .card-block, .card .card-body {padding: 20px 20px;}
 .icon-search-btn {position: absolute; left:83%; top:10%; font-size: 20px;}
 input[type=radio] {width:20px; height:20px; accent-color:#3386ff; vertical-align: middle; cursor: pointer;}
 input[type=checkbox] {width:20px; height:20px; accent-color:#3386ff; vertical-align: middle; cursor: pointer;}
@@ -1400,11 +1657,14 @@ h5 {margin: .5rem 0 0 .5rem;}
 .alertmsg-userlist {background:#fff; border:1px solid #999; width: calc(100% - 47px); height: 38px; line-height: 38px; border-radius:0.25rem 0 0 0.25rem; padding: 0 10px; overflow:hidden;}
 textarea.form-control {background: #f4f7fa;}
 .edit-wrap {
+  display: none;
   padding: 9px;
   border: 1px solid #d0d5dd;
   border-radius: 5px;
   background: #f4f7fa;
 }
+.edit-wrap.active {display: block;}
+.table-default {width:100%;}
 .table-default td, .table-default th {
   border-top: 1px solid #3f4d67;
   white-space: nowrap;
@@ -1420,4 +1680,157 @@ textarea.form-control {background: #f4f7fa;}
 }
 .table-default td {
   padding: 15px 0;
+}
+.btn-gray {background: #5d6e76; color: #fff;}
+.btn-gray:hover{background: #455258; color: #fff;}
+.btn-default {color: #fff; background-color: #3f4d67; border-color: #3f4d67;}
+.btn-default:hover {background-color: #303a4d; color: #fff;}
+.form_input_list{
+  list-style:none;
+  padding-left:0px;
+}
+
+.form_input_list li{
+  list-style-type: none;
+  float:left
+}
+
+.form_input_list{
+  display:table;width:100%;
+}
+.form_input_list > li{
+  display:table-cell;vertical-align: middle;
+}
+
+.form_input_list > li.has_input{
+  width:70%;
+}
+
+.form_input_list > li.has_btn{
+  padding-left: 5px;
+  width:50px;
+}
+
+.bg-c-blue {
+  background: #04a9f5;
+}
+
+.text-c-blue {
+  color: #04a9f5;
+}
+
+.bg-c-red {
+  background: #f44236;
+}
+
+.text-c-red {
+  color: #f44236;
+}
+
+.bg-c-green {
+  background: #1de9b6;
+}
+
+.text-c-green {
+  color: #1de9b6;
+}
+
+.bg-c-yellow {
+  background: #f4c22b;
+}
+
+.text-c-yellow {
+  color: #f4c22b;
+}
+
+.bg-c-purple {
+  background: #a389d4;
+}
+
+.text-c-purple {
+  color: #a389d4;
+}
+.device-table {
+  background: none;
+  font-size: 14px;
+  color: #393c40;
+  box-shadow: none;
+}
+
+.device-table h5, .device-table h6 {
+  font-size: 14px;
+  color: #393c40;
+  margin-bottom: 5px;
+}
+.device-table.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.device-table .col {
+  flex: 0 0 8.33%;
+  max-width: 8.33%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.device-table .card {
+  cursor: pointer;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 5px 12px 0 rgba(63 77 103 / 20%);
+  box-shadow: 0 5px 12px 0 rgba(63 77 103 / 20%);
+}
+.device-table .card .card-block {
+  padding: 10px 10px;
+}
+.device-table .card .card-block h6 {
+  min-height: 17px;
+}
+.device-table .bg-primary {
+  background-color: #00ceff !important;
+}
+.device-table .bg-danger {
+  background-color: #f44236 !important;
+
+}
+.device-table .card.bg-primary {
+  background: #04a9f5 !important;
+}
+.device-table .card.bg-primary h5, .device-table .card.bg-primary h6, .device-table .card.bg-primary p, .device-table .card.bg-primary span, .device-table .card.bg-danger h5, .device-table .card.bg-danger h6, .device-table .card.bg-danger span {
+  color: #fff !important;    
+}
+.dot-green {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #1de9b6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dot-green span {
+  position: absolute;
+  left: -9999px;
+}
+.dot-red {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #f44236;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dot-red span {
+  position: absolute;
+  left: -9999px;
+}
+
+.dot-none {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dot-none span {
+  position: absolute;
+  left: -9999px;
 }
