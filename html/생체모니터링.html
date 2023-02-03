@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/실외모니터링.html">
+              <i class="bi bi-circle"></i><span>실외 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체모니터링.html" class="active">
+              <i class="bi bi-circle"></i><span>생체 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/SOS호출현황및조치.html">
+              <i class="bi bi-circle"></i><span>SOS호출 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/심박동이상현황및조치.html">
+              <i class="bi bi-circle"></i><span>심박동이상 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알람현황및조치.html">
+              <i class="bi bi-circle"></i><span>경고알람 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/구역출입현황.html">
+              <i class="bi bi-circle"></i><span>구역출입 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스매핑.html">
+              <i class="bi bi-circle"></i><span>디바이스 매핑</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스설정.html">
+              <i class="bi bi-circle"></i><span>디바이스 설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#알림설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>알림설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="알림설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/알림메시지.html">
+              <i class="bi bi-circle"></i><span>알림메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/예약메시지.html">
+              <i class="bi bi-circle"></i><span>예약메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/일정관리.html">
+              <i class="bi bi-circle"></i><span>일정 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/공지사항.html">
+              <i class="bi bi-circle"></i><span>공지사항</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알림메시지.html">
+              <i class="bi bi-circle"></i><span>경고알림 메시지</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 알림설정 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-server"></i><span>조직관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/부서관리.html">
+              <i class="bi bi-circle"></i><span>부서관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/사용장상태관리.html">
+              <i class="bi bi-circle"></i><span>사용장상태 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직관리 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#지오펜싱-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-map"></i><span>지오펜싱</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="지오펜싱-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/구역관리.html">
+              <i class="bi bi-circle"></i><span>구역 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/비콘관리.html">
+              <i class="bi bi-circle"></i><span>비콘 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 지오펜싱 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#시스템관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>시스템 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="시스템관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스로그.html">
+              <i class="bi bi-circle"></i><span>디바이스 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체정보로그.html">
+              <i class="bi bi-circle"></i><span>생체정보 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/BLE로그.html">
+              <i class="bi bi-circle"></i><span>BLE 로그</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>생체 모니터링</h1>
+          <div class="d-flex justify-content-end">
+            <div class="p-2">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 전체 자료 다운로드</button>
+            </div>
+            <div class="p-2">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>
+            </div>
+          </div>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-body">              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">지점</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select">
+                            <option value="B99997" selected="selected">본사</option>
+                            <option value="B99998" >부산현장</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="searchUserNm" class="col-sm-4 col-form-label">성명 검색</label>
+                        <div class="col-sm-8 position-relative px-1">
+                          <input type="text" class="form-control" id="searchUserNm" name="searchUserNm" value="">
+                          <a href="#" class="icon-search-btn" data-toggle="modal" data-target="#popupArea"><i class="bi bi-search"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 검색두줄 -->
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-lg-4 col-sm-12 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" checked> 일간
+                        </label>
+                        <div class="col-lg-8 col-sm-12 px-1">
+                          <input type="text" id="" name="" class="form-control" placeholder="시작일시" value="2023-02-01" maxlength="10" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" > 주간
+                        </label>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchStartDt" name="searchStartDt" class="form-control" placeholder="시작일시" value="2023-01-25" maxlength="10" readonly>
+                        </div>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchEndDt" name="searchEndDt" class="form-control" placeholder="종료일시" value="2023-02-01" maxlength="10" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" > 월간
+                        </label>
+                        <div class="col-sm-8 px-1">
+                          <input type="text" id="" name="" class="form-control" placeholder="시작연월"  value="2023-02" maxlength="7" readonly>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 검색두줄 -->
+
+                  <div class="row">
+                    <div class="col text-center">
+                      <button class="btn btn-primary w-50">검색</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+
+          <div class="row responsive-board">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>심박</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataHrm" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartHrm" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>걸음수</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataStep" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartStep" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>칼로리</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataKcal" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartKcal" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>이동거리</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataDis" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartDis" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- Modal -->
+  <div class="modal fade" id="safePop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">안전수칙</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+            <div class="search-area">
+                <form class="row g-3">
+                    
+                        <div class="col-md-4">
+                          <input type="text" class="form-control form-control-sm" id="searchUserNmPop" placeholder="이름" value="">
+                        </div>
+                        <div class="col-md-5">
+                          <input type="text" class="form-control form-control-sm" id="searchMobilePop" placeholder="전화번호" value="">
+                        </div>
+                        <div class="col-md-3">
+                          <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> 검색</button>
+                        </div>
+                    
+                </form>
+            </div>
+            <div class="table-responsive user-list">
+                <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                        <tr>
+                            <th>지점</th>
+                            <th>이름</th>
+                            <th>전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <p class="nodata">등록된 데이터가 없습니다</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- paging_w -->
+            <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- // paging_w -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
