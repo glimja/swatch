@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html" class="active">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/실외모니터링.html">
+              <i class="bi bi-circle"></i><span>실외 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체모니터링.html">
+              <i class="bi bi-circle"></i><span>생체 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/SOS호출현황및조치.html">
+              <i class="bi bi-circle"></i><span>SOS호출 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/심박동이상현황및조치.html">
+              <i class="bi bi-circle"></i><span>심박동이상 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알람현황및조치.html">
+              <i class="bi bi-circle"></i><span>경고알람 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/구역출입현황.html">
+              <i class="bi bi-circle"></i><span>구역출입 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스매핑.html">
+              <i class="bi bi-circle"></i><span>디바이스 매핑</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스설정.html">
+              <i class="bi bi-circle"></i><span>디바이스 설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#알림설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>알림설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="알림설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/알림메시지.html">
+              <i class="bi bi-circle"></i><span>알림메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/예약메시지.html">
+              <i class="bi bi-circle"></i><span>예약메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/일정관리.html">
+              <i class="bi bi-circle"></i><span>일정 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/공지사항.html">
+              <i class="bi bi-circle"></i><span>공지사항</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알림메시지.html">
+              <i class="bi bi-circle"></i><span>경고알림 메시지</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 알림설정 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-server"></i><span>조직관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/부서관리.html">
+              <i class="bi bi-circle"></i><span>부서관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/사용자상태관리.html">
+              <i class="bi bi-circle"></i><span>사용자 상태 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직관리 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#지오펜싱-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-map"></i><span>지오펜싱</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="지오펜싱-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/구역관리.html">
+              <i class="bi bi-circle"></i><span>구역 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/비콘관리.html">
+              <i class="bi bi-circle"></i><span>비콘 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 지오펜싱 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#시스템관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>시스템 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="시스템관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스로그.html">
+              <i class="bi bi-circle"></i><span>디바이스 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체정보로그.html">
+              <i class="bi bi-circle"></i><span>생체정보 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/BLE로그.html">
+              <i class="bi bi-circle"></i><span>BLE 로그</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="pagetitle mb-0">
+          <h1>대시보드
+            <select id="searchBizId" class="form-select biz align-top">
+              <option value="">제로윈텍</option>
+              <option value="B99997" >본사</option>
+              <option value="B99998" >부산현장</option>  
+            </select>
+          </h1>
+        </div>
+      </div>
+      <div class="col-sm-6 text-end">
+        <h3 id="timeTxt" class="my-4"></h3>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-12 col-xl-12">
+        <div class="pagetitle">
+          <h1 class="col-8 col-md-12 col-xl-6">대시보드
+            <select id="searchBizId" class="form-select biz align-top">
+              <option value="">제로윈텍</option>
+              <option value="B99997" >본사</option>
+              <option value="B99998" >부산현장</option>  
+            </select>
+          </h1>
+          <h2 class="col-4 col-md-12 col-xl-6 text-end" id="timeTxt"></h2>
+        </div>
+      </div>
+    </div> -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <h5>날씨</h5>
+              <div class="mt-4 row">
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4">
+                    <p class="fs-16">기온</p>
+                    <p class="fs-26 bold text-center" id="tmp">8℃</p>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4">
+                    <p class="fs-16" id="dong">
+                      고촌읍
+                    </p>
+                    <div class="row">
+                      <!-- /resources/assets/images/sun.png -->
+                      <div class="col-4 text-center"><img src="../assets/img/manyCloud.png" style="height: 39px" alt="" id="weatherImg"></div>
+                      <div class="col-8 text-center">
+                        <p class="fs-26 bold" id="nowWeather">구름많음</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4">
+                    <p class="fs-16">강수확률</p>
+                    <p class="fs-26 bold text-center" id="pop">20%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 border rounded">
+                <div class="row px-3">
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3">
+                    <div class="fs-16">습도</div>
+                    <div class="fs-20 bold" id="humidity">45%</div>
+                  </div>
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3">
+                    <div class="fs-16">풍향</div>
+                    <div class="fs-20 bold" id="windDirection">332m/s</div>
+                  </div>
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3">
+                    <div class="fs-16">풍속</div>
+                    <div class="fs-20 bold" id="windSpeed">2.1m/s</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-block">
+              <h5>실시간 작업 현황 <span class="float-right"><a href="/admin/manage/userMngList.do?gid=lm_07&amp;mid=lm_07_01"><img src="../assets/img/arrow.png" alt=""></a></span></h5>
+              <div class="mt-4 row">
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','','','','')" data-toggle="modal" data-target="#popupUserState">
+                    <p class="fs-16">현장근무인원</p>
+                    <p class="fs-26 bold text-center" id="totManCnt">2</p>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="rounded bg-blue py-2 px-4" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','N','','','')" data-toggle="modal" data-target="#popupUserState">
+                    <p class="fs-16 color-white">위험 지역</p>
+                    <p class="fs-26 bold color-white text-center" id="hazardManCnt">0</p>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','Y','','','')" data-toggle="modal" data-target="#popupUserState">
+                    <p class="fs-16">안전 지역</p>
+                    <p class="fs-26 bold text-center" id="safeManCnt">0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 border rounded">
+                <div class="row px-3">
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','','Y','','')" data-toggle="modal" data-target="#popupUserState">
+                    <div class="fs-16">고령자</div>
+                    <div class="fs-20 bold" id="oldManCnt">0</div>
+                  </div>
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','','','Y','')" data-toggle="modal" data-target="#popupUserState">
+                    <div class="fs-16">건강취약자</div>
+                    <div class="fs-20 bold" id="diseaseManCnt">0</div>
+                  </div>
+                  <div class="col-sm-4 d-flex justify-content-between align-center px-4 my-3" style="cursor:pointer" onclick="javascript:selectUserStateList('1','','','','','','Y')" data-toggle="modal" data-target="#popupUserState">
+                    <div class="fs-16">위험작업자</div>
+                    <div class="fs-20 bold" id="riskManCnt">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <h5>금일 근로자 위험 알림 현황 <span class="float-right"><a href="/admin/manage/sosList.do?gid=lm_01&amp;mid=lm_01_02"><img src="../assets/img/arrow.png" alt=""></a></span></h5>
+              <div class="mt-4 row">
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4">
+                    <p class="fs-16">조치완료</p>
+                    <p class="fs-26 bold text-center" id="completeCnt">0</p>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gradient-red py-2 px-4">
+                    <p class="fs-16 color-white">위험 알림</p>
+                    <p class="fs-26 bold color-white text-center" id="totCnt">0</p>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4">
+                    <p class="fs-16">미조치</p>
+                    <p class="fs-26 bold text-center" id="nonCompleteCnt">0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 border-top" style="margin-left:-25px; margin-right:-25px;">
+                <div class="row pt-4 px-3">
+                  <div class="col-sm-4 mb-3">
+                    <div class="d-flex justify-content-between align-center px-4 py-3 rounded bg-red" style="cursor:pointer" onclick="javascript:selectSosList()">
+                      <div class="fs-16">
+                        <img src="../assets/img/warning_01.png" alt="" class="mr-1 alert-icon">
+                        SOS
+                      </div>
+                      <div class="fs-20" id="sosCnt">0</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 mb-3">
+                    <div class="d-flex justify-content-between align-center px-4 py-3 rounded bg-purple" style="cursor:pointer" onclick="javascript:selectHeartList()">
+                      <div class="fs-16">
+                        <img src="../assets/img/warning_02.png" alt="" class="mr-1 alert-icon">
+                        심박동이상
+                      </div>
+                      <div class="fs-20" id="heartCnt">0</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 mb-3">
+                    <div class="d-flex justify-content-between align-center px-4 py-3 rounded bg-orange" style="cursor:pointer" onclick="javascript:selectWarnList()">
+                      <div class="fs-16">
+                        <img src="../assets/img/warning_03.png" alt="" class="mr-1 alert-icon">
+                        경고알람
+                      </div>
+                      <div class="fs-20" id="hazardCnt">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover table-dashboard mb-0">
+                    <thead>
+                      <tr>
+                        <th>지점</th>
+                        <th>알림유형</th>
+                        <th>내용</th>
+                        <th>이름</th>
+                        <th>조치상태</th>
+                        <th>발생일시</th>
+                      </tr>
+                    </thead>
+                    <tbody id="alertList">
+                      <tr>
+                        <td colspan="6">
+                          <p class="nodata">등록된 데이터가 없습니다</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <h5>공지사항 <span class="float-right"><a href="/admin/manage/noticeList.do?gid=lm_06&amp;mid=lm_06_06"><img src="../assets/img/arrow.png" alt=""></a></span></h5>
+              <div class="mt-4">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover table-dashboard mb-0">
+                    <thead>
+                      <tr>
+                        <th>NO</th>
+                        <th>등록자</th>
+                        <th>제목</th>
+                        <th>등록일시</th>
+                      </tr>
+                    </thead>
+                    <tbody id="noticeList">
+                      <tr>
+                        <td colspan="4">
+                          <p class="nodata">등록된 데이터가 없습니다</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 
+          <div class="col-md-12 col-lg-6">
+              <div class="card">
+                  <div class="card-block">
+                      <h5>금일 메시지 전송 <span class="float-right"><a href="/admin/manage/msgList.do?gid=lm_06&mid=lm_06_01"><img src="../assets/img/arrow.png" alt=""></a></span></h5>
+                      <div class="mt-4 row">
+                          <div class="col-4">
+                              <div class="border rounded bg-gray py-2 px-4">
+                                  <p class="fs-16">예약 메시지</p>
+                                  <p class="fs-26 bold" id="reserveMsgCnt">0</p>
+                              </div>
+                          </div>
+                          <div class="col-4">
+                              <div class="rounded bg-gradient-blue py-2 px-4">
+                                  <p class="fs-16 color-white">총 메시지</p>
+                                  <p class="fs-26 bold color-white" id="totMsgCnt">0</p>
+                              </div>
+                          </div>
+                          <div class="col-4">
+                              <div class="border rounded bg-gray py-2 px-4">
+                                  <p class="fs-16">일반 메시지</p>
+                                  <p class="fs-26 bold" id="msgCnt">0</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="mt-4 border rounded">
+                          <div class="row px-3">
+                              <div class="col-6 d-flex justify-content-between align-items-center px-4 my-2 border-right">
+                                  <p class="fs-16">예약 메시지 전송 완료건</p>
+                                  <p class="fs-20 bold" id="reserveSendCnt">0</p>
+                              </div>
+                              <div class="col-6 d-flex justify-content-between align-items-center px-4">
+                                  <p class="fs-16">예약 메시지 미전송건</p>
+                                  <p class="fs-20 bold" id="reserveNoSendCnt">0</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          -->
+        <div class="col-md-12 col-lg-6">
+          <div class="card">
+            <div class="card-block">
+              <h5>워치 디바이스 현황 <span class="float-right"><a href="/admin/manage/deviceMappingList.do?gid=lm_02&amp;mid=lm_02_08"><img src="../assets/img/arrow.png" alt=""></a></span></h5>
+              <div class="mt-4 row">
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4" style="cursor:pointer" onclick="javascript:selectTotDeviceList('1','','')" data-toggle="modal" data-target="#popupArea3">
+                    <div class="fs-16">배포 워치 디바이스</div>
+                    <div class="fs-26 bold text-center" id="deviceTotCnt">2</div>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="rounded bg-gradient-purple py-2 px-4" style="cursor:pointer" onclick="javascript:selectBadDeviceList('1','','')" data-toggle="modal" data-target="#popupArea">
+                    <div class="fs-16 color-white">데이터 미수신</div>
+                    <div class="fs-26 bold color-white text-center" id="abnormalCnt">2</div>
+                  </div>
+                </div>
+                <div class="col-sm-4 mb-3">
+                  <div class="border rounded bg-gray py-2 px-4" style="cursor:pointer" onclick="javascript:selectGoodDeviceList('1','','')" data-toggle="modal" data-target="#popupArea2">
+                    <div class="fs-16">데이터 정상수신</div>
+                    <div class="fs-26 bold text-center" id="normalCnt">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 border rounded">
+                <div class="row px-3">
+                  <div class="col-sm-6 d-flex justify-content-between align-center px-4 my-3">
+                    <div class="fs-16">스마트 워치</div>
+                    <div class="fs-20 bold" id="watchCnt">2</div>
+                  </div>
+                  <div class="col-sm-6 d-flex justify-content-between align-center px-4 my-3">
+                    <div class="fs-16">스마트 턱끈</div>
+                    <div class="fs-20 bold" id="helmetCnt">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- Modal : 안전수칙 -->
+  <div class="modal fade" id="safePop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">안전수칙</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+            <div class="search-area">
+                <form class="row g-3">
+                    
+                        <div class="col-md-4">
+                          <input type="text" class="form-control form-control-sm" id="searchUserNmPop" placeholder="이름" value="">
+                        </div>
+                        <div class="col-md-5">
+                          <input type="text" class="form-control form-control-sm" id="searchMobilePop" placeholder="전화번호" value="">
+                        </div>
+                        <div class="col-md-3">
+                          <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> 검색</button>
+                        </div>
+                    
+                </form>
+            </div>
+            <div class="table-responsive user-list">
+                <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                        <tr>
+                            <th>지점</th>
+                            <th>이름</th>
+                            <th>전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <p class="nodata">등록된 데이터가 없습니다</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- paging_w -->
+            <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- // paging_w -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal : DEVICE 회수 팝업 -->
+  <div id="popupArea2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="popupAreaContent2">
+            <!-- groupPop start -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLiveLabel">디바이스 회수</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>디바이스를 회수하시겠습니까?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+              <button type="button" class="btn btn-primary mr-0" onclick="javascript:deviceWithdrawInfo(103)">회수하기</button>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      
+      setTime();
+      
+      
+        // biz combo box Start
+        $("#searchBizId").change(function(e)  {
+            selectList('1');
+            return false;
+        });
+        // biz combo box End
+        
+        fnInit();
+        
+        if ("고촌읍" != "") {
+          weather();	
+        }
+    });
+    
+    function fnInit() {
+        
+        
+        
+        
+    }
+    
+    function selectList(pageNo) {
+        $("#pageIndex").val(pageNo);
+        $("#frm").attr("action", "/admin/monitoring/monitoringList.do?gid=lm_01&mid=lm_01_11");
+        $("#frm").attr("target","_self");
+        $("#frm").submit();
+    }
+    
+    function selectSosList(){
+      $("#frm").attr("action", "/admin/manage/sosList.do?gid=lm_01&mid=lm_01_02");
+        $("#frm").attr("target","_self");
+        $("#frm").submit();
+    }
+    
+    function selectHeartList(){
+        $("#frm").attr("action", "/admin/manage/heartList.do?gid=lm_01&mid=lm_01_04");
+        $("#frm").attr("target","_self");
+        $("#frm").submit();
+    }
+    
+    function selectWarnList(){
+        $("#frm").attr("action", "/admin/manage/warnLogList.do?gid=lm_01&mid=lm_01_03");
+        $("#frm").attr("target","_self");
+        $("#frm").submit();
+    }
+    
+    
+    //상단카운트 조회 (5초에 한번)
+    setInterval(function(){
+        getMonitoringist();        
+    }, 5000);
+    
+    setInterval(function(){
+      setTime();
+    },1000)
+    
+    function setTime(){
+      var _now = new Date();
+        document.getElementById("timeTxt").textContent = _now.toLocaleDateString().replace(/ /gi, "") +" "+ _now.toLocaleTimeString();
+    }
+    
+    //상단 카운트
+    function getMonitoringist() {
+      
+      var searchBizId = $("#searchBizId").val();
+      
+        $.ajax({
+            url:"/admin/monitoring/monitoringCount.do",
+            type: "POST",
+            dataType:"JSON",
+            data:"searchBizId="+searchBizId,
+            success: function(data) {
+                var json = data.items;
+    
+                // 공지사항
+                var noticeContent = "";
+                $("#noticeList").empty();
+                if (json.noticeList.length > 0) {
+                  json.noticeList.forEach(function(data, index){
+                    noticeContent += "<tr>" +
+                                 "<td>" + (json.noticeList.length-index) + "</td>" +
+                                 "<td>" + data.regId+ "</td>" +
+                                 "<td>" + data.title+ "</td>" +
+                                 "<td>" + data.regDt+ "</td>" +
+                             "</tr>";
+                            
+                  });
+                } else {
+                    noticeContent = "<tr>" + 
+                                        "<td colspan='4'><p class='nodata'>등록된 데이터가 없습니다</p></td>" + 
+                                    "</tr>";	
+                }
+                $("#noticeList").append(noticeContent);
+                
+                
+                // 실시간 작업 현황
+                $("#totManCnt").text(json.userState.totManCnt);
+                $("#hazardManCnt").text(json.userState.hazardManCnt);
+                $("#safeManCnt").text(json.userState.safeManCnt);
+                $("#oldManCnt").text(json.userState.oldManCnt);
+                $("#diseaseManCnt").text(json.userState.diseaseManCnt);
+                $("#riskManCnt").text(json.userState.riskManCnt);
+                
+                // 근로자 위험 알림 현황
+                $("#completeCnt").text(json.alertState.completeCnt);
+                $("#totCnt").text(json.alertState.totCnt);
+                $("#nonCompleteCnt").text(json.alertState.nonCompleteCnt);
+                $("#sosCnt").text(json.alertState.sosCnt);
+                $("#heartCnt").text(json.alertState.heartCnt);
+                $("#hazardCnt").text(json.alertState.hazardCnt);
+                
+                // 위험 알림 목록
+                var alertContent = "";
+                var alertResult = "";
+                var userInfo = "";
+                var tagDeviceNum = "";
+                var userNm = "";
+                $("#alertList").empty();
+                
+                if (json.alertList.length > 0) {
+                    json.alertList.forEach(function(data, index){
+                      
+                      if (data.completeYn == "Y") {
+                        alertResult = "<td>조치완료</td>";
+                      } else {
+                        alertResult = "<td class='color-red'>미조치</td>";
+                      }
+                      
+                      if (data.tagId == 0) {
+                        tagDeviceNum = data.deviceNum;
+                        } else {
+                          tagDeviceNum = data.tagNum;
+                        }                    	
+                    
+                      alertContent += "<tr>" +
+                                             "<td>" + data.bizNm+ "</td>" +
+                                             "<td>" + data.alertTypeNm + "</td>" +
+                                             "<td>" + data.alertContent + "</td>" +
+                                             "<td>" + data.userNm + "</td>" +
+                                             alertResult + 
+                                             "<td>" + data.regDt+ "</td>" +
+                                         "</tr>";
+                            
+                    });
+                } else {
+                  alertContent = "<tr>" + 
+                                        "<td colspan='6'><p class='nodata'>등록된 데이터가 없습니다</p></td>" + 
+                                    "</tr>";    
+                }
+                $("#alertList").append(alertContent);
+                
+                // 메시지 전송
+                $("#reserveMsgCnt").text(json.msgState.reserveMsgCnt);
+                $("#totMsgCnt").text(json.msgState.reserveMsgCnt+json.msgState.msgCnt);
+                $("#msgCnt").text(json.msgState.msgCnt);
+                $("#reserveSendCnt").text(json.msgState.reserveSendCnt);
+                $("#reserveNoSendCnt").text(json.msgState.reserveNoSendCnt);
+                
+                // 워치 현황
+                $("#deviceTotCnt").text(json.deviceState.totCnt);
+                $("#abnormalCnt").text(json.deviceState.abnormalCnt);
+                $("#normalCnt").text(json.deviceState.normalCnt);
+                $("#watchCnt").text(json.deviceState.watchCnt);
+                $("#helmetCnt").text(json.deviceState.helmetCnt);
+                
+            },
+            error: function(errorThrown) {
+                console.log(JSON.stringify(errorThrown));
+            },
+            complete : function()
+            {
+               
+            }
+        });
+    }
+    
+    // DEVICE POP
+    function selectBadDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
+      
+      var searchBizId = $("#searchBizId").val(); 
+      
+        $.ajax({
+            type: "POST",
+            url: "/admin/monitoring/badDevicePop.do",
+            data: "popRefresh=selectBadDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=Y&searchDstYn=Y&searchDeviceType=01", 
+            dataType: 'html',
+            success: function(data){
+                $("#popupAreaContent").empty();
+                $("#popupAreaContent").html(data);
+            },
+            error: function(request, status, error) {
+                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
+            }
+        });
+    }
+    
+    // DEVICE POP
+    function selectGoodDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
+        
+        var searchBizId = $("#searchBizId").val();         
+        
+        $.ajax({
+            type: "POST",
+            url: "/admin/monitoring/goodDevicePop.do",
+            data: "popRefresh=selectGoodDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=N&searchDstYn=Y&searchDeviceType=01", 
+            dataType: 'html',
+            success: function(data){
+                $("#popupAreaContent2").empty();
+                $("#popupAreaContent2").html(data);
+            },
+            error: function(request, status, error) {
+                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
+            }
+        });
+    }
+    
+    // DEVICE POP
+    function selectTotDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
+        
+        var searchBizId = $("#searchBizId").val(); 
+        
+        $.ajax({
+            type: "POST",
+            url: "/admin/monitoring/totDevicePop.do",
+            data: "popRefresh=selectTotDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=T&searchDstYn=Y&searchDeviceType=01",
+            dataType: 'html',
+            success: function(data){
+                $("#popupAreaContent3").empty();
+                $("#popupAreaContent3").html(data);
+            },
+            error: function(request, status, error) {
+                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
+            }
+        });
+    }
+    
+    // USER LIST POP
+    function selectUserStateList(pageIndex, searchUserNm, searchDeviceNum, searchSafetyYn, searchAged, searchDiseaseYn, searchRiskWorkerYn) {
+        var searchBizId = $("#searchBizId").val(); 
+        
+        $.ajax({
+            type: "POST",
+            url: "/admin/monitoring/userStateListPop.do",
+            data: "popRefresh=selectUserStateList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchSafetyYn="+searchSafetyYn+"&searchAged="+searchAged+"&searchDiseaseYn="+searchDiseaseYn+"&searchRiskWorkerYn="+searchRiskWorkerYn, 
+            dataType: 'html',
+            success: function(data){
+                $("#popupUserStateContent").empty();
+                $("#popupUserStateContent").html(data);
+            },
+            error: function(request, status, error) {
+                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
+            }
+        });
+    }
+    
+    // 날씨
+    function weather() {
+      var searchBizId = $("#searchBizId").val();
+      
+      $.ajax({
+        type: "GET",
+            url: "/admin/monitoring/weather.do",
+            data: "searchBizId="+searchBizId, 
+            dataType: 'json',
+            success: function(data){
+                
+                var json = data.response.body.items.item;
+                var skyStatus = "";
+                var skyImg = "";
+                //console.log(json);
+                if (data.response.header.resultCode == "00") {
+                  if (json.length > 0 ) {
+                    json.forEach(function(result, index){
+                      if (result.category == "REH") {// 습도
+                        $("#humidity").text(result.fcstValue + "%");
+                      } else if (result.category == "POP") { // 강수확률
+                        $("#pop").text(result.fcstValue + "%");
+                      } else if (result.category == "TMP") { // 기온
+                        $("#tmp").text(result.fcstValue + "℃");
+                      } else if (result.category == "WSD") { // 풍속
+                                $("#windSpeed").text((result.fcstValue) + "m/s");
+                            } else if (result.category == "VEC") { // 풍향
+                                $("#windDirection").text(result.fcstValue + "m/s");
+                            } else if (result.category == "SKY") { // 하늘상태
+                              if (result.fcstValue == "1") {// 맑음
+                                skyStatus = "맑음";
+                                skyImg = "sun.png";
+                              } else if (result.fcstValue == "3") {//구름많음
+                                skyStatus = "구름많음";
+                                skyImg = "manyCloud.png";
+                              } else {//흐림
+                                skyStatus = "흐림";
+                                skyImg = "cloudy.png";
+                              }
+                            
+                            } else if (result.category == "PTY") { // 강수형태
+                              if (result.fcstValue == "1") {// 비
+                                skyStatus = "비";
+                                skyImg = "rain.png";
+                              } else if (result.fcstValue == "2") {// 비/눈
+                                skyStatus = "비/눈";
+                                skyImg = "rainOrSnow.png";
+                              } else if (result.fcstValue == "3") {// 눈
+                                skyStatus = "눈";
+                                skyImg = "snow.png";
+                              } else if (result.fcstValue == "4") {// 소나기
+                                skyStatus = "소나기";
+                                skyImg = "shower.png";
+                              }
+                                // 코드값 0은 눈/비가 안오는 것으로 보고 따로 세팅하지 않음
+                                
+                            }
+                    });
+                    //alert("/resources/assets/images/");
+                    $("#nowWeather").text(skyStatus);
+                    $("#weatherImg").attr("src", "../assets/img/"+skyImg);
+                  }
+                } else {
+                  //alert("현재 날씨 정보를 불러올 수 없습니다.");
+                  //$("#alertMsgBtn").click();
+                    //$("#alertContent").text("현재 날씨 정보를 불러올 수 없습니다.");
+                }
+            },
+            error: function(request, status, error) {
+                //alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
+                //alert("현재 날씨 정보를 불러올 수 없습니다.");
+                //$("#alertMsgBtn").click();
+                //$("#alertContent").text("현재 날씨 정보를 불러올 수 없습니다.");
+            }
+      })
+    }
+    
+  </script>
+</body>
+
+</html>

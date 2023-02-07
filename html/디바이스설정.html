@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/실외모니터링.html">
+              <i class="bi bi-circle"></i><span>실외 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체모니터링.html">
+              <i class="bi bi-circle"></i><span>생체 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/SOS호출현황및조치.html">
+              <i class="bi bi-circle"></i><span>SOS호출 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/심박동이상현황및조치.html">
+              <i class="bi bi-circle"></i><span>심박동이상 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알람현황및조치.html">
+              <i class="bi bi-circle"></i><span>경고알람 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/구역출입현황.html">
+              <i class="bi bi-circle"></i><span>구역출입 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스매핑.html">
+              <i class="bi bi-circle"></i><span>디바이스 매핑</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스설정.html" class="active">
+              <i class="bi bi-circle"></i><span>디바이스 설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#알림설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>알림설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="알림설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/알림메시지.html">
+              <i class="bi bi-circle"></i><span>알림메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/예약메시지.html">
+              <i class="bi bi-circle"></i><span>예약메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/일정관리.html">
+              <i class="bi bi-circle"></i><span>일정 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/공지사항.html">
+              <i class="bi bi-circle"></i><span>공지사항</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알림메시지.html">
+              <i class="bi bi-circle"></i><span>경고알림 메시지</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 알림설정 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-server"></i><span>조직관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/부서관리.html">
+              <i class="bi bi-circle"></i><span>부서관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/사용자상태관리.html">
+              <i class="bi bi-circle"></i><span>사용자 상태 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직관리 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#지오펜싱-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-map"></i><span>지오펜싱</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="지오펜싱-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/구역관리.html">
+              <i class="bi bi-circle"></i><span>구역 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/비콘관리.html">
+              <i class="bi bi-circle"></i><span>비콘 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 지오펜싱 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#시스템관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>시스템 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="시스템관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스로그.html">
+              <i class="bi bi-circle"></i><span>디바이스 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체정보로그.html">
+              <i class="bi bi-circle"></i><span>생체정보 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/BLE로그.html">
+              <i class="bi bi-circle"></i><span>BLE 로그</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>디바이스 설정</h1>
+          <div class="d-flex justify-content-end">
+          </div>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-header py-3">
+              <div class="">
+                <div class="">
+                  <h5 class="fs-18 font-bold color-default mr-5">
+                      디바이스 설정
+                      <select id="" name="" class="form-select biz wd150 mt-2 ms-5">
+                          <option value="B99997" selected="selected">본사</option>
+                          <option value="B99998" >부산현장</option>
+                      </select>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-row">
+                  <colgroup>
+                      <col style="width: 18%" />
+                      <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                        <th>심박수 경고 임계치</th>
+                        <td>
+                            <div class="row g-2">
+                                <div class="col-auto me-4">
+                                  <div class="form-check form-switch mt-2">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                  </div>
+                                </div>
+                                <div class="col-2">
+                                  <div class="input-group">
+                                    <input type="number" class="form-control form-control-lg" id="minHeartRate" name="minHeartRate" value="60.0" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <label for="minHeartRate" class="input-group-text">이하</label>
+                                  </div>
+                                </div>
+                                <div class="col-2">
+                                  <div class="input-group">
+                                    <input type="number" class="form-control form-control-lg" id="maxHeartRate" name="maxHeartRate" value="140.0" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <label for="maxHeartRate" class="input-group-text">이상</label>
+                                  </div>
+                                </div>
+                                <div class="col-auto">
+                                  <!--  -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-row">
+                  <colgroup>
+                      <col style="width: 18%" />
+                      <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>센서 업로드주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="sensorUpInterval" class="form-select">
+                                    <option value="30" selected="selected">30초</option>
+                                    <option value="45">45초</option>
+                                    <option value="60">1분</option>
+                                    <option value="90">1분30초</option>
+                                    <option value="120">2분</option>
+                                    <option value="180">3분</option>
+                                    <option value="300">5분</option>
+                                    <option value="1200">20분</option>
+                                    <option value="1800">30분</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>GPS 업로드주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="sensorUpInterval" class="form-select">
+                                    <option value="30" selected="selected">30초</option>
+                                    <option value="45">45초</option>
+                                    <option value="60">1분</option>
+                                    <option value="90">1분30초</option>
+                                    <option value="120">2분</option>
+                                    <option value="180">3분</option>
+                                    <option value="300">5분</option>
+                                    <option value="1200">20분</option>
+                                    <option value="1800">30분</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>BLE 업로드주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <select name="" class="form-select">
+                                  <option value="30" selected="selected">30초</option>
+                                  <option value="45">45초</option>
+                                  <option value="60">1분</option>
+                                  <option value="90">1분30초</option>
+                                  <option value="120">2분</option>
+                                  <option value="180">3분</option>
+                                  <option value="300">5분</option>
+                                  <option value="1200">20분</option>
+                                  <option value="1800">30분</option>
+                                </select>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">BLE 필터구분</div>
+                              </td>
+                              <td>
+                                <select name="bleFilterType" class="form-select">
+                                  <option value="N" selected>name</option>
+                                  <option value="M">mac</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-lg wd140 ms-2" id="bleFilter" name="bleFilter" value="">
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">BLE 스캔모드</div>
+                              </td>
+                              <td>
+                                <select id="bleScanMode" name="bleScanMode" class="form-select">
+                                  <option value="">선택</option>
+                                  <option value="01" >USER MODE</option>
+                                  <option value="02" >LOW_LATENCY</option>
+                                  <option value="03" >BALANCED</option>
+                                  <option value="04" >LOW_POWER</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-lg wd140 ms-2" id="bleRssi" name="bleRssi" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>경고알림 등록주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">등록주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="alertInterval" class="form-select">
+                                    <option value="1">1초</option>
+                                    <option value="10" selected="selected">10초</option>
+                                    <option value="60">1분</option>
+                                    <option value="300">5분</option>
+                                    <option value="600">10분</option>
+                                    <option value="1800">30분</option>
+                                    <option value="3600">60분</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>배터리 잔량 업로드주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="batteryUpInterval" class="form-select">
+                                    <option value="1">1초</option>
+                                    <option value="10" selected="selected">10초</option>
+                                    <option value="60">1분</option>
+                                    <option value="300">5분</option>
+                                    <option value="600">10분</option>
+                                    <option value="1800">30분</option>
+                                    <option value="3600">60분</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>충전상태 업로드 등록주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="chargingUpInterval" class="form-select">
+                                    <option value="1">1초</option>
+                                    <option value="10" selected="selected">10초</option>
+                                    <option value="60">1분</option>
+                                    <option value="300">5분</option>
+                                    <option value="600">10분</option>
+                                    <option value="1800">30분</option>
+                                    <option value="3600">60분</option>
+                                  </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-row">
+                  <colgroup>
+                      <col style="width: 18%" />
+                      <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>생체정보 데이터 보관 주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">보관주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <input type="text" class="form-control form-control-lg wd140" id="gpsDeleteTime" name="gpsDeleteTime" value="30" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '');">
+                                  <label for="minHeartRate" class="input-group-text">일</label>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>GPS 데이터 보관 주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">보관주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <input type="text" class="form-control form-control-lg wd140" id="gpsDeleteTime" name="gpsDeleteTime" value="30" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '');">
+                                  <label for="minHeartRate" class="input-group-text">일</label>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-responsive mt-3">
+                <table class="table table-row">
+                  <colgroup>
+                      <col style="width: 18%" />
+                      <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>구역별 안전수칙 메시지</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="col-form-label-md px-3">전송주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <select name="ruleAlertInterval" class="form-select">
+                                    <option value="">선택</option>
+                                    <option value="30">30분</option>
+                                    <option value="60">1시간</option>
+                                    <option value="180">3시간</option>
+                                    <option value="360">6시간</option>
+                                    <option value="720">12시간</option>
+                                    <option value="1440">24시간</option>
+                                </select>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary btn-small lh-100  w-50"  data-bs-toggle="modal" data-bs-target="#alertConfirmPop" onclick="callSaveModal()">저장</button>
+              </div>
+            </div>
+          </div>
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- Modal : 알림 -->
+  <div id="alertConfirmPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="popupAreaContent2">
+            <!-- groupPop start -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLiveLabel">알림</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>저장하시겠습니까?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+              <button type="button" class="btn btn-primary" onclick="saveDB()">확인</button>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
+
+</body>
+
+</html>

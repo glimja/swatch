@@ -21,6 +21,11 @@
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
@@ -197,8 +202,8 @@
             </a>
           </li>
           <li>
-            <a href="../html/사용장상태관리.html">
-              <i class="bi bi-circle"></i><span>사용장상태 관리</span>
+            <a href="../html/사용자상태관리.html">
+              <i class="bi bi-circle"></i><span>사용자 상태 관리</span>
             </a>
           </li>
         </ul>
@@ -291,7 +296,7 @@
                         <label for="searchUserNm" class="col-sm-4 col-form-label">성명 검색</label>
                         <div class="col-sm-8 position-relative px-1">
                           <input type="text" class="form-control" id="searchUserNm" name="searchUserNm" value="">
-                          <a href="#" class="icon-search-btn" data-toggle="modal" data-target="#popupArea"><i class="bi bi-search"></i></a>
+                          <a href="#" class="icon-search-btn" data-bs-toggle="modal" data-bs-target="#popupArea"><i class="bi bi-search"></i></a>
                         </div>
                       </div>
                     </div>
@@ -307,7 +312,7 @@
                           <input type="radio" name="searchDateFlag" id="" checked> 일간
                         </label>
                         <div class="col-lg-8 col-sm-12 px-1">
-                          <input type="text" id="" name="" class="form-control" placeholder="시작일시" value="2023-02-01" maxlength="10" readonly>
+                          <input type="text" id="searchDt" name="searchDt" class="form-control" placeholder="시작일시" value="2023-02-01" maxlength="10" readonly>
                         </div>
                       </div>
                     </div>
@@ -330,7 +335,7 @@
                           <input type="radio" name="searchDateFlag" id="" > 월간
                         </label>
                         <div class="col-sm-8 px-1">
-                          <input type="text" id="" name="" class="form-control" placeholder="시작연월"  value="2023-02" maxlength="7" readonly>
+                          <input type="text" id="searchYyyyMm" name="searchYyyyMm" class="form-control" placeholder="시작연월"  value="2023-02" maxlength="7" readonly>
                         </div>
                       </div>
                     </div>
@@ -413,83 +418,100 @@
   </section><!-- End #section -->
 
   <!-- ======= Popup ======= -->
-  <!-- Modal -->
-  <div class="modal fade" id="safePop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- modal : 사용자 리스트 -->
+  <div class="modal fade" id="popupArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">안전수칙</h5>
+          <h5 class="modal-title" id="exampleModalLabel">사용자 리스트</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
-            <div class="search-area">
-                <form class="row g-3">
-                    
-                        <div class="col-md-4">
-                          <input type="text" class="form-control form-control-sm" id="searchUserNmPop" placeholder="이름" value="">
-                        </div>
-                        <div class="col-md-5">
-                          <input type="text" class="form-control form-control-sm" id="searchMobilePop" placeholder="전화번호" value="">
-                        </div>
-                        <div class="col-md-3">
-                          <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> 검색</button>
-                        </div>
-                    
-                </form>
-            </div>
-            <div class="table-responsive user-list">
-                <table class="table table-hover mt-4 text-center border-top">
+          <div class="tab-content p-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="searchUserNmPop" class="form-label">이름</label>
+                        <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="searchPhonePop" class="form-label">전화번호</label>
+                        <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" placeholder="전화번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100" ><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                 </form>
+              </div>
+              <div class="table-responsive user-list">
+                 <table class="table table-hover mt-4 text-center border-top">
                     <thead>
-                        <tr>
-                            <th>지점</th>
-                            <th>이름</th>
-                            <th>전화번호</th>
-                        </tr>
+                       <tr>
+                          <th>이름</th>
+                          <th>전화번호</th>
+                          <th>선택</th>
+                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="3">
-                                <p class="nodata">등록된 데이터가 없습니다</p>
-                            </td>
-                        </tr>
+                       <tr>
+                          <td>사용자1</td>
+                          <td></td>
+                          <td>
+                             <button type="button" class="btn btn-info btn-sm m-0" onclick="javascript:setUserInfo('389', '사용자1')" data-dismiss="modal">선택</button>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td>사용자2</td>
+                          <td></td>
+                          <td>
+                             <button type="button" class="btn btn-info btn-sm m-0" onclick="javascript:setUserInfo('390', '사용자2')" data-dismiss="modal">선택</button>
+                          </td>
+                       </tr>
                     </tbody>
-                </table>
-            </div>
-            <!-- paging_w -->
-            <div>
+                 </table>
+              </div>
+              <!-- paging_w -->
+              <div>
                 <nav aria-label="Page navigation">
                     <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
                           <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
                           <span aria-hidden="true">‹</span>
-                        </a>
-                      </li>
-                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">4</a></li>
-                      <li class="page-item"><a class="page-link" href="#">5</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
+                          </a>
+                       </li>
+                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                       <li class="page-item"><a class="page-link" href="#">2</a></li>
+                       <li class="page-item"><a class="page-link" href="#">3</a></li>
+                       <li class="page-item"><a class="page-link" href="#">4</a></li>
+                       <li class="page-item"><a class="page-link" href="#">5</a></li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
                           <span aria-hidden="true">›</span>
-                        </a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
                           <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
+                          </a>
+                       </li>
                     </ul>
-                </nav>
-            </div>
-            <!-- // paging_w -->
-          </div>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+           </div>
+            <!-- //사용자 리스트 -->
+            
+        </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
@@ -498,6 +520,7 @@
       </div>
     </div>
   </div>
+  <!-- //modal : 사용자 리스트 -->
 
   <!-- ======= Footer ======= -->
   <footer id="" class="footer">
@@ -514,8 +537,16 @@
   <!-- JS File -->
   <script src="../assets/js/jquery-1.12.3.min.js"></script>
 	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
 
 </body>
 

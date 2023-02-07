@@ -101,7 +101,7 @@ h6 {
 /* Dropdown menus */
 .dropdown-menu {
   border-radius: 4px;
-  padding: 10px 0;
+  padding: 10px 0;margin-top: 70px;
   -webkit-animation-name: dropdown-animate;
   animation-name: dropdown-animate;
   -webkit-animation-duration: 0.2s;
@@ -1392,6 +1392,27 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 }
 /*====== text-color css ends ======*/
 /*font*/
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-26 {
+  font-size: 26px;
+}
+.fs-44 {
+  font-size: 44px;
+}
 .color-white {
   color: #fff;
 }
@@ -1406,6 +1427,22 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 }
 .color-gray {
   color: #aaaeb3;
+}
+.alert-list-wrap {
+  margin-top: 52px;
+}
+.alert-list-wrap .card {
+  -webkit-box-shadow: 0 5px 12px 0 rgb(63 77 103 / 20%);
+  box-shadow: 0 5px 12px 0 rgb(63 77 103 / 20%);
+}
+.alert-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alert-list img {
+  vertical-align: bottom;
+  margin-right: 20px;
 }
 /*====== Card top border css starts ======*/
 .card-border-c-blue {
@@ -1427,7 +1464,37 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 .card-border-c-purple {
   border-top: 4px solid #a389d4;
 }
-
+/*background*/
+.bg-gray {
+  background: #f8f9fa;
+}
+.bg-blue {
+  background: #04a6f5;
+}
+.bg-red {
+  background: #ffd8d6;
+}
+.bg-purple {
+  background: #e4e4ff;
+}
+.bg-orange {
+  background: #ffeacc;
+}
+.bg-gradient-blue {
+  background: linear-gradient(45deg,#1DC5E9,#1DE9B6);
+}
+.bg-gradient-red {
+  background: linear-gradient(45deg,#F48F36,#F44236);
+}
+.bg-gradient-purple {
+  background: linear-gradient(45deg,#899FD4,#A389D4);
+}
+.border-right {
+  border-right: 1px solid #dee2e6!important;
+}
+.border-left {
+  border-left: 1px solid #dee2e6!important;
+}
 /*====== Card top border ends ======*/
 /*====== Font-size css starts ======*/
 .f-10 {
@@ -1628,7 +1695,7 @@ body.loginpage .form-control {border-color: #333; min-height:40px; font-size:14p
 .btn-warning {background-color: #ffbf33; border-color: #ffb623; color:#fff}
 .btn-success {background-color: #1ca163; border-color: #189159}
 .card .card-block, .card .card-body {padding: 20px 20px;}
-.icon-search-btn {position: absolute; left:83%; top:10%; font-size: 20px;}
+.icon-search-btn {position: absolute; right:15px; top:10%; font-size: 20px;}
 input[type=radio] {width:20px; height:20px; accent-color:#3386ff; vertical-align: middle; cursor: pointer;}
 input[type=checkbox] {width:20px; height:20px; accent-color:#3386ff; vertical-align: middle; cursor: pointer;}
 .form-check-input:checked {background-color: #3386ff; border-color: #237cff;}
@@ -1637,6 +1704,7 @@ input[type=checkbox] {width:20px; height:20px; accent-color:#3386ff; vertical-al
 .graphNoData {text-align: center;display: table-cell;vertical-align: middle;}
 h5 {margin: .5rem 0 0 .5rem;}
 .table {min-width:1100px; font-size: 14px; --bs-table-hover-bg : rgb(0 116 255 / 5%);}
+.modal .table {min-width:320px}
 /* .table-responsive::-webkit-scrollbar {display:none} */
 .table th, .table td {text-align: center;vertical-align: middle;}
 .nodata {margin-top: 1rem;}
@@ -1833,4 +1901,83 @@ textarea.form-control {background: #f4f7fa;}
 .dot-none span {
   position: absolute;
   left: -9999px;
+}
+.popup-table tbody {
+  border-bottom: 1px solid #c6c9cf;
+  
+}
+.popup-table th {
+  background: #ecedef;
+  vertical-align: top;
+}
+.popup-table th,.popup-table td {
+  border-top: 1px solid #c6c9cf;
+  text-align: left;
+  font-size: 16px;
+}
+.height-100n {
+  min-height: auto;
+  height: calc(100vh - 173px);
+  position: relative;
+}
+.red-bubble {
+  width: 58px;
+  height: 70px;
+  background: url(/assets/images/common/bubble_red.png) no-repeat 0 0;
+  text-align: center;
+  padding-top: 10px;
+  
+}
+.red-bubble img {
+  vertical-align: middle;
+}
+.position-right {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.position-top {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.tag-point {
+  width: 160px;
+}
+.tag-point .border-top {
+  border-top: 1px solid #ecedef;
+}
+.table-search select{
+  border: 1px solid #3f4d67;
+  background: #fff !important;
+  height: 35px !important;
+  padding: 5px 20px;
+  font-size: 12px;
+  color: #3f4d67;
+}
+.radio.message-radio {
+  padding: 11px 0;
+}
+.radio.message-radio input[type=radio] + .cr:before {
+  border: 1px solid #777777;
+}
+.radio.message-radio input[type=radio]:checked + .cr:after {
+  background: linear-gradient(-135deg, #01c5fc 0%, #03b0f7 100%);
+}
+.radio.top-17 input[type=radio] + .cr:after {
+  top: 17px;
+}
+.radio.top-16 input[type=radio] + .cr:after {
+  top: 16px;
+}
+.form-control.height-auto {
+  height: auto !important;
+}
+.main.outdoormap {padding: 0;}
+a.lt_text {color:#0d6efd}
+.form-control:disabled, .form-control[readonly] {
+  background-color: #f5f5f5; opacity: 1;border-color: #ccc;
+}
+.form-group {
+  margin-bottom: 1rem;
 }

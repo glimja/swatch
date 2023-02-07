@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/실외모니터링.html">
+              <i class="bi bi-circle"></i><span>실외 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체모니터링.html">
+              <i class="bi bi-circle"></i><span>생체 모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/SOS호출현황및조치.html">
+              <i class="bi bi-circle"></i><span>SOS호출 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/심박동이상현황및조치.html">
+              <i class="bi bi-circle"></i><span>심박동이상 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알람현황및조치.html">
+              <i class="bi bi-circle"></i><span>경고알람 현황 및 조치</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/구역출입현황.html">
+              <i class="bi bi-circle"></i><span>구역출입 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스매핑.html">
+              <i class="bi bi-circle"></i><span>디바이스 매핑</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스설정.html">
+              <i class="bi bi-circle"></i><span>디바이스 설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#알림설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>알림설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="알림설정-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/알림메시지.html">
+              <i class="bi bi-circle"></i><span>알림메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/예약메시지.html" class="active">
+              <i class="bi bi-circle"></i><span>예약메시지</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/일정관리.html">
+              <i class="bi bi-circle"></i><span>일정 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/공지사항.html">
+              <i class="bi bi-circle"></i><span>공지사항</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/경고알림메시지.html">
+              <i class="bi bi-circle"></i><span>경고알림 메시지</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 알림설정 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-server"></i><span>조직관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/부서관리.html">
+              <i class="bi bi-circle"></i><span>부서관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/사용자상태관리.html">
+              <i class="bi bi-circle"></i><span>사용자 상태 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직관리 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#지오펜싱-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-map"></i><span>지오펜싱</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="지오펜싱-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/구역관리.html">
+              <i class="bi bi-circle"></i><span>구역 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/비콘관리.html">
+              <i class="bi bi-circle"></i><span>비콘 관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 지오펜싱 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#시스템관리-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>시스템 관리</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="시스템관리-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스로그.html">
+              <i class="bi bi-circle"></i><span>디바이스 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/생체정보로그.html">
+              <i class="bi bi-circle"></i><span>생체정보 로그</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/BLE로그.html">
+              <i class="bi bi-circle"></i><span>BLE 로그</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>예약메시지</h1>
+          <div class="d-flex justify-content-end">
+            <div class="p-2">
+              <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>
+            </div>
+          </div>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">예약메시지 등록</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+              <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="form-group my-2">
+                        <div class="">
+                            <div class="radio message-radio d-inline">
+                                <input type="radio" name="targetGrp" id="chkall" value="A"  checked>
+                                <label for="chkall" class="cr">전체</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-3">
+                            <div class="py-2">
+                                <input type="radio" name="targetGrp" id="chkGroup" value="G" >
+                                <label for="chkGroup" class="cr">부서</label>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="form-group mb-2">
+                                        <select id="grp1" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="form-group mb-2">
+                                        <select id="grp2" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="form-group mb-2">
+                                        <select id="grp3" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-6">
+                                    <div class="form-group mb-2">
+                                        <select id="grp4" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="py-2">
+                                <input type="radio" name="targetGrp" id="chkUser" value="P" >
+                                <label for="chkUser" class="cr">개인</label>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-12">
+                            <div class="tab-search">
+                                <div class="input-group">
+                                    <div class="alertmsg-userlist" id="userList">
+                                    </div>
+                                    <a href="#!" class="input-group-text" data-bs-toggle="modal" id="personPop" data-bs-target="#popupArea">
+                                    <i class="bi bi-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-12 col-lg-12 pt-5">
+                  <div class="form-group">
+                    <label for="daySendYn">주기</label>
+                    <div class="row py-2">
+                      <div class="col-md-12">
+                        <div class="d-inline me-5">
+                          <input type="checkbox" name="chkAllWeek" id="chkAllWeek">
+                          <label for="chkAllWeek" class="cr">매일</label>
+                        </div>
+                        <span class="py-2 ms-5">요일별 : </span>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="sunSendYn" id="sunSendYn" value="Y" autocomplete="off">
+                          <label for="sunSendYn" class="cr">일요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="monSendYn" id="monSendYn" value="Y" autocomplete="off">
+                          <label for="monSendYn" class="cr">월요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="tueSendYn" id="tueSendYn" value="Y" autocomplete="off">
+                          <label for="tueSendYn" class="cr">화요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="wedSendYn" id="wedSendYn" value="Y" autocomplete="off">
+                          <label for="wedSendYn" class="cr">수요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="thuSendYn" id="thuSendYn" value="Y" autocomplete="off">
+                          <label for="thuSendYn" class="cr">목요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="friSendYn" id="friSendYn" value="Y" autocomplete="off">
+                          <label for="friSendYn" class="cr">금요일</label>
+                        </div>
+                        <div class="d-inline me-2">
+                          <input type="checkbox" name="satSendYn" id="satSendYn" value="Y" autocomplete="off">
+                          <label for="satSendYn" class="cr">토요일</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-12 col-lg-12 pt-3">
+                  <label for="tagMac">시간</label>
+                  <div class="row py-2">
+                    <div class="col-md-3">
+                      <select id="sendHh" name="sendHh" class="form-select">
+                        <option value="00">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <select id="sendMm" name="sendMm" class="form-select">
+                        <option value="00">00</option>
+                        <option value="05">05</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                        <option value="55">55</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-12 col-lg-12 pt-3">
+                  <label for="sendContent">내용</label>
+                  <textarea class="form-control height-auto mt-3" id="message" name="message" rows="6"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-gray btn-small lh-100 me-2" onclick="location.href='예약메시지.html'">돌아가기</button>
+                <button class="btn btn-primary btn-small lh-100" onclick="callSaveModal()">저장</button>
+              </div>
+            </div>
+          </div>
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- modal : 사용자 리스트 -->
+  <div class="modal fade" id="popupArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">사용자 리스트</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content p-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="searchUserNmPop" class="form-label">이름</label>
+                        <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="searchPhonePop" class="form-label">디바이스 번호</label>
+                        <input type="text" class="form-control form-control-sm" id="searchDeviceNumPop" placeholder="디바이스 번호" value="">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100" ><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                 </form>
+              </div>
+              <div class="table-responsive user-list">
+                 <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                       <tr>
+                          <th>선택</th>
+                          <th>이름</th>
+                          <th>디바이스 번호</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                        <td>
+                          <div class="d-inline">
+                            <input type="checkbox" name="list_rd" id="list_rd_0" value="0">
+                            <label for="list_rd_0" class="cr"></label>
+                          </div>
+                        </td>
+                          <td>사용자1</td>
+                          <td></td>
+                       </tr>
+                       <tr>
+                        <td>
+                          <div class="d-inline">
+                            <input type="checkbox" name="list_rd" id="list_rd_1" value="1">
+                            <label for="list_rd_1" class="cr"></label>
+                          </div>
+                        </td>
+                          <td>사용자2</td>
+                          <td></td>
+                       </tr>
+                    </tbody>
+                 </table>
+              </div>
+              <!-- paging_w -->
+              <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                          </a>
+                       </li>
+                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                       <li class="page-item"><a class="page-link" href="#">2</a></li>
+                       <li class="page-item"><a class="page-link" href="#">3</a></li>
+                       <li class="page-item"><a class="page-link" href="#">4</a></li>
+                       <li class="page-item"><a class="page-link" href="#">5</a></li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          </a>
+                       </li>
+                    </ul>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+           </div>
+            <!-- //사용자 리스트 -->
+            
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //modal : 사용자 리스트 -->
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
+
+</body>
+
+</html>
