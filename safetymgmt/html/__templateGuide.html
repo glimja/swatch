@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+        <!-- <li class="nav-item pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <a href="#">
+              <i class="bi bi-box-arrow-right"></i>
+              <span>로그아웃</span>
+            </a>
+          </a>
+        </li> -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/개인모니터링.html">
+              <i class="bi bi-circle"></i><span>개인모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/모니터링현황.html">
+              <i class="bi bi-circle"></i><span>모니터링현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스현황.html">
+              <i class="bi bi-circle"></i><span>디바이스 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>조직</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/그룹관리.html">
+              <i class="bi bi-circle"></i><span>그룹관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/모니터링실적.html">
+              <i class="bi bi-circle"></i><span>모니터링 실적</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/페이징설정.html">
+              <i class="bi bi-circle"></i><span>페이징 설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/보안설정.html">
+              <i class="bi bi-circle"></i><span>보안설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>타이틀타이틀</h1>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <section class="section">
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Line Chart</h5>
+
+              <!-- Line Chart -->
+              <div id="lineChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#lineChart"), {
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                      height: 350,
+                      type: 'line',
+                      zoom: {
+                        enabled: false
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'straight'
+                    },
+                    grid: {
+                      row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                      },
+                    },
+                    xaxis: {
+                      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Line Chart -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bar Chart</h5>
+
+              <!-- Bar Chart -->
+              <div id="barChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#barChart"), {
+                    series: [{
+                      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+                    }],
+                    chart: {
+                      type: 'bar',
+                      height: 350
+                    },
+                    plotOptions: {
+                      bar: {
+                        borderRadius: 4,
+                        horizontal: true,
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    xaxis: {
+                      categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+                        'United States', 'China', 'Germany'
+                      ],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Bar Chart -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pie Chart</h5>
+
+              <!-- Pie Chart -->
+              <div id="pieChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#pieChart"), {
+                    series: [44, 55, 13, 43, 22],
+                    chart: {
+                      height: 350,
+                      type: 'pie',
+                      toolbar: {
+                        show: true
+                      }
+                    },
+                    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
+                  }).render();
+                });
+              </script>
+              <!-- End Pie Chart -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-body">              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">지점</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select">
+                            <option value="B99997" selected="selected">본사</option>
+                            <option value="B99998" >부산현장</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="searchUserNm" class="col-sm-4 col-form-label">성명 검색</label>
+                        <div class="col-sm-8 position-relative px-1">
+                          <input type="text" class="form-control" id="searchUserNm" name="searchUserNm" value="">
+                          <a href="#" class="icon-search-btn" data-bs-toggle="modal" data-bs-target="#popupArea"><i class="bi bi-search"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 검색두줄 -->
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-lg-4 col-sm-12 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" checked> 일간
+                        </label>
+                        <div class="col-lg-8 col-sm-12 px-1">
+                          <input type="text" id="searchDt" name="searchDt" class="form-control" placeholder="시작일시" value="2023-02-01" maxlength="10" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" > 주간
+                        </label>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchStartDt" name="searchStartDt" class="form-control" placeholder="시작일시" value="2023-01-25" maxlength="10" readonly>
+                        </div>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchEndDt" name="searchEndDt" class="form-control" placeholder="종료일시" value="2023-02-01" maxlength="10" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">
+                          <input type="radio" name="searchDateFlag" id="" > 월간
+                        </label>
+                        <div class="col-sm-8 px-1">
+                          <input type="text" id="searchYyyyMm" name="searchYyyyMm" class="form-control" placeholder="시작연월"  value="2023-02" maxlength="7" readonly>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 검색두줄 -->
+
+                  <div class="row">
+                    <div class="col text-center">
+                      <button class="btn btn-primary w-50">검색</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="searchUserNm"  class="col-lg-4 col-sm-12 col-form-label">성명</label>
+                        <div class="col-lg-8 col-sm-12 px-1">
+                          <input type="text" class="form-control" id="searchUserNm" name="searchUserNm" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="day" class="col-lg-4 col-sm-12 col-form-label">등록일자</label>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchStartDt" name="searchStartDt" class="form-control" value="" class="form-control" maxlength="10" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');" readonly>
+                        </div>
+                        <div class="col-sm-4 px-1 mb-2">
+                          <input type="text" id="searchEndDt" name="searchEndDt" class="form-control" value="" class="form-control" maxlength="10" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');" readonly>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="searchCompleteYn" class="col-lg-4 col-sm-12 col-form-label lg-text-center">조치여부</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="searchCompleteYn" name="searchCompleteYn" class="form-select">
+                            <option value="" >전체</option>
+                            <option value="Y" >조치완료</option>
+                            <option value="N" >미조치</option>  
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-center">
+                      <button class="btn btn-primary w-50">검색</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+
+            </div>
+          </div>
+
+          <!-- 심박 -->
+          <div class="row responsive-board">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>심박</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataHrm" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartHrm" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>걸음수</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataStep" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartStep" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>칼로리</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataKcal" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartKcal" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>이동거리</h5>
+                        <div class="btn-group card-option">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div id="noDataDis" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div>
+                        <canvas id="chartDis" class="chartarea" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div> -->
+          </div>
+          
+          <!-- 심박동 이상 -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">심박동 이상</h5>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+               <!--   table  -->
+               <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                     <colgroup>
+                        <col style="width: 5%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: 10%">
+                        <col style="width: auto">
+                        <col style="width: auto">
+                        <col style="width: auto">
+                        <col style="width: 10%">
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th>지점</th>
+                           <th>성명</th>
+                           <th>심박수</th>
+                           <th>조치여부</th>
+                           <th>긴급연락망</th>
+                           <th>현장조치사항</th>
+                           <th>등록일시</th>
+                           <th>조치일시</th>
+                           <th>지도보기</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td colspan="9">
+                              <p class="nodata">등록된 데이터가 없습니다</p>
+                           </td>
+                        </tr>
+                        <tr>
+                          <td>본사</td>
+                          <td>사용자2</td>
+                          <td></td>
+                          <td>
+                              <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#popupArea">조치완료</button>
+                          </td>
+                          <td>
+                              <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#safetyPop">긴급연락망</button>
+                          </td>
+                          <td>119호출</td>
+                          <td>2023-01-26 17:01:51</td>
+                          <td>2023-01-30 17:39:49</td>
+                          <td><button type="button" class="btn btn-success btn-sm">지도보기</button></td>
+                        </tr>
+                        <tr>
+                          <td>본사</td>
+                          <td>사용자2</td>
+                          <td></td>
+                          <td>
+                              <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#popupArea">미조치</button>
+                          </td>
+                          <td>
+                              <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#safetyPop">긴급연락망</button>
+                          </td>
+                          <td></td>
+                          <td>2023-01-26 17:01:51</td>
+                          <td></td>
+                          <td><button type="button" class="btn btn-success btn-sm">지도보기</button></td>
+                      </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <!--   //table  -->
+               <!-- paging_w -->
+               <div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">‹</span>
+                        </a>
+                     </li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">›</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                     </li>
+                  </ul>
+                </nav>
+               </div>
+               <!-- // paging_w -->
+            </div>
+          </div>
+
+          <!-- 디바이스 설정 -->
+          <div class="card">
+            <div class="card-header py-3">
+              <div class="">
+                <div class="">
+                  <h5 class="fs-18 font-bold color-default mr-5">
+                      디바이스 설정
+                      <select id="" name="" class="form-select biz wd150 mt-2 ms-5">
+                          <option value="B99997" selected="selected">본사</option>
+                          <option value="B99998" >부산현장</option>
+                      </select>
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              
+              <div class="table-responsive">
+                <table class="table table-row">
+                  <colgroup>
+                      <col style="width: 18%" />
+                      <col style="width: auto" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                        <th>심박수 경고 임계치</th>
+                        <td>
+                            <div class="row g-2">
+                                <div class="col-auto me-4">
+                                  <div class="form-check form-switch mt-2">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                  </div>
+                                </div>
+                                <div class="col-2">
+                                  <div class="input-group">
+                                    <input type="number" class="form-control form-control-lg" id="minHeartRate" name="minHeartRate" value="60.0" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <label for="minHeartRate" class="input-group-text">이하</label>
+                                  </div>
+                                </div>
+                                <div class="col-2">
+                                  <div class="input-group">
+                                    <input type="number" class="form-control form-control-lg" id="maxHeartRate" name="maxHeartRate" value="140.0" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <label for="maxHeartRate" class="input-group-text">이상</label>
+                                  </div>
+                                </div>
+                                <div class="col-auto">
+                                  <!--  -->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                      <th>BLE 업로드주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">업로드주기</div>
+                              </td>
+                              <td>
+                                <select name="" class="form-select">
+                                  <option value="30" selected="selected">30초</option>
+                                  <option value="45">45초</option>
+                                  <option value="60">1분</option>
+                                  <option value="90">1분30초</option>
+                                  <option value="120">2분</option>
+                                  <option value="180">3분</option>
+                                  <option value="300">5분</option>
+                                  <option value="1200">20분</option>
+                                  <option value="1800">30분</option>
+                                </select>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">BLE 필터구분</div>
+                              </td>
+                              <td>
+                                <select name="bleFilterType" class="form-select">
+                                  <option value="N" selected>name</option>
+                                  <option value="M">mac</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-lg wd140 ms-2" id="bleFilter" name="bleFilter" value="">
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">BLE 스캔모드</div>
+                              </td>
+                              <td>
+                                <select id="bleScanMode" name="bleScanMode" class="form-select">
+                                  <option value="">선택</option>
+                                  <option value="01" >USER MODE</option>
+                                  <option value="02" >LOW_LATENCY</option>
+                                  <option value="03" >BALANCED</option>
+                                  <option value="04" >LOW_POWER</option>
+                                </select>
+                              </td>
+                              <td>
+                                <input type="text" class="form-control form-control-lg wd140 ms-2" id="bleRssi" name="bleRssi" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>생체정보 데이터 보관 주기</th>
+                      <td>
+                        <table class="table-inner">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check form-switch mt-2 wd70">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" value="Y" autocomplete="off" checked>
+                                  <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-form-label-md px-3">보관주기</div>
+                              </td>
+                              <td>
+                                <div class="input-group">
+                                  <input type="text" class="form-control form-control-lg wd140" id="gpsDeleteTime" name="gpsDeleteTime" value="30" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '');">
+                                  <label for="minHeartRate" class="input-group-text">일</label>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row justify-content-between">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="form-group my-2">
+                        <div class="">
+                            <div class="radio message-radio d-inline">
+                                <input type="radio" name="targetGrp" id="chkall" value="A"  checked>
+                                <label for="chkall" class="cr">전체</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-3">
+                            <div class="py-2">
+                                <input type="radio" name="targetGrp" id="chkGroup" value="G" >
+                                <label for="chkGroup" class="cr">부서</label>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="row">
+                                <div class="col-3 table-search">
+                                    <div class="form-group mb-0">
+                                        <select id="grp1" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3 table-search">
+                                    <div class="form-group mb-0">
+                                        <select id="grp2" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3 table-search">
+                                    <div class="form-group mb-0">
+                                        <select id="grp3" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3 table-search">
+                                    <div class="form-group mb-0">
+                                        <select id="grp4" class="form-select">
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="py-2">
+                                <input type="radio" name="targetGrp" id="chkUser" value="P" >
+                                <label for="chkUser" class="cr">개인</label>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-12">
+                            <div class="tab-search">
+                                <div class="input-group">
+                                    <div class="alertmsg-userlist" id="userList">
+                                    </div>
+                                    <a href="#!" class="input-group-text" data-bs-toggle="modal" id="personPop" data-bs-target="#popupArea">
+                                    <i class="bi bi-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control height-auto mt-2" id="message" name="message" rows="6"></textarea>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-primary btn-small lh-100  w-50"  onclick="callSaveModal()">저장</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 예약메시지 -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">예약메시지</h5>
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+               <!--   table  -->
+               <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                  <colgroup>
+                      <col style="width:5%" />
+                      <col style="width:5%" />
+                      <col style="width:20%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:3%" />
+                      <col style="width:7%" />
+                      <col style="width:15%" />
+                      <col style="width:10%" />
+                  </colgroup>
+                  <thead>
+                      <tr>
+                          <th rowspan="2" class="middle">
+                              <div class="form-group mb-0">
+                                  <div class="checkbox checkbox-primary p-0">
+                                      <input type="checkbox" name="chkAll" id="chkAll">
+                                      <label for="chkAll" class="cr mb-0"></label>
+                                  </div>
+                              </div>
+                          </th>
+                          <th rowspan="2" class="middle">NO</th>
+                          <th rowspan="2" class="middle">내용</th>
+                          <th colspan="7" class="middle">주기</th>
+                          <th rowspan="2" class="middle">수신대상</th>
+                          <th rowspan="2" class="middle">수신부서</th>
+                          <th rowspan="2" class="middle">전송시간</th>
+                      </tr>
+                      <tr>
+                          <th>일</th>
+                          <th>월</th>
+                          <th>화</th>
+                          <th>수</th>
+                          <th>목</th>
+                          <th>금</th>
+                          <th>토</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td colspan="14">
+                              <p class="nodata">등록된 데이터가 없습니다</p>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+               </div>
+               <!--   //table  -->
+               <!-- paging_w -->
+               <div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">‹</span>
+                        </a>
+                     </li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">›</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                     </li>
+                  </ul>
+                </nav>
+               </div>
+               <!-- // paging_w -->
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-secondary btn-small lh-100">삭제</button>
+                <button class="btn btn-primary btn-small lh-100 ms-3">등록</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 사용자관리 -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">사용자</h5>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+               <!--   table  -->
+               <div class="table-responsive">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <colgroup>
+                      <col style="width: 5%">
+                      <col style="width: 7%">
+                      <col style="width: 10%">
+                      <col style="width: 10%">
+                      <col style="width: 13%">
+                      <col style="width: 7%">
+                      <col style="width: 12%">
+                      <col style="width: 10%">
+                      <col style="width: 15%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>
+                          <div class="form-group mb-0">
+                            <div class="checkbox checkbox-primary p-0">
+                              <input type="checkbox" name="chkAll" id="chkAll" class="checkAll">
+                              <label for="chkAll" class="cr mb-0"></label>
+                            </div>
+                          </div>
+                        </th>
+                        <th>사용자 ID</th>
+                        <th>성명</th>
+                        <th>사용자 상태</th>
+                        <th>성별</th>
+                        <th>연령</th>
+                        <th>사용자타입</th>
+                        <th>휴대폰</th>
+                        <th>착용 디바이스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <div class="checkbox checkbox-primary p-0">
+                              <input type="hidden" name="userNmHidden" value="사용자1">
+                              <input type="checkbox" name="checkList" id="checkList389" value="389">
+                              <label for="checkList389" class="cr mb-0"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td>389</td>
+                        <td><a href="javascript:selectUpdateView('389');">사용자1</a></td>
+                        <td></td>
+                        <td>남자</td>
+                        <td></td>
+                        <td>일반사용자</td>
+                        <td></td>
+                        <td>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#deviceListPop" onclick="javascript:deviceListPop(389)">스마트 워치 <i class="feather icon-chevron-right"></i></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group mb-0">
+                            <div class="checkbox checkbox-primary p-0">
+                              <input type="hidden" name="userNmHidden" value="사용자2">
+                              <input type="checkbox" name="checkList" id="checkList390" value="390">
+                              <label for="checkList390" class="cr mb-0"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td>390</td>
+                        <td><a href="javascript:selectUpdateView('390');">사용자2</a></td>
+                        <td></td>
+                        <td>남자</td>
+                        <td></td>
+                        <td>일반사용자</td>
+                        <td></td>
+                        <td>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#deviceListPop" onclick="javascript:deviceListPop(390)">스마트 워치 <i class="feather icon-chevron-right"></i></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               </div>
+               <!--   //table  -->
+               <!-- paging_w -->
+               <div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">‹</span>
+                        </a>
+                     </li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">›</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                     </li>
+                  </ul>
+                </nav>
+               </div>
+               <!-- // paging_w -->
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-secondary btn-small lh-100">삭제</button>
+                <button class="btn btn-primary btn-small lh-100 ms-3">등록</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 사용자등록 -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">사용자</h5>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+              <form id="" name="" action="" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="userId" class="form-label">사용자 ID</label>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="userNm" class="form-label">성명</label>
+                      <input type="text" class="form-control mb-3" id="userNm" name="userNm" value="" maxlength="50">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="userType" class="form-label">사용자타입</label>
+                    <select id="userType" name="userType" class="form-select mb-3">
+                      <option value="01">일반사용자</option>
+                      <option value="02">안전관리자</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="deptId" class="form-label">부서</label>
+                    <ul class="form_input_list">
+                      <li class="has_input">
+                        <input type="hidden" id="deptId" name="deptId" value="">
+                        <input type="text" class="form-control mb-3" id="deptNm" name="deptNm" value="">
+                      </li>
+                      <li class="has_btn">
+                        <button type="button" class="btn btn-icon btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#popupArea"><i class="bi bi-search"></i></button>
+                      </li>
+                      <li class="has_btn">
+                        <button type="button" class="btn btn-icon btn-outline-secondary"><i class="bi bi-trash"></i></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">전화번호</label>
+                    <input type="text" class="form-control mb-3" id="phone" name="phone" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="mobile" class="form-label">휴대폰</label>
+                    <input type="text" class="form-control mb-3" id="mobile" name="mobile" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">이메일</label>
+                    <input type="text" class="form-control mb-3" id="email" name="email" value="" maxlength="30" oninput="this.value = this.value.replace(/[^@.a-zA-Z0-9]/g, '').replace(/(\..*)\./g, '');">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="birth" class="form-label">생년월일</label>
+                    <input type="date" class="form-control mb-3" id="birth" name="birth" value="" maxlength="8">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="gender" class="form-label">성별</label>
+                    <select id="gender" name="gender" class="form-control mb-3">
+                      <option value="M">남자</option>
+                      <option value="F">여자</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="userStatus" class="form-label">사용자상태</label>
+                    <select id="userStatus" name="userStatus" class="form-select mb-3">
+                      <option value="">전체</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="addr1" class="form-label">주소1</label>
+                    <input type="text" class="form-control mb-3" id="addr1" name="addr1" value="">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="addr2" class="form-label">주소2</label>
+                    <input type="text" class="form-control mb-3" id="addr2" name="addr2" value="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="diseaseYn" class="form-label">질환여부</label>
+                    <select id="diseaseYn" name="diseaseYn" class="form-select mb-3">
+                      <option value="">전체</option>
+                      <option value="N">미해당</option>
+                      <option value="Y">해당</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="riskWorkerYn" class="form-label">위험작업자 여부</label>
+                    <select id="riskWorkerYn" name="riskWorkerYn" class="form-select mb-3">
+                      <option value="">전체</option>
+                      <option value="N">미해당</option>
+                      <option value="Y">해당</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="sortOrder" class="form-label">정렬순서</label>
+                    <input type="text" class="form-control mb-3" id="sortOrder" name="sortOrder" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '');">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="memo" class="form-label">메모</label>
+                    <input type="text" class="form-control mb-3" id="memo" name="memo" value="">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-secondary btn-small lh-100">돌아가기</button>
+                <button class="btn btn-primary btn-small lh-100 ms-3">저장</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 부서관리 -->
+          <div class="card">
+            <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <select id="" name="" class="form-select biz wd150 mt-2">
+                      <option value="B99997" selected="selected">본사</option>
+                      <option value="B99998" >부산현장</option>
+                    </select>
+                  </div>
+               </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <!-- 1 Level -->
+                <div class="col-xl-3 col-md-6">
+                  <table class="table-default">
+                    <thead>
+                      <tr>
+                        <th>1 Level</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div id="">
+                            <div class="edit-wrap mb-2 btnLevelOpentarget">
+                              <div class="input-group">
+                                <input type="text" class="form-control" value="본부">
+                              </div>
+                              <div class="text-end mt-2">
+                                <button class="btn btn-gray btn-small btnLevelClose">취소</button>
+                                <button class="btn btn-default btn-small">수정</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-center"><button class="btn btn-primary btn-small btnLevelOpen">등록</button></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //1 Level -->
+                <!-- 2 Level -->
+                <div class="col-xl-3 col-md-6">
+                  <table class="table-default">
+                    <thead>
+                      <tr>
+                        <th>2 Level</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div id="">
+                            <div class="edit-wrap mb-2 btnLevelOpentarget">
+                              <div class="input-group">
+                                <input type="text" class="form-control" value="본부">
+                              </div>
+                              <div class="text-end mt-2">
+                                <button class="btn btn-gray btn-small btnLevelClose">취소</button>
+                                <button class="btn btn-default btn-small">수정</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-center"><button class="btn btn-primary btn-small btnLevelOpen">등록</button></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //2 Level -->
+                <!-- 3 Level -->
+                <div class="col-xl-3 col-md-6">
+                  <table class="table-default">
+                    <thead>
+                      <tr>
+                        <th>3 Level</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div id="">
+                            <div class="edit-wrap mb-2 btnLevelOpentarget">
+                              <div class="input-group">
+                                <input type="text" class="form-control" value="본부">
+                              </div>
+                              <div class="text-end mt-2">
+                                <button class="btn btn-gray btn-small btnLevelClose">취소</button>
+                                <button class="btn btn-default btn-small">수정</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-center"><button class="btn btn-primary btn-small btnLevelOpen">등록</button></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //3 Level -->
+                <!-- 4 Level -->
+                <div class="col-xl-3 col-md-6">
+                  <table class="table-default">
+                    <thead>
+                      <tr>
+                        <th>4 Level</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div id="">
+                            <div class="edit-wrap mb-2 btnLevelOpentarget">
+                              <div class="input-group">
+                                <input type="text" class="form-control" value="본부">
+                              </div>
+                              <div class="text-end mt-2">
+                                <button class="btn btn-gray btn-small btnLevelClose">취소</button>
+                                <button class="btn btn-default btn-small">수정</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-center"><button class="btn btn-primary btn-small btnLevelOpen">등록</button></p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //4 Level -->
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+
+  <!-- ======= Popup ======= -->
+  <!-- modal : 안전수칙 -->
+  <div class="modal fade" id="safePop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">안전수칙</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+            <div class="search-area">
+              <form id="" name="" action="">
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <label for="searchUserNmPop" class="form-label">이름</label>
+                      <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      <!-- <input type="text" class="form-control form-control-sm" id="searchUserNmPop" placeholder="이름" value=""> -->
+                    </div>
+                    <div class="col-md-6">
+                      <label for="searchPhonePop" class="form-label">전화번호</label>
+                      <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" value="" maxlength="20" placeholder="전화번호" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      <!-- <input type="text" class="form-control form-control-sm" id="searchMobilePop" placeholder="전화번호" value=""> -->
+                    </div>
+                  </div>
+                  <div class="row justify-content-center mt-1">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-primary w-100" ><i class="bi bi-search"></i> 검색</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="table-responsive user-list">
+                <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                        <tr>
+                            <th>지점</th>
+                            <th>이름</th>
+                            <th>전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">
+                                <p class="nodata">등록된 데이터가 없습니다</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- paging_w -->
+            <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- // paging_w -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal : 사용자 리스트 -->
+  <div class="modal fade" id="popupArea" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">사용자 리스트</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content p-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="searchUserNmPop" class="form-label">이름</label>
+                        <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="searchPhonePop" class="form-label">전화번호</label>
+                        <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" placeholder="전화번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100" ><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                 </form>
+              </div>
+              <div class="table-responsive user-list">
+                 <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                       <tr>
+                          <th>이름</th>
+                          <th>전화번호</th>
+                          <th>선택</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                          <td>사용자1</td>
+                          <td></td>
+                          <td>
+                             <button type="button" class="btn btn-info btn-sm m-0" onclick="javascript:setUserInfo('389', '사용자1')" data-dismiss="modal">선택</button>
+                          </td>
+                       </tr>
+                       <tr>
+                          <td>사용자2</td>
+                          <td></td>
+                          <td>
+                             <button type="button" class="btn btn-info btn-sm m-0" onclick="javascript:setUserInfo('390', '사용자2')" data-dismiss="modal">선택</button>
+                          </td>
+                       </tr>
+                    </tbody>
+                 </table>
+              </div>
+              <!-- paging_w -->
+              <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                          </a>
+                       </li>
+                       <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                       <li class="page-item"><a class="page-link" href="#">2</a></li>
+                       <li class="page-item"><a class="page-link" href="#">3</a></li>
+                       <li class="page-item"><a class="page-link" href="#">4</a></li>
+                       <li class="page-item"><a class="page-link" href="#">5</a></li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                          </a>
+                       </li>
+                       <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          </a>
+                       </li>
+                    </ul>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+           </div>
+            <!-- //사용자 리스트 -->
+            
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //modal : 사용자 리스트 -->
+
+  <!-- modal : 조치완료 입력 -->
+  <div id="popupArea" class="modal fade " tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div id="popupAreaContent">
+          <!-- groupPop start -->
+          <div class="modal-header point">
+            <h5 class="modal-title" id="exampleModalLiveLabel">조치사항 입력</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- <div class="alert alert-danger" role="alert" id="notSaveRsn">
+              저장 불가 사유
+            </div> -->
+            <table class="table popup-table">
+              <colgroup>
+                <col style="width: 30%">
+                <col style="width: auto">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>현장조치사항</th>
+                  <td><textarea class="form-control height-auto" id="infoFieldRemark" rows="5">119호출</textarea></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="mb-1">
+              <button type="button" class="btn btn-rounded btn-outline-primary btn-sm setRemark" id="callPhone"><i class="bi bi-telephone-outbound"></i> 유선통화</button>
+              <button type="button" class="btn btn-rounded btn-outline-danger btn-sm setRemark" id="callSos"><i class="bi bi-headphones"></i> 119호출</button>
+              <button type="button" class="btn btn-rounded btn-outline-warning btn-sm setRemark" id="callMove"><i class="bi bi-person"></i> 현장출동</button>
+              <button type="button" class="btn btn-rounded btn-outline-secondary btn-sm setRemark" id="wrongTouch"><i class="bi bi-x-circle"></i> 오조작</button>
+            </div>
+            <div>
+              <button type="button" class="btn btn-rounded btn-outline-info btn-sm setRemark" id="test"><i class="bi bi-info-circle"></i> 테스트</button>
+            </div>
+            <hr>
+            <div style="text-align: center">
+              <div class="checkbox checkbox-sky d-inline" style="display:inline-block;">
+                <input type="checkbox" id="infoCompleteYn" value="Y" checked="checked">
+                <label for="infoCompleteYn" class="cr">조치완료</label>           
+              </div>
+            </div>
+          </div>
+          <!-- // groupPop end -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="javascript:saveSosPop()" data-bs-dismiss="modal" id="btnSave">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// modal : 조치완료 입력 -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
+</body>
+
+</html>

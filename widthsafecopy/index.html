@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head> 
+        <title>Publishing 목록</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <style type="text/css">
+            /* CSS 리셋 설정 */
+            body,html,
+            header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+            div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+            h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+            img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+            a,label,output,dialog, /* 인라인 요소 */
+            address,blockquote, /* 텍스트 블럭 요소 */
+            p,pre,/* 텍스트 인라인 블럭 요소 */
+            span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+            acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+            map,option,hr,*{border:0;padding:0;margin:0;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+            header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+            applet,basefont,center,dir,font,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+            q,blockquote{quotes:none;content:none}
+            li,menu{list-style:none}
+            table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed} /* 테이블 보더 변경 (겹칩지 않음 separate) */
+            caption{text-align:left}
+            th,td{text-align:left;vertical-align:middle;}
+            address{font-style:normal}
+            label{display:inline-block;*zoom:1}
+            a{text-decoration:none;display:inline-block;*zoom:1} /* 접근성 포커싱을 위해 a요소 속성 변경 */
+            a:hover{text-decoration:underline;color:#1979CA}
+            /* 공통 설정 */
+            html{}
+            html,body{} /* 가로스크롤 시 배경이 잘리는 버그를 없애기 위해 최소사이즈 지정 */
+            body{color:#333;font:normal 12px/1 "Nanum Gothic",Sans-Serif} /* 기본 폰트 지정 */
+            .blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+            .hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+            /* 내용 */
+            #wrap{padding:0 10px;margin:0 auto}
+            #header h1{padding:20px 0;text-align:center;font-size:30px;}
+            #header h1 strong {color:#ff6969;}
+            #header .nav{border-width:3px 0;border-style:solid;border-color:#222;overflow:hidden}
+            #header .nav li{float:left;width:50%;}
+            #header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
+            #header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
+            #header .nav li.on a{color:#fff;background:#222}
+            .wrap_list_table{margin:20px 0 40px 0;border:1px solid #222;}
+            .list_table{line-height:1.3}
+            .list_table tr.line td {border-top:2px solid #000}
+            .list_table th{padding:10px 0;color:#fff;border:1px solid #222;text-align:center;}
+            .list_table th[scope="col"]{background:#4c4c4c;}
+            .list_table th[scope="row"]{color:#fff;font-weight:normal;}
+            .list_table td{height:15px; padding:5px 5px;border:1px solid #e5e5e5;color:#222222;word-break:break-word}
+            .list_table td.t_left{padding-left:10px;text-align:left}
+            .list_table td img{vertical-align:middle}
+            .list_table td a{font-size:12px;}
+            .list_table td a span{height:24px;padding:0 8px;color:#fff;line-height:24px;display:block}
+            .list_table td span.date{background-color:#4f4f4f}
+            .list_table td span.jpg{background-color:#ff8a23}
+            .list_table td span.kwah{background-color:#6f9fd1}
+            .list_table td.line{background:#dddddd;height:1px;padding:0;}
+            .list_table .mid_tfoot{background:#999;}
+            .list_table tfoot{font-weight:bold;color:#fff;background:#4c4c4c;}
+            .list_table tfoot td{color:#fff;border:1px solid #222;}
+            .today {background:#fcead7;font-weight:bold}
+            .today .on {}
+            .fn_date{position: relative;float:left;}
+            .fn_date:after{content: '';display:block;clear:both;}
+            .t_center {text-align:center;}
+            .remark {position:relative;float:right;}
+            .remark span {margin-left:10px;}
+            .remark span:before {content:"-"}
+            .remark:after{content:'';display:block;clear:both}
+            .txt_fin {color:#0058EF !important;}
+            .txt_ing {color:#EF3100 !important;}
+            .txt_add {color:#00BE19 !important;}
+            .txt_wait {color:#666666 !important;}
+            .overlapmenu {background: #cdcdcd}
+            .overlapmenu.del {background: #777777}
+            .part {background: #ffce60;color:#fff;font-weight:bold}
+            .part_carcheck {background: #7bc2ff;color:#fff;font-weight:bold}
+            .part_chat {background: #d1ff60;color:#fff;font-weight:bold}
+            .list_table td h2 > a {padding: 10px 0; font-size:15px}
+        </style>
+        <script src="js/jquery-1.12.3.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+            	$('.list_table tbody th').each(function(i){
+            		$(this).text(i+1);
+            	});
+            
+            	var date=new Date();
+            	var yy = date.getFullYear();
+            	var mm=""+((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+            	var dd=(date.getDate()<10)?'0'+date.getDate():date.getDate();
+            	var today=(yy+'-'+mm+'-'+dd);
+            
+            	//alert( '.' +today)
+            	$('td').each(function(){
+            		var vars=$(this).text();
+            		if(vars==today){
+            			$(this).parent('tr').addClass('today');
+            			$(this).addClass('on')
+            		}
+            	})
+            	// today
+            	function __fn_date() {
+            		var today = new Date(),
+            			weeks = new Array('일', '월', '화', '수', '목', '금', '토');
+            			year = today.getFullYear(), "년",
+            			month = today.getMonth() + 1, "월",
+            			date = today.getDate(), "일",
+            			ymd = year + '.' + month + '.' + date + ' ' + weeks[today.getDay()] + "요일";				
+            		$('.fn_date').append("<span>" + ymd + "</span>");
+            	}__fn_date()
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <h1>Publishing List</h1>
+            </div>
+            <div class="fn_date"></div>
+            <div class="remark">
+                <span class="txt_fin">완료</span>
+                <span class="txt_ing">진행</span>
+                <span class="txt_wait">대기</span>
+                <span>작성자 : </span>
+            </div>
+            <div class="wrap_list_table">
+                <table class="list_table" summary="Publishing 진행사항 입니다.">
+                    <caption class="hidden">Publishing</caption>
+                    <colgroup>
+                        <col style="width:3%" />
+                        <col style="width:10%" />
+                        <col style="width:15%" />
+                        <col style="width:9%" />
+                        <col style="width:10%" />
+                        <col style="width:20%" />
+                        <col style="width:6%" />
+                        <col style="width:auto" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col">No</th>
+                            <th colspan="3" scope="col">페이지명</th>
+                            <th rowspan="2" scope="col">설명</th>
+                            <th rowspan="2" scope="col">파일</th>
+                            <th rowspan="2" scope="col">상태</th>
+                            <th rowspan="2" scope="col">비고</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">P1</th>
+                            <th scope="col">P2</th>
+                            <th scope="col">P3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td class="t_center">모니터링</td>
+                          <td class="t_center">대시보드</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/대시보드.html" target="_blank">html/대시보드.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">실외모니터링</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/실외모니터링.html" target="_blank">html/실외모니터링.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">지도</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">생체모니터링</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/생체모니터링.html" target="_blank">html/생체모니터링.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">달력3개, 검색팝업</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">SOS호출현황및조치</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/SOS호출현황및조치.html" target="_blank">html/SOS호출현황및조치.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">안전수칙팝업, 달력, 팝업3개, 지도보기</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">심박동이상현황및조치</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/심박동이상현황및조치.html" target="_blank">html/심박동이상현황및조치.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">안전수칙팝업, 달력</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">경고알람현황및조치</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/경고알람현황및조치.html" target="_blank">html/경고알람현황및조치.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">안전수칙팝업, 달력</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">구역출입현황</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/구역출입현황.html" target="_blank">html/구역출입현황.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">달력, 검색팝업</td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td class="t_center">디바이스</td>
+                          <td class="t_center">디바이스관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스관리.html" target="_blank">html/디바이스관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">디바이스관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스관리등록.html" target="_blank">html/디바이스관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">디바이스관리리스트상세</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스관리리스트상세.html" target="_blank">html/디바이스관리리스트상세.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>11</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">디바이스매핑</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스매핑.html" target="_blank">html/디바이스매핑.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">탭안에 탭, 팝업</td>
+                        </tr>
+                        <tr>
+                          <td>12</td>
+                          <td class="t_center">&nbsp;</td>
+                          <td class="t_center">디바이스설정</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스설정.html" target="_blank">html/디바이스설정.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">스위치버튼</td>
+                        </tr>
+                        <tr>
+                          <td>13</td>
+                          <td class="t_center">알림설정</td>
+                          <td class="t_center">알림메시지</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/알림메시지.html" target="_blank">html/알림메시지.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">전송팝업</td>
+                        </tr>
+                        <tr>
+                          <td>14</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">예약메시지</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/예약메시지.html" target="_blank">html/예약메시지.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업</td>
+                        </tr>
+                        <tr>
+                          <td>15</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">예약메시지등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/예약메시지등록.html" target="_blank">html/예약메시지등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">전체선택체크박스</td>
+                        </tr>
+                        <tr>
+                          <td>16</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">일정관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/일정관리.html" target="_blank">html/일정관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업</td>
+                        </tr>
+                        <tr>
+                          <td>17</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">일정관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/일정관리등록.html" target="_blank">html/일정관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">부서검색팝업</td>
+                        </tr>
+                        <tr>
+                          <td>18</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">공지사항</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/공지사항.html" target="_blank">html/공지사항.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업</td>
+                        </tr>
+                        <tr>
+                          <td>19</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">공지사항등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/공지사항등록.html" target="_blank">html/공지사항등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동</td>
+                        </tr>
+                        <tr>
+                          <td>20</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">경고알림메시지</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/경고알림메시지.html" target="_blank">html/경고알림메시지.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>21</td>
+                          <td class="t_center">조직관리</td>
+                          <td class="t_center">사용자관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/사용자관리.html" target="_blank">html/사용자관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업, 착용 디바이스팝업</td>
+                        </tr>
+                        <tr>
+                          <td>22</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">사용자관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/사용자관리등록.html" target="_blank">html/사용자관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">부서검색팝업, 달력</td>
+                        </tr>
+                        <tr>
+                          <td>23</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">사용자관리상세</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/사용자관리상세.html" target="_blank">html/사용자관리상세.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">부서검색팝업, 달력</td>
+                        </tr>
+                        <tr>
+                          <td>24</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">부서관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/부서관리.html" target="_blank">html/부서관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록슬라이드, 알림팝업</td>
+                        </tr>
+                        <tr>
+                          <td>25</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">사용자상태관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/사용자상태관리.html" target="_blank">html/사용자상태관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업</td>
+                        </tr>
+                        <tr>
+                          <td>26</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">사용자상태관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/사용자상태관리등록.html" target="_blank">html/사용자상태관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">사용여부 스위치버튼</td>
+                        </tr>
+                        <tr>
+                          <td>27</td>
+                          <td class="t_center">지오펜싱</td>
+                          <td class="t_center">구역관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/구역관리.html" target="_blank">html/구역관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동, 삭제팝업</td>
+                        </tr>
+                        <tr>
+                          <td>28</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">구역관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/구역관리등록.html" target="_blank">html/구역관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">접근허용부서검색팝업, 팝업 탭타이틀, 스위치버튼, 테이블추가, 위치지도</td>
+                        </tr>
+                        <tr>
+                          <td>29</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">비콘관리</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/비콘관리.html" target="_blank">html/비콘관리.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">등록이동</td>
+                        </tr>
+                        <tr>
+                          <td>30</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">비콘관리등록</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/비콘관리.html" target="_blank">html/비콘관리등록.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">스위치버튼</td>
+                        </tr>
+                        <tr>
+                          <td>31</td>
+                          <td class="t_center">시스템 관리</td>
+                          <td class="t_center">디바이스로그</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/디바이스로그.html" target="_blank">html/디바이스로그.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">달력</td>
+                        </tr>
+                        <tr>
+                          <td>32</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">생체정보로그</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/생체정보로그.html" target="_blank">html/생체정보로그.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">달력</td>
+                        </tr>
+                        <tr>
+                          <td>33</td>
+                          <td class="t_center"></td>
+                          <td class="t_center">BLE로그</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/BLE로그.html" target="_blank">html/BLE로그.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">달력</td>
+                        </tr>
+                        <tr>
+                          <td>34</td>
+                          <td class="t_center">로그인</td>
+                          <td class="t_center"></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/로그인.html" target="_blank">html/로그인.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>35</td>
+                          <td class="t_center">회원가입</td>
+                          <td class="t_center"></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/회원가입.html" target="_blank">html/회원가입.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>36</td>
+                          <td class="t_center">에러페이지404.html</td>
+                          <td class="t_center"></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/에러페이지404.html.html" target="_blank">html/에러페이지404.html.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td>37</td>
+                          <td class="t_center">Blank Page</td>
+                          <td class="t_center"></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="html/__templateBlank.html" target="_blank">html/__templateBlank.html</a></td>
+                          <td class="t_center txt_fin">완료</td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="t_center"></td>
+                          <td class="t_center"></td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td class=""><a href="#" target="_blank"></a></td>
+                          <td class="t_center txt_wait"></td>
+                          <td class="t_center">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/개인모니터링.html" class="active">
+              <i class="bi bi-circle"></i><span>개인모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/모니터링현황.html">
+              <i class="bi bi-circle"></i><span>모니터링현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스현황.html">
+              <i class="bi bi-circle"></i><span>디바이스 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>조직</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/그룹관리.html">
+              <i class="bi bi-circle"></i><span>그룹관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/모니터링실적.html">
+              <i class="bi bi-circle"></i><span>모니터링 실적</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/페이징설정.html">
+              <i class="bi bi-circle"></i><span>페이징 설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/보안설정.html">
+              <i class="bi bi-circle"></i><span>보안설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>개인 모니터링</h1>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-body">              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">그룹</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select" data-bs-toggle="modal" data-bs-target="#biggroupSelectPop">
+                            <option value="" selected="selected">그룹선택</option>
+                            <option value="" >그룹</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">대상</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select" data-bs-toggle="modal" data-bs-target="#midgroupSelectPop">
+                            <option value="" selected="selected">대상선택</option>
+                            <option value="" >대상</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <!--  -->
+                    </div>
+                  </div>
+                  <!-- 검색두줄 -->
+                  <div class="row">
+                    <div class="col-sm-8 mb-3">
+                      <div class="row">
+                        <div class="col-sm-2">기간</div>
+                        <div class="col-sm-5 px-1 mb-2">
+                          <input type="text" id="searchStartDt" name="searchStartDt" class="form-control" placeholder="시작일" value="" maxlength="10" >
+                        </div>
+                        <div class="col-sm-5 px-1 mb-2">
+                          <input type="text" id="searchEndDt" name="searchEndDt" class="form-control" placeholder="종료일" value="" maxlength="10" >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 mb-3">
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">오늘</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">이번주</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">이번달</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--// 검색두줄 -->
+
+                  <div class="row">
+                    <div class="col text-center">
+                      <button class="btn btn-primary w-50"><span class="bi bi-search me-1"></span>검색</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+
+          <div class="mt-5 mb-4">
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-primary btn-small lh-100  mr-4" ><i class="bi bi-file-earmark-arrow-down"></i> 전체 다운로드</button>
+            </div>
+          </div>
+
+          <div class="row responsive-board">
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>심박수</h5>
+                        <div class="btn-group card-option">
+                          <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- <div id="noDataHrm" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div> -->
+                        <!-- Line Chart -->
+                        <div id="lineChart"></div>
+
+                        <script>
+                          document.addEventListener("DOMContentLoaded", () => {
+                            new ApexCharts(document.querySelector("#lineChart"), {
+                              series: [{
+                                name: "Desktops",
+                                data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                              }],
+                              chart: {
+                                height: 350,
+                                type: 'line',
+                                zoom: {
+                                  enabled: false
+                                }
+                              },
+                              dataLabels: {
+                                enabled: false
+                              },
+                              stroke: {
+                                curve: 'straight'
+                              },
+                              grid: {
+                                row: {
+                                  colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                  opacity: 0.5
+                                },
+                              },
+                              xaxis: {
+                                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                              }
+                            }).render();
+                          });
+                        </script>
+                        <!-- End Line Chart -->
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>산소포화도</h5>
+                        <div class="btn-group card-option">
+                          <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>                            
+                        </div>
+                    </div>
+                    <div class="card-body">                        
+                        <!-- <div id="noDataHrm" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div> -->
+                        <!-- Line Chart -->
+                        <div id="lineChart2"></div>
+
+                        <script>
+                          document.addEventListener("DOMContentLoaded", () => {
+                            new ApexCharts(document.querySelector("#lineChart2"), {
+                              series: [{
+                                name: "Desktops",
+                                data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                              }],
+                              chart: {
+                                height: 350,
+                                type: 'line',
+                                zoom: {
+                                  enabled: false
+                                }
+                              },
+                              dataLabels: {
+                                enabled: false
+                              },
+                              stroke: {
+                                curve: 'straight'
+                              },
+                              grid: {
+                                row: {
+                                  colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                  opacity: 0.5
+                                },
+                              },
+                              xaxis: {
+                                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                              }
+                            }).render();
+                          });
+                        </script>
+                        <!-- End Line Chart -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>혈압</h5>
+                        <div class="btn-group card-option">
+                          <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                      <!-- Line Chart -->
+                      <div id="lineChart3"></div>
+
+                      <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          new ApexCharts(document.querySelector("#lineChart3"), {
+                            series: [{
+                              name: "Desktops",
+                              data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                            }],
+                            chart: {
+                              height: 350,
+                              type: 'line',
+                              zoom: {
+                                enabled: false
+                              }
+                            },
+                            dataLabels: {
+                              enabled: false
+                            },
+                            stroke: {
+                              curve: 'straight'
+                            },
+                            grid: {
+                              row: {
+                                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                opacity: 0.5
+                              },
+                            },
+                            xaxis: {
+                              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                            }
+                          }).render();
+                        });
+                      </script>
+                      <!-- End Line Chart -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>체온</h5>
+                        <div class="btn-group card-option">
+                          <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                      <!-- Line Chart -->
+                      <div id="lineChart4"></div>
+
+                      <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          new ApexCharts(document.querySelector("#lineChart4"), {
+                            series: [{
+                              name: "Desktops",
+                              data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                            }],
+                            chart: {
+                              height: 350,
+                              type: 'line',
+                              zoom: {
+                                enabled: false
+                              }
+                            },
+                            dataLabels: {
+                              enabled: false
+                            },
+                            stroke: {
+                              curve: 'straight'
+                            },
+                            grid: {
+                              row: {
+                                colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                opacity: 0.5
+                              },
+                            },
+                            xaxis: {
+                              categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                            }
+                          }).render();
+                        });
+                      </script>
+                      <!-- End Line Chart -->
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <div class="d-flex justify-content-center">
+              <button class="btn btn-primary btn-small lh-100  mr-4" ><i class="bi bi-file-earmark-arrow-down"></i> 전체 다운로드</button>
+            </div>
+          </div>
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- Modal : 그룹 팝업 -->
+  <div id="biggroupSelectPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="popupAreaContent2">
+            <!-- groupPop start -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLiveLabel">그룹</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="groupselecttree">
+                <li>
+                  <input type="checkbox" id="root">
+                  <label for="root">최고그룹</label>
+                  <ul>
+                    <li>
+                      <a href="#none">대그룹1</a>
+                      <ul>
+                        <li>
+                          <a class="bi bi-folder" href="#none">중그룹1</a>
+                          <ul>
+                            <li><a class="bi bi-folder" href="#none">소그룹1</a></li>
+                            <li><a href="#none">소그룹2</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#none">중그룹2</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="node3">
+                      <label for="node3">대그룹2</label>
+                      <ul>
+                        <li>
+                          <a class="bi bi-folder" href="#none">중그룹1</a>
+                          <ul>
+                            <li><a class="bi bi-folder" href="#none">소그룹1</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary mr-1" >선택</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 대상 팝업 -->
+  <div id="midgroupSelectPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">사용자 리스트</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content p-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="searchUserNmPop" class="form-label">이름</label>
+                        <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchadnumPop" class="form-label">관리번호</label>
+                        <input type="text" class="form-control mb-3" id="searchadnumPop" name="phone" placeholder="관리번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchPhonePop" class="form-label">전화번호</label>
+                        <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" placeholder="전화번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100"><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="table-responsive user-list">
+                  <table class="table table-hover mt-4 text-center border-top">
+                    <thead>
+                        <tr>
+                          <th>관리번호</th>
+                          <th>이름</th>
+                          <th>전화번호</th>
+                          <th>등록일</th>
+                          <th>선택</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>asd123</td>
+                          <td>김계정</td>
+                          <td>0000000000</td>
+                          <td>2023.02.22</td>
+                          <td>
+                              <button type="button" class="btn btn-info btn-sm m-0" data-dismiss="modal">선택</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>asd123</td>
+                          <td>김계정</td>
+                          <td>0000000000</td>
+                          <td>2023.02.22</td>
+                          <td>
+                              <button type="button" class="btn btn-info btn-sm m-0" data-dismiss="modal">선택</button>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <!-- paging_w -->
+              <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                          </a>
+                        </li>
+                    </ul>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+            </div>
+            <!-- //사용자 리스트 -->
+            
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-primary">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
+
+</body>
+
+</html>
