@@ -91,7 +91,7 @@
         <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../html/대시보드.html">
               <i class="bi bi-circle"></i><span>대시보드</span>
@@ -129,17 +129,17 @@
       </li><!-- End 디바이스 메뉴 -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link active" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-calendar-check"></i><span>조직</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="조직-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="조직-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../html/사용자관리.html">
               <i class="bi bi-circle"></i><span>사용자관리</span>
             </a>
           </li>
           <li>
-            <a href="../html/그룹관리.html">
+            <a href="../html/그룹관리.html" class="active">
               <i class="bi bi-circle"></i><span>그룹관리</span>
             </a>
           </li>
@@ -177,7 +177,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="pagetitle">
-          <h1>타이틀타이틀</h1>
+          <h1>그룹관리</h1>
         </div><!-- End Page Title -->
       </div>
     </div>
@@ -186,7 +186,105 @@
       <div class="row">
         <div class="col-lg-12">
           <!-- content Area -->
-          
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                    <ul class="groupselecttree">
+                      <li>
+                        <input type="checkbox" id="root">
+                        <label for="root">최고그룹</label>
+                        <ul>
+                          <li>
+                            <input type="checkbox" id="node1">
+                            <label for="node1">대그룹1</label>
+                            <ul>
+                              <li>
+                                <input type="checkbox" id="node1-1">
+                                <label for="node1-1">중그룹1-1</label>
+                                <ul>
+                                  <li><a class="bi bi-folder" href="#none">소그룹1</a></li>
+                                  <li><a href="#none">소그룹2</a></li>
+                                </ul>
+                              </li>
+                              <li>
+                                <input type="checkbox" id="node1-2">
+                                <label for="node1-2">중그룹1-2</label>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            <input type="checkbox" id="node2">
+                            <label for="node2">대그룹2</label>
+                            <ul>
+                              <li>
+                                <input type="checkbox" id="node2-1">
+                                <label for="node2-1">중그룹2-1</label>
+                                <ul>
+                                  <li><a class="bi bi-folder" href="#none">소그룹1</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <!--   table  -->
+                    <div class="table-responsive">
+                      <table class="table table-hover minwid100 tbl-type1 table-bordered">
+                        <colgroup>
+                          <col style="width: 30%">
+                          <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">상위그룹</th>
+                            <td>최고그룹</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">이름</th>
+                            <td><input type="text" value="대그룹1" ></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">사용 여부</th>
+                            <td>
+                              <div class="form-group">
+                                <div class="col-sm-12 px-1 mt-2">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefaultUsed" id="flexRadioDefaultUsed1" checked>
+                                      <label class="form-check-label" for="flexRadioDefaultUsed1">
+                                        사용
+                                      </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="flexRadioDefaultUsed" id="flexRadioDefaultUsed2" >
+                                      <label class="form-check-label" for="flexRadioDefaultUsed2">
+                                        미사용
+                                      </label>
+                                    </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">설명</th>
+                            <td><textarea class="form-control height-auto mt-2" id="" name="" rows="6"></textarea></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!--   //table  -->
+                    
+                    <div class="d-flex justify-content-center">
+                      <button class="btn btn-info btn-small lh-100 me-2">수정</button>
+                      <button class="btn btn-gray btn-small lh-100">취소</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!--// content Area -->
         </div>
       </div>

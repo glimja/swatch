@@ -1705,6 +1705,7 @@ input[type=checkbox] {width:20px; height:20px; accent-color:#3386ff; vertical-al
 h5 {margin: .5rem 0 0 .5rem;}
 .table {min-width:1100px; font-size: 14px; --bs-table-hover-bg : rgb(0 116 255 / 5%);}
 .modal .table {min-width:320px}
+.table.minwid100 {min-width: 100%}
 /* .table-responsive::-webkit-scrollbar {display:none} */
 .table th, .table td {text-align: center;vertical-align: middle;}
 .nodata {margin-top: 1rem;}
@@ -1713,7 +1714,7 @@ h5 {margin: .5rem 0 0 .5rem;}
 .form-select.biz, .wd150 {width: 150px;}
 .wd70, .input-group>.form-control.wd70, .input-group>.form-floating.wd70, .input-group>.form-select.wd70 {width: 70px;}
 .wd140, .input-group>.form-control.wd140, .input-group>.form-floating.wd140, .input-group>.form-select.wd140 {width: 140px;}
-.btn-small {padding: 0 40px;}
+.btn-small {padding: 0 20px;}
 .table-row th, .table-row td {border-top: 1px solid #c6c9cf;border-bottom: 1px solid #c6c9cf;}
 .table-row th {background: #ecedef;color: #393c40;vertical-align: middle;padding: 0.65rem 2rem;}
 .table-row td {padding: 0.65rem 0.75rem;}
@@ -2019,3 +2020,17 @@ a.lt_text {color:#0d6efd}
   content:'\f126';
   font-family: bootstrap-icons !important;
 }
+.table.tbl-type1 th {background-color: #f8f9fa;}
+.table.tbl-type1 td {text-align: left;}
+/* 대그룹 */
+.groupselecttree > li > ul li > label,
+.groupselecttree > li > ul li > a {border: 0px solid #0f0;}
+/* 중그룹 */
+.groupselecttree > li > ul li > ul li > label,
+.groupselecttree > li > ul li > ul li > a {border: 0px solid #000;}
+/* 소그룹 */
+.groupselecttree > li > ul li > ul li > ul li > label,
+.groupselecttree > li > ul li > ul li > ul li a {border: 0px solid #f00;}
+
+.groupselecttree > li > ul li > ul li > label:before,
+.groupselecttree > li > ul li > ul li > a:before {content: '\f132';}

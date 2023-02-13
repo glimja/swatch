@@ -91,7 +91,7 @@
         <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../html/대시보드.html">
               <i class="bi bi-circle"></i><span>대시보드</span>
@@ -147,12 +147,12 @@
       </li><!-- End 조직 메뉴 -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#설정-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link active" data-bs-target="#설정-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-sliders"></i><span>설정</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="설정-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="설정-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../html/모니터링설정.html">
+            <a href="../html/모니터링설정.html" class="active">
               <i class="bi bi-circle"></i><span>모니터링 설정</span>
             </a>
           </li>
@@ -177,7 +177,7 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="pagetitle">
-          <h1>타이틀타이틀</h1>
+          <h1>모니터링 설정</h1>
         </div><!-- End Page Title -->
       </div>
     </div>
@@ -186,7 +186,43 @@
       <div class="row">
         <div class="col-lg-12">
           <!-- content Area -->
-          
+          <div class="card">
+            <div class="card-body">
+              <!--   table  -->
+              <div class="table-responsive">
+                <table class="table table-hover minwid100 tbl-type1 table-bordered">
+                  <colgroup>
+                    <col style="width: 30%">
+                    <col style="width: auto">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">대시보드 자동 갱신</th>
+                      <td><input type="text" value="5" > sec</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">심박수 정상범위</th>
+                      <td><input type="text" value="" ><span class="mx-1">~</span><input type="text" value="" > bpm</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">혈압 정상범위</th>
+                      <td><input type="text" value="" ><span class="mx-1">~</span><input type="text" value="" > mmHg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">디바이스 OFF 판단 시간</th>
+                      <td><input type="text" value="15" > sec</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--   //table  -->
+              
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-info btn-small lh-100 me-2">수정</button>
+                <button class="btn btn-gray btn-small lh-100">취소</button>
+              </div>
+            </div>
+          </div>
           <!--// content Area -->
         </div>
       </div>
