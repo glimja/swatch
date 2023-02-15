@@ -60,7 +60,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="사용자정보변경.html">
                 <i class="bi bi-gear"></i>
                 <span>회원 설정</span>
               </a>
@@ -69,7 +69,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="로그인.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>로그아웃</span>
               </a>
@@ -91,7 +91,7 @@
         <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="../html/대시보드.html">
               <i class="bi bi-circle"></i><span>대시보드</span>
@@ -111,12 +111,12 @@
       </li><!-- End 모니터링 메뉴 -->
 
       <li class="nav-item">
-        <a class="nav-link active" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="디바이스-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../html/디바이스관리.html" class="active">
+            <a href="../html/디바이스관리.html">
               <i class="bi bi-circle"></i><span>디바이스 관리</span>
             </a>
           </li>
@@ -129,12 +129,12 @@
       </li><!-- End 디바이스 메뉴 -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
+        <a class="nav-link active" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-calendar-check"></i><span>조직</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-        <ul id="조직-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <ul id="조직-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../html/사용자관리.html">
+            <a href="../html/사용자관리.html" class="active">
               <i class="bi bi-circle"></i><span>사용자관리</span>
             </a>
           </li>
@@ -199,7 +199,7 @@
             <div class="card-body">
 
               <div class="row">
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="" class="col-lg-4 col-sm-12 col-form-label lg-text-center">그룹</label>
                     <div class="col-sm-12 px-1">
                       <div class="col-auto me-4">
@@ -207,7 +207,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">유형</label>
                     <div class="col-sm-12 px-1 mt-2">
                         <div class="form-check form-check-inline">
@@ -224,7 +224,7 @@
                         </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">관리번호</label>
                     <ul class="form_input_list mt-2">
                       <li class="has_input">
@@ -232,52 +232,54 @@
                       </li>
                     </ul>  
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">비밀번호</label>
-                    <ul class="form_input_list mt-2">
+                    <ul class="form_input_list mt-2 mb-0">
                       <li class="">
                           <input type="text" class="form-control form-control-lg mb-3" id="" name="" value="*************" readonly>
                       </li>
                       <li class="">
-                        <button type="button" class="btn btn-gray btn-small ms-2" >비밀번호 변경</button>
+                        <button type="button" class="btn btn-gray btn-small ms-2" data-bs-toggle="modal" data-bs-target="#modifypasswordPop">비밀번호 변경</button>
                       </li>
                       <li class="">
                         <button type="button" class="btn btn-gray btn-small ms-2" >비밀번호 제거</button>
                       </li>
                     </ul>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">이름</label>
                     <input type="text" class="form-control form-control-lg mt-2" id="" name="" value="아무개">
                   </div>
-                  <div class="row mb-3">
-                    <label for="" class="mb-2">전화번호</label>
-                    <div class="col">
-                      <select id="" name="" class="form-select">
-                        <option value="01" selected="selected">010</option>
-                        <option value="02"></option>
-                      </select>
-                    </div>
-                    <div class="col">
-                      <input type="number" class="form-control" id="">
-                    </div>
-                    <div class="col">
-                      <input type="number" class="form-control" id="">
+                  <div class="form-group border-bottom pb-3 mb-3">
+                    <div class="row">
+                      <label for="" class="mb-2">전화번호</label>
+                      <div class="col">
+                        <select id="" name="" class="form-select">
+                          <option value="01" selected="selected">010</option>
+                          <option value="02"></option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <input type="number" class="form-control" id="">
+                      </div>
+                      <div class="col">
+                        <input type="number" class="form-control" id="">
+                      </div>
                     </div>
                   </div>
-                  <div class="mb-3 row">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
                     </div>
                   </div>
-                  <div class="mb-3 row">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
                       <input type="password" class="form-control" id="inputPassword">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="" class="mb-2">긴급연락망</label>
                     <div class="row">
                       <label for="" class="col-sm-2 col-form-label">이름</label>
@@ -301,13 +303,13 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-center mt-3">
-                      <button type="button" class="btn btn-gray btn-small ms-2" ><i class="bi bi-plus me-1"></i>추가</button>
+                      <button type="button" class="btn btn-gray btn-small ms-2 addTblObjAdd" ><i class="bi bi-plus me-1"></i>추가</button>
                     </div>                    
                   </div>
                   <!-- 추가 -->
                   <!--   table  -->
                   <div class="table-responsive">
-                    <table class="table table-striped table-hover minwid100">
+                    <table class="table table-striped table-hover minwid100 tbldeladdTarget">
                       <colgroup>
                         <col style="width: 10%">
                         <col style="width: 30%">
@@ -319,20 +321,20 @@
                           <th scope="row">1</th>
                           <td>이름</td>
                           <td>0000000000</td>
-                          <td><button type="button" class="btn btn-outline-danger btn-sm">삭제</button></td>
+                          <td><button type="button" class="btn btn-outline-danger btn-sm addTblObjDel">삭제</button></td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
                           <td>이름</td>
                           <td>0000000000</td>
-                          <td><button type="button" class="btn btn-outline-danger btn-sm">삭제</button></td>
+                          <td><button type="button" class="btn btn-outline-danger btn-sm addTblObjDel">삭제</button></td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                   <!--   //table  -->
                   
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">성별</label>
                     <div class="col-sm-12 px-1 mt-2">
                         <div class="form-check form-check-inline">
@@ -359,7 +361,7 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">혈액형</label>
                     <div class="col-sm-12 px-1 mt-2">
                         <div class="form-check form-check-inline">
@@ -398,7 +400,7 @@
                     </div>
                   </div>
                   
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">생년월일</label>
                     <div class="col-sm-12 px-1 mt-2">
                       <div class="row">
@@ -417,7 +419,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                       <div class="col-sm-12 px-1 mt-2">
                           <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="flexRadioDefaultmonth" id="flexRadioDefaultmonth1" checked>
@@ -434,7 +436,7 @@
                       </div>
                   </div>
                   
-                  <div class="form-group">
+                  <div class="form-group border-bottom pb-3 mb-3">
                     <label for="">메모</label>
                     <textarea class="form-control height-auto mt-2" id="" name="" rows="6"></textarea>
                   </div>
@@ -478,6 +480,48 @@
     </div>
   </div>
 
+  <!-- Modal : 비밀번호 변경 팝업 -->
+  <div id="modifypasswordPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="">
+            <!-- groupPop start -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLiveLabel">비밀번호 변경</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="row g-3 needs-validation " novalidate>
+                <div class="col-12">
+                  <label for="currentPassword" class="form-label">현재 비밀번호</label>
+                  <div class="input-group has-validation">
+                    <input type="text" name="currentPassword" class="form-control" id="currentPassword" required placeholder="현재 비밀번호">
+                    <div class="invalid-feedback">현재 비밀번호와 일치하지 않습니다.</div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="newPassword" class="form-label">새 비밀번호</label>
+                  <input type="password" name="newPassword" class="form-control" id="newPassword" required placeholder="새 비밀번호">
+                  <div class="invalid-feedback">비밀번호를 확인해주세요.</div>
+                </div>
+
+                <div class="col-12">
+                  <label for="newPasswordconfirm" class="form-label">새 비밀번호 확인</label>
+                  <input type="password" name="newPasswordconfirm" class="form-control" id="newPasswordconfirm" required placeholder="새 비밀번호 확인">
+                  <div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
+                </div>
+                <div class="col-12 text-center">
+                  <button class="btn btn-primary w-50" type="submit">비밀번호 변경</button>
+                </div>
+              </form>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
   <!-- ======= Footer ======= -->
   <footer id="" class="footer">
     <div class="copyright">
@@ -505,6 +549,28 @@
     })
   </script>
 
+  <script>
+    $(function(){
+      fn__addTblObjAdd();
+      function fn__addTblObjAdd(){
+        var $target = $(".addTblObjAdd");
+
+        $target.on("click", function(){
+          console.log('Add')
+        })
+      }
+
+      fn__addTblObjDel();
+      function fn__addTblObjDel(){
+        var $target = $(".addTblObjDel");
+
+        $target.on("click", function(){
+          console.log('Del')
+        })
+
+      }
+    });
+  </script>
 </body>
 
 </html>

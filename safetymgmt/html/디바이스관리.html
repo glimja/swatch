@@ -60,7 +60,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="사용자정보변경.html">
                 <i class="bi bi-gear"></i>
                 <span>회원 설정</span>
               </a>
@@ -69,7 +69,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="로그인.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>로그아웃</span>
               </a>
@@ -189,11 +189,11 @@
           <div class="card">
             <div class="card-body">              
               <form id="" name="" action="" method="">
-                <div class="container">
+                <div class="">
                   <div class="row">
                     <div class="col-sm mb-3">
                       <div class="row">
-                        <label for="" class="col-sm-4 col-form-label">그룹</label>
+                        <label for="" class="col-sm-3 col-form-label">그룹</label>
                         <div class="col-sm-8 px-1">
                           <select id="" name="" class="form-select" data-bs-toggle="modal" data-bs-target="#biggroupSelectPop">
                             <option value="" selected="selected">그룹선택</option>
@@ -204,7 +204,7 @@
                     </div>
                     <div class="col-sm mb-3">
                       <div class="row">
-                        <label for="" class="col-sm-4 col-form-label">유형</label>
+                        <label for="" class="col-sm-3 col-form-label">유형</label>
                         <div class="col-sm-8 px-1">
                           <select id="" name="" class="form-select">
                             <option value="" selected="selected">선택</option>
@@ -215,8 +215,20 @@
                     </div>
                     <div class="col-sm mb-3">
                       <div class="row">
-                        <label for="" class="col-lg-4 col-sm-12 col-form-label">사용자</label>
-                        <div class="col-lg-8 col-sm-12 px-1">
+                        <label for="" class="col-sm-3 col-form-label">사용 여부</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select">
+                            <option value="" selected="selected">선택</option>
+                            <option value="" >사용</option>
+                            <option value="" >미사용</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">사용자</label>
+                        <div class="col-sm-8 px-1">
                           <input type="text" class="form-control" id="" name="" value="">
                         </div>
                       </div>
@@ -298,10 +310,10 @@
                       <td class="text-end">
                         사용자이름 (배포일) 
                         <button type="button" class="btn btn-warning btn-sm mx-1">회수</button>
-                        <button type="button" class="btn btn-default btn-sm">내역</button>
+                        <button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#deployDeviceListPop">내역</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스수정.html'">수정</button>
+                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스관리수정.html'">수정</button>
                         <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
                       </td>
                     </tr>
@@ -321,10 +333,10 @@
                       <td>2023-02-06 13:18:39</td>
                       <td>사용</td>
                       <td class="text-end">
-                        <button type="button" class="btn btn-default btn-sm">내역</button>
+                        <button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#deployDeviceListPop">내역</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스수정.html'">수정</button>
+                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스관리수정.html'">수정</button>
                         <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
                       </td>
                     </tr>
@@ -344,11 +356,11 @@
                       <td>2023-02-06 13:18:39</td>
                       <td>사용</td>
                       <td class="text-end">
-                        <button type="button" class="btn btn-default btn-sm mx-1">배포</button>
-                        <button type="button" class="btn btn-default btn-sm">내역</button>
+                        <button type="button" class="btn btn-default btn-sm mx-1" data-bs-toggle="modal" data-bs-target="#deployDevicePop">배포</button>
+                        <button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#deployDeviceListPop">내역</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스수정.html'">수정</button>
+                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스관리수정.html'">수정</button>
                         <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
                       </td>
                     </tr>
@@ -370,10 +382,10 @@
                       <td class="text-end">
                         사용자이름 (배포일) 
                         <button type="button" class="btn btn-warning btn-sm mx-1">회수</button>
-                        <button type="button" class="btn btn-default btn-sm">내역</button>
+                        <button type="button" class="btn btn-default btn-sm" data-bs-toggle="modal" data-bs-target="#deployDeviceListPop">내역</button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스수정.html'">수정</button>
+                        <button type="button" class="btn btn-info btn-sm me-1" onclick="location.href='디바이스관리수정.html'">수정</button>
                         <button type="button" class="btn btn-outline-danger btn-sm">삭제</button>
                       </td>
                     </tr>
@@ -384,7 +396,7 @@
               <div class="my-4">
                 <div class="d-flex justify-content-center">
                   <button class="btn btn-danger btn-small lh-100 me-1">삭제</button>
-                  <button class="btn btn-primary btn-small lh-100" onclick="location.href='디바이스추가.html'">추가</button>
+                  <button class="btn btn-primary btn-small lh-100" onclick="location.href='디바이스관리추가.html'">추가</button>
                 </div>
               </div>
                <!-- paging_w -->
@@ -447,6 +459,191 @@
             <!-- // groupPop end -->
           </div>
         </div>
+    </div>
+  </div>
+
+  <!-- Modal : 배포 팝업 -->
+  <div id="deployDevicePop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">스마트워치(asd1234 / qwe123) 배포</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content p-0" id="">
+            <div class="tab-pane fade show active" id="" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="searchUserNmPop" class="form-label">이름</label>
+                        <input type="text" class="form-control mb-3" id="searchUserNmPop" placeholder="이름" value="">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchadnumPop" class="form-label">관리번호</label>
+                        <input type="text" class="form-control mb-3" id="searchadnumPop" name="phone" placeholder="관리번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchPhonePop" class="form-label">전화번호</label>
+                        <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" placeholder="전화번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100"><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="table-responsive user-list">
+                  <table class="table table-hover table-striped mt-4 text-center border-top minwid400">
+                    <thead>
+                        <tr>
+                          <th scope="col">관리번호</th>
+                          <th scope="col">이름</th>
+                          <th scope="col">전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>asd123</td>
+                          <td>김계정</td>
+                          <td>0000000000</td>
+                        </tr>
+                        <tr>
+                          <td>asd123</td>
+                          <td>김계정</td>
+                          <td>0000000000</td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <!-- paging_w -->
+              <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                          </a>
+                        </li>
+                    </ul>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+              <h5 class="py-2 mt-4">배포 사유</h5>
+              <textarea name="" id="" cols="30" rows="10" class="w-100"></textarea>
+            </div>            
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">배포</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal : 배포 팝업 -->
+  <div id="deployDeviceListPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">스마트워치(asd1234 / qwe123) 배포</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!--   table  -->
+            <div class="table-responsive">
+                <table class="table table-hover table-striped text-center border-top minwid600">
+                  <thead>
+                      <tr>
+                        <th scope="col">배포일시</th>
+                        <th scope="col">회수일시</th>
+                        <th scope="col">사용자</th>
+                        <th scope="col">배포 사유</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>2023-02-07 13:02:30</td>
+                        <td>2023-02-06 17:02:30</td>
+                        <td>이름(관리번호)</td>
+                        <td>공장1 작업</td>
+                      </tr>
+                      <tr>
+                        <td>2023-02-07 13:02:30</td>
+                        <td>2023-02-06 17:02:30</td>
+                        <td>이름(관리번호)</td>
+                        <td>공장1 작업</td>
+                      </tr>
+                      <tr>
+                        <td>2023-02-07 13:02:30</td>
+                        <td>2023-02-06 17:02:30</td>
+                        <td>이름(관리번호)</td>
+                        <td>공장1 작업</td>
+                      </tr>
+                  </tbody>
+                </table>
+            </div>
+            <!-- paging_w -->
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">‹</span>
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">›</span>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+            <!-- // paging_w -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+        </div>
+      </div>
     </div>
   </div>
 

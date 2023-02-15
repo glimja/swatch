@@ -101,7 +101,7 @@ h6 {
 /* Dropdown menus */
 .dropdown-menu {
   border-radius: 4px;
-  padding: 10px 0;margin-top: 70px;
+  padding: 10px ;margin-top: 70px;
   -webkit-animation-name: dropdown-animate;
   animation-name: dropdown-animate;
   -webkit-animation-duration: 0.2s;
@@ -1706,6 +1706,9 @@ h5 {margin: .5rem 0 0 .5rem;}
 .table {min-width:1100px; font-size: 14px; --bs-table-hover-bg : rgb(0 116 255 / 5%);}
 .modal .table {min-width:320px}
 .table.minwid100 {min-width: 100%}
+.table.minwid400 {min-width: 400px}
+.table.minwid500 {min-width: 500px}
+.table.minwid600 {min-width: 600px}
 /* .table-responsive::-webkit-scrollbar {display:none} */
 .table th, .table td {text-align: center;vertical-align: middle;}
 .nodata {margin-top: 1rem;}
@@ -2034,3 +2037,7 @@ a.lt_text {color:#0d6efd}
 
 .groupselecttree > li > ul li > ul li > label:before,
 .groupselecttree > li > ul li > ul li > a:before {content: '\f132';}
+
+@media (min-width: 1200px) {
+  .modal-dialog.mw-1200 {max-width:1200px}
+}

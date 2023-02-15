@@ -60,7 +60,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="../users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="사용자정보변경.html">
                 <i class="bi bi-gear"></i>
                 <span>회원 설정</span>
               </a>
@@ -69,7 +69,7 @@
               <hr class="dropdown-divider">
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="로그인.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>로그아웃</span>
               </a>
@@ -176,7 +176,7 @@
   <section id="" class="main">
     <div class="row">
       <div class="col-sm-6">
-        <div class="pagetitle mb-0">
+        <div class="pagetitle mb-3">
           <h1>대시보드</h1>
         </div>
       </div>
@@ -186,6 +186,78 @@
     </div>
 
     <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">위험 알림 현황</h5>
+
+              <!-- Bar Chart -->
+              <div id="barChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#barChart"), {
+                    series: [{
+                      data: [1, 5, 10, 2, 3]
+                    }],
+                    chart: {
+                      type: 'bar',
+                      height: 350
+                    },
+                    plotOptions: {
+                      bar: {
+                        borderRadius: 4,
+                        horizontal: false,
+                      }
+                    },
+                    dataLabels: {
+                      enabled: false
+                    },
+                    xaxis: {
+                      categories: [
+                        "SOS", "심박동", "혈압", "산소포화도", "체온이상"
+                      ],
+                    }
+                  }).render();
+                });
+              </script>
+              <!-- End Bar Chart -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">위험 알림 현황</h5>
+
+              <!-- Pie Chart -->
+              <div id="pieChart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#pieChart"), {
+                    series: [1, 5, 10, 2, 3],
+                    chart: {
+                      height: 350,
+                      type: 'pie',
+                      toolbar: {
+                        show: true
+                      }
+                    },
+                    labels: ["SOS", "심박동", "혈압", "산소포화도", "체온이상"]
+                  }).render();
+                });
+              </script>
+              <!-- End Pie Chart -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-12 col-lg-6">
           <div class="card">
@@ -412,350 +484,12 @@
   <script src="../assets/js/jquery-1.12.3.min.js"></script>
 	<script src="../assets/js/jquery-ui.min.js"></script>
 
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>
 
 
-  <script>
-    $(document).ready(function () {
-      
-      setTime();
-      
-      
-        // biz combo box Start
-        $("#searchBizId").change(function(e)  {
-            selectList('1');
-            return false;
-        });
-        // biz combo box End
-        
-        fnInit();
-        
-        if ("고촌읍" != "") {
-          weather();	
-        }
-    });
-    
-    function fnInit() {
-        
-        
-        
-        
-    }
-    
-    function selectList(pageNo) {
-        $("#pageIndex").val(pageNo);
-        $("#frm").attr("action", "/admin/monitoring/monitoringList.do?gid=lm_01&mid=lm_01_11");
-        $("#frm").attr("target","_self");
-        $("#frm").submit();
-    }
-    
-    function selectSosList(){
-      $("#frm").attr("action", "/admin/manage/sosList.do?gid=lm_01&mid=lm_01_02");
-        $("#frm").attr("target","_self");
-        $("#frm").submit();
-    }
-    
-    function selectHeartList(){
-        $("#frm").attr("action", "/admin/manage/heartList.do?gid=lm_01&mid=lm_01_04");
-        $("#frm").attr("target","_self");
-        $("#frm").submit();
-    }
-    
-    function selectWarnList(){
-        $("#frm").attr("action", "/admin/manage/warnLogList.do?gid=lm_01&mid=lm_01_03");
-        $("#frm").attr("target","_self");
-        $("#frm").submit();
-    }
-    
-    
-    //상단카운트 조회 (5초에 한번)
-    setInterval(function(){
-        getMonitoringist();        
-    }, 5000);
-    
-    setInterval(function(){
-      setTime();
-    },1000)
-    
-    function setTime(){
-      var _now = new Date();
-        document.getElementById("timeTxt").textContent = _now.toLocaleDateString().replace(/ /gi, "") +" "+ _now.toLocaleTimeString();
-    }
-    
-    //상단 카운트
-    function getMonitoringist() {
-      
-      var searchBizId = $("#searchBizId").val();
-      
-        $.ajax({
-            url:"/admin/monitoring/monitoringCount.do",
-            type: "POST",
-            dataType:"JSON",
-            data:"searchBizId="+searchBizId,
-            success: function(data) {
-                var json = data.items;
-    
-                // 공지사항
-                var noticeContent = "";
-                $("#noticeList").empty();
-                if (json.noticeList.length > 0) {
-                  json.noticeList.forEach(function(data, index){
-                    noticeContent += "<tr>" +
-                                 "<td>" + (json.noticeList.length-index) + "</td>" +
-                                 "<td>" + data.regId+ "</td>" +
-                                 "<td>" + data.title+ "</td>" +
-                                 "<td>" + data.regDt+ "</td>" +
-                             "</tr>";
-                            
-                  });
-                } else {
-                    noticeContent = "<tr>" + 
-                                        "<td colspan='4'><p class='nodata'>등록된 데이터가 없습니다</p></td>" + 
-                                    "</tr>";	
-                }
-                $("#noticeList").append(noticeContent);
-                
-                
-                // 실시간 작업 현황
-                $("#totManCnt").text(json.userState.totManCnt);
-                $("#hazardManCnt").text(json.userState.hazardManCnt);
-                $("#safeManCnt").text(json.userState.safeManCnt);
-                $("#oldManCnt").text(json.userState.oldManCnt);
-                $("#diseaseManCnt").text(json.userState.diseaseManCnt);
-                $("#riskManCnt").text(json.userState.riskManCnt);
-                
-                // 근로자 위험 알림 현황
-                $("#completeCnt").text(json.alertState.completeCnt);
-                $("#totCnt").text(json.alertState.totCnt);
-                $("#nonCompleteCnt").text(json.alertState.nonCompleteCnt);
-                $("#sosCnt").text(json.alertState.sosCnt);
-                $("#heartCnt").text(json.alertState.heartCnt);
-                $("#hazardCnt").text(json.alertState.hazardCnt);
-                
-                // 위험 알림 목록
-                var alertContent = "";
-                var alertResult = "";
-                var userInfo = "";
-                var tagDeviceNum = "";
-                var userNm = "";
-                $("#alertList").empty();
-                
-                if (json.alertList.length > 0) {
-                    json.alertList.forEach(function(data, index){
-                      
-                      if (data.completeYn == "Y") {
-                        alertResult = "<td>조치완료</td>";
-                      } else {
-                        alertResult = "<td class='color-red'>미조치</td>";
-                      }
-                      
-                      if (data.tagId == 0) {
-                        tagDeviceNum = data.deviceNum;
-                        } else {
-                          tagDeviceNum = data.tagNum;
-                        }                    	
-                    
-                      alertContent += "<tr>" +
-                                             "<td>" + data.bizNm+ "</td>" +
-                                             "<td>" + data.alertTypeNm + "</td>" +
-                                             "<td>" + data.alertContent + "</td>" +
-                                             "<td>" + data.userNm + "</td>" +
-                                             alertResult + 
-                                             "<td>" + data.regDt+ "</td>" +
-                                         "</tr>";
-                            
-                    });
-                } else {
-                  alertContent = "<tr>" + 
-                                        "<td colspan='6'><p class='nodata'>등록된 데이터가 없습니다</p></td>" + 
-                                    "</tr>";    
-                }
-                $("#alertList").append(alertContent);
-                
-                // 메시지 전송
-                $("#reserveMsgCnt").text(json.msgState.reserveMsgCnt);
-                $("#totMsgCnt").text(json.msgState.reserveMsgCnt+json.msgState.msgCnt);
-                $("#msgCnt").text(json.msgState.msgCnt);
-                $("#reserveSendCnt").text(json.msgState.reserveSendCnt);
-                $("#reserveNoSendCnt").text(json.msgState.reserveNoSendCnt);
-                
-                // 워치 현황
-                $("#deviceTotCnt").text(json.deviceState.totCnt);
-                $("#abnormalCnt").text(json.deviceState.abnormalCnt);
-                $("#normalCnt").text(json.deviceState.normalCnt);
-                $("#watchCnt").text(json.deviceState.watchCnt);
-                $("#helmetCnt").text(json.deviceState.helmetCnt);
-                
-            },
-            error: function(errorThrown) {
-                console.log(JSON.stringify(errorThrown));
-            },
-            complete : function()
-            {
-               
-            }
-        });
-    }
-    
-    // DEVICE POP
-    function selectBadDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
-      
-      var searchBizId = $("#searchBizId").val(); 
-      
-        $.ajax({
-            type: "POST",
-            url: "/admin/monitoring/badDevicePop.do",
-            data: "popRefresh=selectBadDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=Y&searchDstYn=Y&searchDeviceType=01", 
-            dataType: 'html',
-            success: function(data){
-                $("#popupAreaContent").empty();
-                $("#popupAreaContent").html(data);
-            },
-            error: function(request, status, error) {
-                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
-            }
-        });
-    }
-    
-    // DEVICE POP
-    function selectGoodDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
-        
-        var searchBizId = $("#searchBizId").val();         
-        
-        $.ajax({
-            type: "POST",
-            url: "/admin/monitoring/goodDevicePop.do",
-            data: "popRefresh=selectGoodDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=N&searchDstYn=Y&searchDeviceType=01", 
-            dataType: 'html',
-            success: function(data){
-                $("#popupAreaContent2").empty();
-                $("#popupAreaContent2").html(data);
-            },
-            error: function(request, status, error) {
-                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
-            }
-        });
-    }
-    
-    // DEVICE POP
-    function selectTotDeviceList(pageIndex, searchUserNm, searchDeviceNum) {
-        
-        var searchBizId = $("#searchBizId").val(); 
-        
-        $.ajax({
-            type: "POST",
-            url: "/admin/monitoring/totDevicePop.do",
-            data: "popRefresh=selectTotDeviceList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchBadDevice=T&searchDstYn=Y&searchDeviceType=01",
-            dataType: 'html',
-            success: function(data){
-                $("#popupAreaContent3").empty();
-                $("#popupAreaContent3").html(data);
-            },
-            error: function(request, status, error) {
-                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
-            }
-        });
-    }
-    
-    // USER LIST POP
-    function selectUserStateList(pageIndex, searchUserNm, searchDeviceNum, searchSafetyYn, searchAged, searchDiseaseYn, searchRiskWorkerYn) {
-        var searchBizId = $("#searchBizId").val(); 
-        
-        $.ajax({
-            type: "POST",
-            url: "/admin/monitoring/userStateListPop.do",
-            data: "popRefresh=selectUserStateList&searchBizId=" + searchBizId +"&pageIndex="+ pageIndex + "&searchUserNm=" + searchUserNm + "&searchDeviceNum="+searchDeviceNum+"&searchSafetyYn="+searchSafetyYn+"&searchAged="+searchAged+"&searchDiseaseYn="+searchDiseaseYn+"&searchRiskWorkerYn="+searchRiskWorkerYn, 
-            dataType: 'html',
-            success: function(data){
-                $("#popupUserStateContent").empty();
-                $("#popupUserStateContent").html(data);
-            },
-            error: function(request, status, error) {
-                alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
-            }
-        });
-    }
-    
-    // 날씨
-    function weather() {
-      var searchBizId = $("#searchBizId").val();
-      
-      $.ajax({
-        type: "GET",
-            url: "/admin/monitoring/weather.do",
-            data: "searchBizId="+searchBizId, 
-            dataType: 'json',
-            success: function(data){
-                
-                var json = data.response.body.items.item;
-                var skyStatus = "";
-                var skyImg = "";
-                //console.log(json);
-                if (data.response.header.resultCode == "00") {
-                  if (json.length > 0 ) {
-                    json.forEach(function(result, index){
-                      if (result.category == "REH") {// 습도
-                        $("#humidity").text(result.fcstValue + "%");
-                      } else if (result.category == "POP") { // 강수확률
-                        $("#pop").text(result.fcstValue + "%");
-                      } else if (result.category == "TMP") { // 기온
-                        $("#tmp").text(result.fcstValue + "℃");
-                      } else if (result.category == "WSD") { // 풍속
-                                $("#windSpeed").text((result.fcstValue) + "m/s");
-                            } else if (result.category == "VEC") { // 풍향
-                                $("#windDirection").text(result.fcstValue + "m/s");
-                            } else if (result.category == "SKY") { // 하늘상태
-                              if (result.fcstValue == "1") {// 맑음
-                                skyStatus = "맑음";
-                                skyImg = "sun.png";
-                              } else if (result.fcstValue == "3") {//구름많음
-                                skyStatus = "구름많음";
-                                skyImg = "manyCloud.png";
-                              } else {//흐림
-                                skyStatus = "흐림";
-                                skyImg = "cloudy.png";
-                              }
-                            
-                            } else if (result.category == "PTY") { // 강수형태
-                              if (result.fcstValue == "1") {// 비
-                                skyStatus = "비";
-                                skyImg = "rain.png";
-                              } else if (result.fcstValue == "2") {// 비/눈
-                                skyStatus = "비/눈";
-                                skyImg = "rainOrSnow.png";
-                              } else if (result.fcstValue == "3") {// 눈
-                                skyStatus = "눈";
-                                skyImg = "snow.png";
-                              } else if (result.fcstValue == "4") {// 소나기
-                                skyStatus = "소나기";
-                                skyImg = "shower.png";
-                              }
-                                // 코드값 0은 눈/비가 안오는 것으로 보고 따로 세팅하지 않음
-                                
-                            }
-                    });
-                    //alert("/resources/assets/images/");
-                    $("#nowWeather").text(skyStatus);
-                    $("#weatherImg").attr("src", "../assets/img/"+skyImg);
-                  }
-                } else {
-                  //alert("현재 날씨 정보를 불러올 수 없습니다.");
-                  //$("#alertMsgBtn").click();
-                    //$("#alertContent").text("현재 날씨 정보를 불러올 수 없습니다.");
-                }
-            },
-            error: function(request, status, error) {
-                //alert("error:"+error+"\n"+"code:"+request.status+"\n"+"message:"+request.responseText+"\n");
-                //alert("현재 날씨 정보를 불러올 수 없습니다.");
-                //$("#alertMsgBtn").click();
-                //$("#alertContent").text("현재 날씨 정보를 불러올 수 없습니다.");
-            }
-      })
-    }
-    
-  </script>
 </body>
 
 </html>
