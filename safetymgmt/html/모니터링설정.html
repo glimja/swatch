@@ -157,8 +157,13 @@
             </a>
           </li>
           <li>
-            <a href="../html/페이징설정.html">
-              <i class="bi bi-circle"></i><span>페이징 설정</span>
+            <a href="../html/디바이스설정.html">
+              <i class="bi bi-circle"></i><span>디바이스 설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/표시설정.html">
+              <i class="bi bi-circle"></i><span>표시 설정</span>
             </a>
           </li>
           <li>
@@ -198,19 +203,31 @@
                   <tbody>
                     <tr>
                       <th scope="row">대시보드 자동 갱신</th>
-                      <td><input type="text" value="5" > sec</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">심박수 정상범위</th>
-                      <td><input type="text" value="" ><span class="mx-1">~</span><input type="text" value="" > bpm</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">혈압 정상범위</th>
-                      <td><input type="text" value="" ><span class="mx-1">~</span><input type="text" value="" > mmHg</td>
+                      <td><input type="text" value="5" class="text-end"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">디바이스 OFF 판단 시간</th>
-                      <td><input type="text" value="15" > sec</td>
+                      <td><input type="text" value="15" class="text-end"> sec</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">심박수 정상범위</th>
+                      <td><input type="text" value="" class="text-end"><span class="mx-1">~</span><input type="text" value="" class="text-end"> bpm</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">혈압 정상범위</th>
+                      <td><input type="text" value="" class="text-end"><span class="mx-1">~</span><input type="text" value="" class="text-end"> mmHg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">체온 정상범위</th>
+                      <td><input type="text" value="" class="text-end"><span class="mx-1">~</span><input type="text" value="" class="text-end"> 도</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">산소포화도 정상범위</th>
+                      <td><input type="text" value="" class="text-end"><span class="mx-1">~</span><input type="text" value="" class="text-end"> %</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">걸음수 변동 확인</th>
+                      <td></span><input type="text" value="" class="text-end"> 분</td>
                     </tr>
                   </tbody>
                 </table>
@@ -269,6 +286,7 @@
 	<script src="../assets/js/jquery-ui.min.js"></script>
 
   <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>

@@ -10,6 +10,7 @@ body {
   background: #f6f9ff;
   color: #444444;
   font-size: 15px;
+  word-break: keep-all;
 }
 
 a {
@@ -2037,7 +2038,13 @@ a.lt_text {color:#0d6efd}
 
 .groupselecttree > li > ul li > ul li > label:before,
 .groupselecttree > li > ul li > ul li > a:before {content: '\f132';}
-
+.groupselecttree li li {padding: 2px 0}
+.groupselecttree.active {border:2px solid #0d6efd}
 @media (min-width: 1200px) {
   .modal-dialog.mw-1200 {max-width:1200px}
 }
+
+.grouptreeoption button {min-height:21px; min-width:21px; padding:0; border-radius: 20px; font-size: 12px}
+.persenalphoto {width:120px; height: 120px}
+.healthinfobox {max-width: 60px; max-height:60px; text-align: center; color:#fff; padding: 15px 0}
+.iconlogo {width:20px; height: 20px}

@@ -622,56 +622,71 @@
                   <div class="row">
                     <div class="col">
                       <h6>개인정보</h6>
-                      <!--   table  -->
-                      <div class="table-responsive">
-                        <table class="table table-hover tbl-type1 table-bordered">
-                          <colgroup>
-                            <col style="width: 30%">
-                            <col style="width: auto">
-                          </colgroup>
-                          <tbody>
-                            <tr>
-                              <th scope="row">그룹</th>
-                              <td>그룹1 > 중그룹2 > 소그룹2</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">유형</th>
-                              <td>사용자</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">관리번호</th>
-                              <td>110005</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">이름</th>
-                              <td>아무개</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">전화번호</th>
-                              <td>00000000000</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">성별</th>
-                              <td>남</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">혈액형</th>
-                              <td>O RH-</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">생년월일</th>
-                              <td>00000000000</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <div class="row">
+                        <div class="col-xl-3 text-center mb-3">
+                          <img src="../assets/img/client1.jpg" alt="Profile" class="rounded-circle persenalphoto">
+                        </div>
+                        <div class="col-xl-9">
+                          <!--   table  -->
+                          <div class="table-responsive">
+                            <table class="table table-hover tbl-type1 border-top">
+                              <colgroup>
+                                <col style="width: 30%">
+                                <col style="width: auto">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">그룹</th>
+                                  <td>그룹1 > 중그룹2 > 소그룹2</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">유형</th>
+                                  <td>사용자</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">관리번호</th>
+                                  <td>110005</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">이름</th>
+                                  <td>아무개</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">전화번호</th>
+                                  <td>00000000000</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">성별</th>
+                                  <td>남</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">혈액형</th>
+                                  <td>O RH-</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">생년월일</th>
+                                  <td>00000000000</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">키</th>
+                                  <td>175cm</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">몸무게</th>
+                                  <td>63kg</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!--   //table  -->
+                        </div>
                       </div>
-                      <!--   //table  -->
                     </div>
                     <div class="col">
                       <h6 class="mt-2">긴급연락망</h6>
                       <!--   table  -->
                       <div class="table-responsive">
-                        <table class="table table-hover tbl-type1 table-bordered">
+                        <table class="table table-striped table-hover tbl-type1">
                           <colgroup>
                             <col style="width: 10%">
                             <col style="width: 30%">
@@ -688,6 +703,11 @@
                               <td>아무개</td>
                               <td>000000000000</td>
                             </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>아무개</td>
+                              <td>000000000000</td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -699,7 +719,7 @@
                       <h6 class="mt-2">최근 기록</h6>
                       <!--   table  -->
                       <div class="table-responsive">
-                        <table class="table table-hover minwid100 tbl-type1 table-bordered">
+                        <table class="table table-striped table-hover minwid100 tbl-type1">
                           <colgroup>
                             <col style="width: auto">
                             <col style="width: 30%">
@@ -738,7 +758,7 @@
               </div>
             </div>
             <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-primary mr-0" data-bs-dismiss="modal">닫기</button>
+              <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
             </div>
             <!-- // groupPop end -->
           
@@ -755,7 +775,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="card">
+          <div class="card mb-0">
             <div class="card-body">
               <!--   table  -->
               <div class="table-responsive">
@@ -931,9 +951,57 @@
                       </td>
                     </tr>
                     <tr>
+                      <th scope="row">건강 정보</th>
+                      <td>
+                        <table class="table ">
+                          <colgroup>
+                            <col style="width: 25%">
+                            <col style="width: 25%">
+                            <col style="width: 25%">
+                            <col style="width: 25%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">심박수</th>
+                              <th scope="col">혈압</th>
+                              <th scope="col">체온</th>
+                              <th scope="col">산소포화도</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="rounded-circle bg-danger healthinfobox">
+                                  <span class="fs-5">120</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="rounded-circle bg-danger healthinfobox">
+                                  <span class="fs-5">150</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="rounded-circle bg-success healthinfobox">
+                                  <span class="fs-5">36.5</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="rounded-circle bg-success healthinfobox">
+                                  <span class="fs-5">95</span>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
                       <th scope="row">조치</th>
                       <td>
-                        
+                        <div class="row mx-1">
+                          <div class="col-12 border-bottom pb-2 mb-2"><span>119호출</span></div>
+                          <div class="col-12">심박수 이상 후 가슴 통증 호소, 119에 증상 및 위치 전달</div>
+                        </div>
                       </td>
                     </tr>
                   </tbody>
@@ -942,6 +1010,9 @@
               <!--   //table  -->
             </div>
           </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
         </div>
       </div>
     </div>
@@ -1105,7 +1176,7 @@
         </div>
         <div class="modal-footer justify-content-between">
           <span>2023-02-06 15:25:35 (14142730, 4509701)</span>
-          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">닫기</button>
+          <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">닫기</button>
         </div>
       </div>
     </div>
@@ -1159,6 +1230,7 @@
 	<script src="../assets/js/jquery-ui.min.js"></script>
 
   <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>

@@ -264,7 +264,56 @@
           </div>
 
           <div class="row responsive-board">
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-4 col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>걸음수</h5>
+                        <div class="btn-group card-option">
+                          <button type="button" class="btn btn-outline-secondary"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- <div id="noDataHrm" class="nodataarea"><span class="graphNoData">조회된 자료가 없습니다.</span></div> -->
+                        <!-- Line Chart -->
+                        <div id="lineChart0"></div>
+
+                        <script>
+                          document.addEventListener("DOMContentLoaded", () => {
+                            new ApexCharts(document.querySelector("#lineChart0"), {
+                              series: [{
+                                name: "Desktops",
+                                data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                              }],
+                              chart: {
+                                height: 350,
+                                type: 'line',
+                                zoom: {
+                                  enabled: false
+                                }
+                              },
+                              dataLabels: {
+                                enabled: false
+                              },
+                              stroke: {
+                                curve: 'straight'
+                              },
+                              grid: {
+                                row: {
+                                  colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                                  opacity: 0.5
+                                },
+                              },
+                              xaxis: {
+                                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                              }
+                            }).render();
+                          });
+                        </script>
+                        <!-- End Line Chart -->
+                    </div>
+                </div>
+            </div>  
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h5>심박수</h5>
@@ -313,7 +362,7 @@
                     </div>
                 </div>
             </div>            
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h5>산소포화도</h5>
@@ -362,7 +411,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h5>혈압</h5>
@@ -410,7 +459,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-4 col-sm-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h5>체온</h5>
@@ -663,6 +712,7 @@
 	<script src="../assets/js/jquery-ui.min.js"></script>
 
   <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>

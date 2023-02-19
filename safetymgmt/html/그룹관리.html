@@ -190,21 +190,21 @@
             <div class="card-body">
               <div class="row">
                 <div class="col">
-                    <ul class="groupselecttree">
+                    <ul class="groupselecttree active">
                       <li>
                         <input type="checkbox" id="root">
                         <label for="root">최고그룹</label>
                         <ul>
                           <li>
                             <input type="checkbox" id="node1">
-                            <label for="node1">대그룹1</label>
-                            <div class="">
-                              <div class="btn-group" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-outline-secondary">E</button>
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus"></i></button>
-                                <button type="button" class="btn btn-outline-secondary">x</button>
-                              </div>
-                            </div>
+                            <label for="node1">대그룹1
+                              <span class="grouptreeoption" role="group">
+                                <button type="button" class="btn btn-info"><i class="bi bi-tools"></i></button>
+                                <button type="button" class="btn btn-success"><i class="bi bi-diagram-2"></i></button>
+                                <!-- <button type="button" class="btn btn-success"><i class="bi bi-plus-lg"></i></button> -->
+                                <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                              </span>
+                            </label>
                             <ul>
                               <li>
                                 <input type="checkbox" id="node1-1">
@@ -338,6 +338,7 @@
 	<script src="../assets/js/jquery-ui.min.js"></script>
 
   <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>

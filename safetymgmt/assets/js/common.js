@@ -140,4 +140,57 @@ function setDatepicker(obj) {
 		minViewMode: "months",
 		autoclose: true,
 	});
+
+	
+	// 긴급연락망 추가 클릭
+	fn__addTblObjAdd();
+	function fn__addTblObjAdd(){
+	  var $trigger = $(".addTblObjAdd"),
+		  $target = $(".tbldeladdTarget tbody");
+
+	  $trigger.on("click", function(){
+		$target.each(function(){
+		  var lengthTr = $(this).find("tr").length;
+		  
+		  $(this).append(
+			$("<tr>" +
+				"<th scope='row'>" + (++lengthTr)  + "</th>" +
+				"<td>" + "이름" + "</td>" +
+				"<td>" + "0000000000" + "</td>" +
+				"<td>" + "<button type='button' class='btn btn-outline-danger btn-sm addTblObjDel addDel'>삭제</button>" + "</td>" +
+			  "</tr>")
+		  );
+		}); 
+		fn_addDel()
+	  })
+	}
+
+	// 긴급연락망 삭제 클릭
+	fn__addTblObjDel();
+	function fn__addTblObjDel(){
+	  var $trigger = $(".addTblObjDel"),
+		  $target = $(".tbldeladdTarget tbody");
+	  
+	  $trigger.on("click", function(){
+		$(this).parent().parent().remove();
+		
+		$target.find("tr").each(function(idx){
+		  $(this).find("th").text(++idx);            
+		});
+	  })
+	}
+	
+	// 긴급연락망 추가 생성후 삭제 클릭
+	function fn_addDel(){
+	  var $trigger = $(".addDel"),
+		  $target = $(".tbldeladdTarget tbody");
+
+	  $trigger.on("click", function(){
+		$(this).parent().parent().remove();
+
+		$target.find("tr").each(function(idx){
+		  $(this).find("th").text(++idx);
+		});
+	  })
+	}
 }
