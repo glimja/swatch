@@ -152,7 +152,7 @@
         </a>
         <ul id="설정-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../html/모니터링설정.html" class="active">
+            <a href="../html/모니터링설정.html">
               <i class="bi bi-circle"></i><span>모니터링 설정</span>
             </a>
           </li>
@@ -203,40 +203,46 @@
                   <tbody>
                     <tr>
                       <th scope="row">센서 업로드 주기</th>
-                      <td><input type="text" value="35" class="text-end"> sec</td>
+                      <td><input type="text" value="35" class="text-end w-60"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">GPS 업로드 주기</th>
-                      <td><input type="text" value="" class="text-end"> sec</td>
+                      <td><input type="text" value="" class="text-end w-60"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">낙상 감도</th>
                       <td>
-                        <select id="" name="" class="form-select">
-                          <option value="" selected="selected">1</option>
-                          <option value="">2</option>
-                        </select> 단계
+                        <div class="row">
+                          <div class="col-7">
+                            <select id="" name="" class="form-select">
+                              <option value="" selected="selected">1</option>
+                              <option value="">2</option>
+                            </select>
+                          </div>
+                          <div class="col-auto py-2">단계</div>
+                        </div>
+                        
                     </td>
                     </tr>
                     <tr>
                       <th scope="row">경고알람 등록 주기</th>
-                      <td><input type="text" value="" class="text-end"> sec</td>
+                      <td><input type="text" value="" class="text-end w-60"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">배터리(잔량) 업로드 주기</th>
-                      <td><input type="text" value="" class="text-end"> sec</td>
+                      <td><input type="text" value="" class="text-end w-60"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">충전상태 업로드 등록주기</th>
-                      <td><input type="text" value="" class="text-end"> sec</td>
+                      <td><input type="text" value="" class="text-end w-60"> sec</td>
                     </tr>
                     <tr>
                       <th scope="row">생태정보 데이터보관주기</th>
-                      <td><input type="text" value="" class="text-end"> 일</td>
+                      <td><input type="text" value="" class="text-end w-60"> 일</td>
                     </tr>
                     <tr>
                       <th scope="row">GPS 데이터 보관 주기</th>
-                      <td><input type="text" value="" class="text-end"> 일</td>
+                      <td><input type="text" value="" class="text-end w-60"> 일</td>
                     </tr>
                   </tbody>
                 </table>
