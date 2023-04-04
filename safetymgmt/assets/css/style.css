@@ -2487,3 +2487,54 @@ a.lt_text {
 	width: 20px;
 	height: 20px
 }
+
+.warninglight {
+	display: inline-block;
+	width: 26px;
+	height:26px;
+	margin-right: 9px;
+	background: url('../img/alert-off.png') 0 0 no-repeat;
+	background-size: 100%;
+	animation: lightbling .5s infinite cubic-bezier(.36, .11, .89, .32);
+}
+
+.warninglight img {
+	max-height:26px;
+	margin-right: 9px;
+}
+@keyframes lightbling {
+	0% {
+		background-image: url('../img/alert-off.png');
+	}
+	20% {
+		background-image: url('../img/alert-on.png');
+	}
+	90% {
+		background-image: url('../img/alert-off.png');
+		opacity: .5;
+	}
+}
+.adminposition {
+	max-height:26px;
+	vertical-align: 4px;
+}
+.redlightning {
+	position: fixed;
+	width: 100%;
+    height: 100%;
+	background-color: red;
+	opacity: .8;
+	z-index: 999999;
+	animation: redlightbling 1.2s infinite cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes redlightbling {
+	0% {
+		opacity: .3;
+	}
+	30% {
+		opacity: .05;
+	}
+	90% {
+		opacity: .5;
+	}
+}
