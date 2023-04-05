@@ -194,3 +194,25 @@ function setDatepicker(obj) {
 	  })
 	}
 }
+
+// today
+function fn__date() {
+	var today = new Date(),
+		weeks = new Array('일', '월', '화', '수', '목', '금', '토');
+		year = today.getFullYear(), "년",
+		month = today.getMonth() + 1, "월",
+		date = today.getDate(), "일",
+		ymd = year + '.' + month + '.' + date + ' ' + weeks[today.getDay()] + "요일";				
+	$('.fn_date').append("<span>" + ymd + "</span>");
+}fn__date();
+
+// time
+function fn__time() {
+	var now = new Date(),
+		hours = now.getHours(),
+		minutes = now.getMinutes(),
+		seconds = now.getSeconds();
+		hms = hours + ':' + minutes + ':' + seconds;
+	$('.fn_time').text(hms);
+}fn__time();
+setInterval(fn__time, 1000);

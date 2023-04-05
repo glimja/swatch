@@ -2538,3 +2538,9 @@ a.lt_text {
 		opacity: .5;
 	}
 }
+.clientlogowrap {padding: 20px 0;}
+.clientlogowrap img {width: 160px}
+.fn_date, 
+.fn_time {position: relative;float:left; padding-right: 10px;}
+.fn_date:after,
+.fn_time:after  {content: '';display:block;clear:both;}
