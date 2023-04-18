@@ -2544,3 +2544,11 @@ a.lt_text {
 .fn_time {position: relative;float:left; padding-right: 10px;}
 .fn_date:after,
 .fn_time:after  {content: '';display:block;clear:both;}
+
+/* 추가 2023.04 */
+.statusicon {opacity: .5;}
+.statusicon.active {opacity: 1;}
+.statusicon.type1 {color: red;}
+.statusicon.type2 {color: red;}
+.statusicon.type3 {color: red;}
+.statusicon.type4 {color: red;}
