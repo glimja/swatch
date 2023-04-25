@@ -2546,9 +2546,32 @@ a.lt_text {
 .fn_time:after  {content: '';display:block;clear:both;}
 
 /* 추가 2023.04 */
-.statusicon {opacity: .5;}
+.statusicon {opacity: .5; padding: 0 3px;}
 .statusicon.active {opacity: 1;}
 .statusicon.type1 {color: red;}
 .statusicon.type2 {color: red;}
 .statusicon.type3 {color: red;}
 .statusicon.type4 {color: red;}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.dashboard .heartrate-card .card-icon {
+    color: #ff2c1d;
+    background: #ffe4df;
+}
+.dashboard .blood-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+.dashboard .oxygen-card .card-icon {
+    color: #4154f1;
+    background: #f6f6fe;
+}
+.dashboard .temperature-card .card-icon {
+    color: #2eca6a;
+    background: #e0f8e9;
+}
+.dashboard .walk-card .card-icon {
+    color: #2eabca;
+    background: #e0f5f8;
+}
