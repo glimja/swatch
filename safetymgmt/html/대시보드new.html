@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 </head>
 
 <body>
@@ -95,9 +96,6 @@
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
-    <div class="clientlogowrap">
-      <img src="../assets/img/koreapostlogo.png" alt="" />
-    </div>
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -107,7 +105,7 @@
         </a>
         <ul id="모니터링-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="../html/대시보드.html" class="active">
+            <a href="../html/대시보드new.html" class="active">
               <i class="bi bi-circle"></i><span>대시보드</span>
             </a>
           </li>
@@ -270,84 +268,66 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section dashboard">
       <div class="row">
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">안전관리 현황</h5>
-
-              <!-- Stacked Bar Chart -->
-              <canvas id="stakedBarChart" style="max-height: 400px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#stakedBarChart'), {
-                    type: 'bar',
-                    data: {
-                      labels: ['SOS호출', '낙상', '심박수이상', '산소포화도이상', '혈압이상', '체온이상'],
-                      datasets: [{
-                          label: '조치',
-                          data: [10, 30, 50, 48, 20, 35],
-                          backgroundColor: 'rgb(54, 162, 235)',
-                        },
-                        {
-                          label: '미조치',
-                          data: [0, 20, 10, 62, 15, 45],
-                          backgroundColor: 'rgb(255, 205, 86)',
-                        },
-                      ]
-                    },
-                    options: {
-                      plugins: {
-                        title: {
-                          display: true,
-                          text: ''
-                        },
-                      },
-                      responsive: true,
-                      scales: {
-                        x: {
-                          stacked: true,
-                        },
-                        y: {
-                          stacked: true
-                        }
-                      }
-                    }
-                  });
-                });
-              </script>
-              <!-- End Stacked Bar Chart -->
-
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="card info-card oxygen-card">
+                <div class="card-body">
+                  <h5 class="card-title">사용자</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <span class="text-muted small pt-2 ps-1">Today : </span> <span class="text-success small pt-1 fw-bold">12</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card info-card walk-card">
+                <div class="card-body">
+                  <h5 class="card-title">디바이스</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="fa-regular fa-watch-fitness"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <span class="text-muted small pt-2 ps-1">Today : </span> <span class="text-success small pt-1 fw-bold">12</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-    </section>
 
-    <section class="section">
-      <div class="row">
         <div class="col-lg-8">
           <div class="card">
             <div class="card-body">
+              <div class="card-title">일 알림건수</div>
               <div class="row">
-                <div class="col">
-                  <div class="card-title">SOS호출</div>
+                <div class="col-6">
+                  <div class="card-title">심박수 이상</div>
                   <!-- Pie Chart -->
-                  <canvas id="pieChart1" style="max-height: 150px;"></canvas>
+                  <canvas id="pieChart1" style="max-height: 80px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#pieChart1'), {
                         type: 'pie',
                         data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
+                          // labels: [
+                          //   '조치',
+                          //   '미조치'
+                          // ],
                           datasets: [{
-                            label: 'SOS호출',
-                            data: [100, 0],
+                            label: '심박수 이상',
+                            data: [0, 100],
                             backgroundColor: [
                               'rgb(54, 162, 235)',
                               'rgb(255, 205, 86)'
@@ -360,81 +340,22 @@
                   </script>
                   <!-- End Pie CHart -->
                 </div>
-                <div class="col">
-                  <div class="card-title">낙상</div>
+                <div class="col-6">
+                  <div class="card-title">산소포화도 이상</div>
                   <!-- Pie Chart -->
-                  <canvas id="pieChart2" style="max-height: 150px;"></canvas>
+                  <canvas id="pieChart2" style="max-height: 80px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#pieChart2'), {
                         type: 'pie',
                         data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
+                          // labels: [
+                          //   '조치',
+                          //   '미조치'
+                          // ],
                           datasets: [{
-                            label: '낙상',
-                            data: [100, 100],
-                            backgroundColor: [
-                              'rgb(54, 162, 235)',
-                              'rgb(255, 205, 86)'
-                            ],
-                            hoverOffset: 4
-                          }]
-                        }
-                      });
-                    });
-                  </script>
-                  <!-- End Pie CHart --></div>
-                <div class="col">
-                  <div class="card-title">심박수이상</div>
-                  <!-- Pie Chart -->
-                  <canvas id="pieChart3" style="max-height: 150px;"></canvas>
-                  <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#pieChart3'), {
-                        type: 'pie',
-                        data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
-                          datasets: [{
-                            label: '심박수이상',
-                            data: [0, 100],
-                            backgroundColor: [
-                              'rgb(54, 162, 235)',
-                              'rgb(255, 205, 86)'
-                            ],
-                            hoverOffset: 4
-                          }]
-                        }
-                      });
-                    });
-                  </script>
-                  <!-- End Pie CHart --></div>
-              </div>
-
-              <div class="border-top mt-4 mb-2"><!-- 간격 조절 --></div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="card-title">산소포화도이상</div>
-                  <!-- Pie Chart -->
-                  <canvas id="pieChart4" style="max-height: 150px;"></canvas>
-                  <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#pieChart4'), {
-                        type: 'pie',
-                        data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
-                          datasets: [{
-                            label: '산소포화도이상',
-                            data: [50, 150],
+                            label: '산소포화도 이상',
+                            data: [50, 100],
                             backgroundColor: [
                               'rgb(54, 162, 235)',
                               'rgb(255, 205, 86)'
@@ -447,22 +368,22 @@
                   </script>
                   <!-- End Pie CHart -->
                 </div>
-                <div class="col">
-                  <div class="card-title">혈압이상</div>
+                <div class="col-6">
+                  <div class="card-title">혈압 이상</div>
                   <!-- Pie Chart -->
-                  <canvas id="pieChart5" style="max-height: 150px;"></canvas>
+                  <canvas id="pieChart3" style="max-height: 80px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#pieChart5'), {
+                      new Chart(document.querySelector('#pieChart3'), {
                         type: 'pie',
                         data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
+                          // labels: [
+                          //   '조치',
+                          //   '미조치'
+                          // ],
                           datasets: [{
-                            label: '혈압이상',
-                            data: [100, 0],
+                            label: '혈압 이상',
+                            data: [80, 100],
                             backgroundColor: [
                               'rgb(54, 162, 235)',
                               'rgb(255, 205, 86)'
@@ -473,23 +394,24 @@
                       });
                     });
                   </script>
-                  <!-- End Pie CHart --></div>
-                <div class="col">
-                  <div class="card-title">체온이상</div>
+                  <!-- End Pie CHart -->
+                </div>
+                <div class="col-6">
+                  <div class="card-title">체온 이상</div>
                   <!-- Pie Chart -->
-                  <canvas id="pieChart6" style="max-height: 150px;"></canvas>
+                  <canvas id="pieChart4" style="max-height: 80px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#pieChart6'), {
+                      new Chart(document.querySelector('#pieChart4'), {
                         type: 'pie',
                         data: {
-                          labels: [
-                            '조치',
-                            '미조치'
-                          ],
+                          // labels: [
+                          //   '조치',
+                          //   '미조치'
+                          // ],
                           datasets: [{
                             label: '체온이상',
-                            data: [0, 100],
+                            data: [50, 50],
                             backgroundColor: [
                               'rgb(54, 162, 235)',
                               'rgb(255, 205, 86)'
@@ -500,50 +422,302 @@
                       });
                     });
                   </script>
-                  <!-- End Pie CHart --></div>
+                  <!-- End Pie CHart -->
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">디바이스 현황</h5>
-
-              <!-- Pie Chart -->
-              <canvas id="pieChartDevice" style="max-height: 400px;"></canvas>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#pieChartDevice'), {
-                    type: 'pie',
-                    data: {
-                      labels: [
-                        '갤럭시30',
-                        '아이폰20',
-                        '갤럭시탭7'
-                      ],
-                      datasets: [{
-                        label: '디바이스 현황',
-                        data: [6, 3, 1],
-                        backgroundColor: [
-                          'rgb(255, 99, 132)',
-                          'rgb(54, 162, 235)',
-                          'rgb(255, 205, 86)'
-                        ],
-                        hoverOffset: 4
-                      }]
-                    }
-                  });
-                });
-              </script>
-              <!-- End Pie CHart -->
-
+      
             </div>
           </div>
         </div>
       </div>
+
       
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-title">위험알림</div>
+                      <!-- Pie Chart -->
+                      <canvas id="pieChart5" style="max-height: 80px;"></canvas>
+                      <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          new Chart(document.querySelector('#pieChart5'), {
+                            type: 'pie',
+                            data: {
+                              // labels: [
+                              //   '조치',
+                              //   '미조치'
+                              // ],
+                              datasets: [{
+                                label: '체온이상',
+                                data: [50, 50],
+                                backgroundColor: [
+                                  'rgb(54, 162, 235)',
+                                  'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 4
+                              }]
+                            }
+                          });
+                        });
+                      </script>
+                      <!-- End Pie CHart -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-6">
+              <div class="card info-card heartrate-card">
+                <div class="card-body">
+                  <h5 class="card-title">SOS</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="fa-solid fa-siren-on"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>2</h6>
+                      <span class="text-success small pt-1 fw-bold">3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card info-card blood-card">
+                <div class="card-body">
+                  <h5 class="card-title">낙상</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="fa-solid fa-person-falling-burst"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>2</h6>
+                      <span class="text-success small pt-1 fw-bold">3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <div class="card-title">기간별 알림건수</div>
+                  <!-- Line Chart -->
+                  <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new Chart(document.querySelector('#lineChart'), {
+                        type: 'line',
+                        data: {
+                          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                          datasets: [{
+                            label: 'Line Chart',
+                            data: [65, 59, 80, 81, 56, 55, 40],
+                            fill: false,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                          }]
+                        },
+                        options: {
+                          scales: {
+                            y: {
+                              beginAtZero: true
+                            }
+                          }
+                        }
+                      });
+                    });
+                  </script>
+                  <!-- End Line CHart -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <div class="card-title">기간별 조치건수</div>
+                  <!-- Stacked Bar Chart -->
+                  <canvas id="stakedBarChart" style="max-height: 400px;"></canvas>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new Chart(document.querySelector('#stakedBarChart'), {
+                        type: 'bar',
+                        data: {
+                          labels: ['SOS호출', '낙상', '심박수이상', '산소포화도이상', '혈압이상', '체온이상'],
+                          datasets: [{
+                              label: '조치',
+                              data: [10, 30, 50, 48, 20, 35],
+                              backgroundColor: 'rgb(54, 162, 235)',
+                            },
+                            {
+                              label: '미조치',
+                              data: [0, 20, 10, 62, 15, 45],
+                              backgroundColor: 'rgb(255, 205, 86)',
+                            },
+                          ]
+                        },
+                        options: {
+                          plugins: {
+                            title: {
+                              display: true,
+                              text: ''
+                            },
+                          },
+                          responsive: true,
+                          scales: {
+                            x: {
+                              stacked: true,
+                            },
+                            y: {
+                              stacked: true
+                            }
+                          }
+                        }
+                      });
+                    });
+                  </script>
+                  <!-- End Stacked Bar Chart -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <div class="card-title">알림유형</div>
+                  <!-- Doughnut Chart -->
+                  <canvas id="doughnutChart" style="max-height: 400px;"></canvas>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new Chart(document.querySelector('#doughnutChart'), {
+                        type: 'doughnut',
+                        data: {
+                          labels: [
+                            'Red',
+                            'Blue',
+                            'Yellow'
+                          ],
+                          datasets: [{
+                            label: 'My First Dataset',
+                            data: [300, 50, 100],
+                            backgroundColor: [
+                              'rgb(255, 99, 132)',
+                              'rgb(54, 162, 235)',
+                              'rgb(255, 205, 86)'
+                            ],
+                            hoverOffset: 4
+                          }]
+                        }
+                      });
+                    });
+                  </script>
+                  <!-- End Doughnut CHart -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <div class="card-title">조치유형</div>
+                  <!-- Doughnut Chart -->
+                  <canvas id="doughnutChart2" style="max-height: 400px;"></canvas>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new Chart(document.querySelector('#doughnutChart2'), {
+                        type: 'doughnut',
+                        data: {
+                          labels: [
+                            'Red',
+                            'Blue',
+                            'Yellow'
+                          ],
+                          datasets: [{
+                            label: 'My First Dataset',
+                            data: [300, 50, 100],
+                            backgroundColor: [
+                              'rgb(255, 99, 132)',
+                              'rgb(54, 162, 235)',
+                              'rgb(255, 205, 86)'
+                            ],
+                            hoverOffset: 4
+                          }]
+                        }
+                      });
+                    });
+                  </script>
+                  <!-- End Doughnut CHart -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="card info-card">
+                <div class="card-body">
+                  <h5 class="card-title">발생비율</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="ps-3 text-center">
+                      <h4>2.6%</h4>
+                      <span class="text-muted small pt-2 ps-1">사용자수 : </span> <span class="text-success small pt-1 fw-bold">300</span>
+                      <span class="text-muted small pt-2 ps-1">발생건수 : </span> <span class="text-danger small pt-1 fw-bold">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card info-card">
+                <div class="card-body">
+                  <h5 class="card-title">조치비율</h5>
+                  <div class="d-flex justify-content-center">
+                    <div class="ps-3 text-center">
+                      <h4>86.7%</h4>
+                      <span class="text-muted small pt-2 ps-1">조치건수 : </span> <span class="text-success small pt-1 fw-bold">1</span>
+                      <span class="text-muted small pt-2 ps-1">발생건수 : </span> <span class="text-danger small pt-1 fw-bold">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </section><!-- End #section -->

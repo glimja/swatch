@@ -2575,3 +2575,45 @@ a.lt_text {
     color: #2eabca;
     background: #e0f5f8;
 }
+
+
+.statusicon {
+	display: inline-block;
+    font-size: 16px;
+    line-height: 0;
+	width:32px;
+	height:32px;
+	margin: 0 2px;
+    padding: 8px;
+    flex-shrink: 0;
+    flex-grow: 0;
+	color:#000;
+	background: #fff;
+}
+.statusicon.heartrate-icon {
+	color: #ff2c1d;
+    background: #ffe4df;
+}
+.statusicon.blood-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+.statusicon.oxygen-icon {
+    color: #4154f1;
+    background: #f6f6fe;
+}
+.statusicon.temperature-icon {
+    color: #2eca6a;
+    background: #e0f8e9;
+}
+.statusicon.walk-icon {
+    color: #2eabca;
+    background: #e0f5f8;
+}
+.dashboard .info-card h4 {
+    font-size: 36px;
+    color: #012970;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
