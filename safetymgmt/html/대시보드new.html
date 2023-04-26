@@ -278,11 +278,14 @@
                   <h5 class="card-title">사용자</h5>
                   <div class="d-flex justify-content-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="fa-solid fa-user-tie"></i>
+                      <!-- <div class="iconbox">
+                        <img src="../assets/img/icon_postman.svg" alt="" />
+                      </div> -->
+                      <i class="fa-solid fa-user-pilot"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-muted small pt-2 ps-1">Today : </span> <span class="text-success small pt-1 fw-bold">12</span>
+                      <h6 class="pb-2">145</h6>
+                      <span class="text-muted pt-2 ps-1">Today : </span> <span class="text-success pt-1 fw-bold">12</span>
                     </div>
                   </div>
                 </div>
@@ -297,8 +300,8 @@
                       <i class="fa-regular fa-watch-fitness"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-muted small pt-2 ps-1">Today : </span> <span class="text-success small pt-1 fw-bold">12</span>
+                      <h6 class="pb-2">145</h6>
+                      <span class="text-muted pt-2 ps-1">Today : </span> <span class="text-success pt-1 fw-bold">12</span>
                     </div>
                   </div>
                 </div>
@@ -310,7 +313,7 @@
         <div class="col-lg-8">
           <div class="card">
             <div class="card-body">
-              <div class="card-title mb-0 pb-0">일 알림건수</div>
+              <div class="card-title">일 알림건수</div>
               <div class="row">
                 <div class="col-6">
                   <div class="card-title mb-0">심박수 이상</div>
@@ -456,12 +459,12 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <div class="card-title">위험알림 <span class="text-danger fw-bold">3</span></div>
+                      <div class="card-title">위험알림 <span class="text-danger float-end fs-1 px-3">3</span></div>
                       <div class="d-flex justify-content-center">
                         <div class="position-absolute">
                           <div class="gauge1 gaugestyle"></div>
                         </div>
-                        <div class="py-4 my-3 w-100"><!-- 높이 맞추는 빈 공간 --></div>
+                        <div class="py-4 my-4 w-100"><!-- 높이 맞추는 빈 공간 --></div>
                       </div>
 
                       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -482,7 +485,7 @@
                             },
                             colors: {
                                 0 : '#666',
-                        9 : '#378618',
+                                9 : '#378618',
                                 60: '#ffa500',
                                 80: '#f00'
                             },
@@ -497,34 +500,7 @@
                 
                             value: 30
                         });
-                    </script>
-                      <!-- Pie Chart -->
-                      <!-- <canvas id="doughnutChart5" style="max-height: 80px;"></canvas>
-                      <script>
-                        document.addEventListener("DOMContentLoaded", () => {
-                          new Chart(document.querySelector('#doughnutChart5'), {
-                            type: 'doughnut',
-                            data: {
-                              // labels: [
-                              //   'Red',
-                              //   'Blue',
-                              //   'Yellow'
-                              // ],
-                              datasets: [{
-                                label: '위험알림',
-                                data: [40, 37, 60],
-                                backgroundColor: [
-                                  'rgb(255, 99, 132)',
-                                  'rgb(54, 162, 235)',
-                                  'rgb(255, 205, 86)'
-                                ],
-                                hoverOffset: 4
-                              }]
-                            }
-                          });
-                        });
-                      </script> -->
-                      <!-- End Pie CHart -->
+                      </script>
                     </div>
                   </div>
                 </div>
@@ -534,7 +510,7 @@
         </div>
         <div class="col-lg-8">
           <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-12">
               <div class="card info-card heartrate-card">
                 <div class="card-body">
                   <h5 class="card-title">SOS</h5>
@@ -543,14 +519,14 @@
                       <i class="fa-solid fa-siren-on"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>2</h6>
-                      <span class="text-success small pt-1 fw-bold">3</span>
+                      <h6 class="pb-2"><span class="text-muted fs-6">알람 : </span>2</h6>
+                      <span class="text-muted">조치 : </span><span class="text-success pt-1 fw-bold">3</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-12">
               <div class="card info-card blood-card">
                 <div class="card-body">
                   <h5 class="card-title">낙상</h5>
@@ -559,12 +535,50 @@
                       <i class="fa-solid fa-person-falling-burst"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>2</h6>
-                      <span class="text-success small pt-1 fw-bold">3</span>
+                      <h6 class="pb-2"><span class="text-muted fs-6">알람 : </span>2</h6>
+                      <span class="text-muted">조치 : </span><span class="text-success pt-1 fw-bold">3</span>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-body">              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <div class="row gx-3">
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">일주일</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">이번달</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">최근 3개월</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-secondary w-100" type="button">1년</button>
+                        </div>
+                        <div class="col">
+                          <button class="btn btn-primary w-100"><span class="bi bi-search me-1"></span>검색</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
             </div>
           </div>
         </div>
@@ -580,29 +594,70 @@
                 <div class="col">
                   <div class="card-title">기간별 알림건수</div>
                   <!-- Line Chart -->
-                  <canvas id="lineChart" style="max-height: 400px;"></canvas>
+                  <div id="reportsChart" style="max-height: 400px;"></div>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#lineChart'), {
-                        type: 'line',
-                        data: {
-                          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                          datasets: [{
-                            label: 'Line Chart',
-                            data: [65, 59, 80, 81, 56, 55, 40],
-                            fill: false,
-                            borderColor: 'rgb(75, 192, 192)',
-                            tension: 0.1
-                          }]
+                      new ApexCharts(document.querySelector("#reportsChart"), {
+                        series: [{
+                          name: 'Alam1',
+                          data: [31, 40, 28, 51, 42, 82, 56],
+                        }, {
+                          name: 'Alam2',
+                          data: [11, 32, 45, 32, 34, 52, 41]
+                        }, {
+                          name: 'Alam3',
+                          data: [15, 11, 32, 18, 9, 24, 11]
+                        }, {
+                          name: 'Alam4',
+                          data: [21, 52, 15, 52, 24, 42, 31]
+                        }, {
+                          name: 'Alam5',
+                          data: [12, 19, 38, 11, 19, 29, 18]
+                        }, {
+                          name: 'Alam6',
+                          data: [11, 12, 45, 22, 64, 52, 41]
+                        }],
+                        chart: {
+                          height: 350,
+                          type: 'area',
+                          toolbar: {
+                            show: false
+                          },
                         },
-                        options: {
-                          scales: {
-                            y: {
-                              beginAtZero: true
-                            }
+                        markers: {
+                          size: 4
+                        },
+                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                        fill: {
+                          type: "gradient",
+                          gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
                           }
+                        },
+                        dataLabels: {
+                          enabled: false
+                        },
+                        stroke: {
+                          curve: 'smooth',
+                          width: 2
+                        },
+                        xaxis: {
+                          type: 'datetime',
+                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                        },
+                        // xaxis: {
+                        //   type: 'datetime',
+                        //   categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                        // },
+                        tooltip: {
+                          x: {
+                            format: 'dd/MM/yy HH:mm'
+                          },
                         }
-                      });
+                      }).render();
                     });
                   </script>
                   <!-- End Line CHart -->
@@ -751,10 +806,12 @@
                 <div class="card-body">
                   <h5 class="card-title">발생비율</h5>
                   <div class="d-flex justify-content-center">
-                    <div class="ps-3 text-center">
-                      <h4>2.6%</h4>
-                      <span class="text-muted small pt-2 ps-1">사용자수 : </span> <span class="text-success small pt-1 fw-bold">300</span>
-                      <span class="text-muted small pt-2 ps-1">발생건수 : </span> <span class="text-danger small pt-1 fw-bold">2</span>
+                    <div class="ps-3 py-3 text-center">
+                      <h4 class="pb-1">2.6%</h4>
+                      <div class="fs-5">
+                        <span class="text-muted pt-2 ps-1">사용자수 : </span> <span class="text-success pt-1 fw-bold">300</span>
+                        <span class="text-muted pt-2 ps-3">발생건수 : </span> <span class="text-danger pt-1 fw-bold">2</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -765,10 +822,12 @@
                 <div class="card-body">
                   <h5 class="card-title">조치비율</h5>
                   <div class="d-flex justify-content-center">
-                    <div class="ps-3 text-center">
-                      <h4>86.7%</h4>
-                      <span class="text-muted small pt-2 ps-1">조치건수 : </span> <span class="text-success small pt-1 fw-bold">1</span>
-                      <span class="text-muted small pt-2 ps-1">발생건수 : </span> <span class="text-danger small pt-1 fw-bold">2</span>
+                    <div class="ps-3 py-3 text-center">
+                      <h4 class="pb-1">86.7%</h4>
+                      <div class="fs-5">
+                        <span class="text-muted pt-2 ps-1">조치건수 : </span> <span class="text-success pt-1 fw-bold">1</span>
+                        <span class="text-muted pt-2 ps-3">발생건수 : </span> <span class="text-danger pt-1 fw-bold">2</span>
+                      </div>
                     </div>
                   </div>
                 </div>

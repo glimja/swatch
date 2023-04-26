@@ -305,11 +305,11 @@
                         <td>111-11-11-23-33</td>
                         <td>
                           <div class="tableicon">
-                            <a href="#none" class="statusicon rounded-circle"><i class="fa-solid fa-heart-pulse"></i></a>
-                            <a href="#none" class="statusicon rounded-circle"><i class="fa-regular fa-hand-holding-heart"></i></a>
-                            <a href="#none" class="statusicon rounded-circle"><i class="fa-solid fa-temperature-half"></i></a>
-                            <a href="#none" class="statusicon rounded-circle"><i class="fa-regular fa-droplet-percent"></i></a>
-                            <a href="#none" class="statusicon rounded-circle"><i class="fa-duotone fa-shoe-prints"></i></a>
+                            <a href="#none" class="statusicon rounded-circle" data-bs-toggle="modal" data-bs-target="#statusiconPop1"><i class="fa-solid fa-heart-pulse"></i></a>
+                            <a href="#none" class="statusicon rounded-circle" data-bs-toggle="modal" data-bs-target="#statusiconPop2"><i class="fa-regular fa-hand-holding-heart"></i></a>
+                            <a href="#none" class="statusicon rounded-circle" data-bs-toggle="modal" data-bs-target="#statusiconPop3"><i class="fa-solid fa-temperature-half"></i></a>
+                            <a href="#none" class="statusicon rounded-circle" data-bs-toggle="modal" data-bs-target="#statusiconPop4"><i class="fa-regular fa-droplet-percent"></i></a>
+                            <a href="#none" class="statusicon rounded-circle" data-bs-toggle="modal" data-bs-target="#statusiconPop5"><i class="fa-duotone fa-shoe-prints"></i></a>
                           </div>
                         </td>
                         <td>
@@ -997,6 +997,7 @@
       </div>
     </div>
   </div>
+
   <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered mw-1200">
       <div class="modal-content">
@@ -1186,6 +1187,186 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-primary mr-0" >입력</button>
               <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 심박수 현황 팝업 -->
+  <div id="statusiconPop1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div id="">
+            <div class="modal-body">
+              <section class="section dashboard">
+                <div class="row">
+                  <div class="col">
+                    <div class="card info-card heartrate-card">
+                      <div class="card-body">
+                        <h5 class="card-title">심박수</h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>145</h6>
+                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </section>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 혈압 현황 팝업 -->
+  <div id="statusiconPop2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div id="">
+            <div class="modal-body">
+              <section class="section dashboard">
+                <div class="row">
+                  <div class="col">
+                    <div class="card info-card blood-card">
+                      <div class="card-body">
+                        <h5 class="card-title">혈압</h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="fa-regular fa-hand-holding-heart"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>120/74</h6>
+                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </section>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 체온 현황 팝업 -->
+  <div id="statusiconPop3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div id="">
+            <div class="modal-body">
+              <section class="section dashboard">
+                <div class="row">
+                  <div class="col">
+                    <div class="card info-card oxygen-card">
+                      <div class="card-body">
+                        <h5 class="card-title">체온</h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-temperature-half"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>36.5</h6>
+                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </section>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 산소포화도 현황 팝업 -->
+  <div id="statusiconPop4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div id="">
+            <div class="modal-body">
+              <section class="section dashboard">
+                <div class="row">
+                  <div class="col">
+                    <div class="card info-card temperature-card">
+                      <div class="card-body">
+                        <h5 class="card-title">산소포화도</h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="fa-regular fa-droplet-percent"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>80</h6>
+                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </section>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Modal : 걸음수 현황 팝업 -->
+  <div id="statusiconPop5" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div id="">
+            <div class="modal-body">
+              <section class="section dashboard">
+                <div class="row">
+                  <div class="col">
+                    <div class="card info-card walk-card">
+                      <div class="card-body">
+                        <h5 class="card-title">걸음수</h5>
+                        <div class="d-flex align-items-center">
+                          <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                            <i class="fa-duotone fa-shoe-prints"></i>
+                          </div>
+                          <div class="ps-3">
+                            <h6>9000</h6>
+                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-secondary mr-0" data-bs-dismiss="modal">닫기</button>
+                </div>
+              </section>
             </div>
             <!-- // groupPop end -->
           </div>
