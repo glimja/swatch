@@ -457,8 +457,49 @@
                   <div class="row">
                     <div class="col">
                       <div class="card-title">위험알림 <span class="text-danger fw-bold">3</span></div>
+                      <div class="d-flex justify-content-center">
+                        <div class="position-absolute">
+                          <div class="gauge1 gaugestyle"></div>
+                        </div>
+                        <div class="py-4 my-3 w-100"><!-- 높이 맞추는 빈 공간 --></div>
+                      </div>
+
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                      <script src="../assets/js/jquery-gauge.min.js"></script>
+                      <script>
+                        // first example
+                        var gauge = new Gauge($('.gauge1'), {value: 70});
+                
+                        // second example
+                        $('.gauge1').gauge({
+                            values: {
+                                0 : '0',
+                                20: '2',
+                                40: '4',
+                                60: '6',
+                                80: '8',
+                                100: '10'
+                            },
+                            colors: {
+                                0 : '#666',
+                        9 : '#378618',
+                                60: '#ffa500',
+                                80: '#f00'
+                            },
+                            angles: [
+                                180,
+                                360
+                            ],
+                            lineWidth: 10,
+                            arrowWidth: 5,
+                            arrowColor: '#aaa',
+                            inset:true,
+                
+                            value: 30
+                        });
+                    </script>
                       <!-- Pie Chart -->
-                      <canvas id="doughnutChart5" style="max-height: 80px;"></canvas>
+                      <!-- <canvas id="doughnutChart5" style="max-height: 80px;"></canvas>
                       <script>
                         document.addEventListener("DOMContentLoaded", () => {
                           new Chart(document.querySelector('#doughnutChart5'), {
@@ -482,7 +523,7 @@
                             }
                           });
                         });
-                      </script>
+                      </script> -->
                       <!-- End Pie CHart -->
                     </div>
                   </div>
@@ -870,6 +911,7 @@
   <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script src="../assets/vendor/chart.js/chart.umd.js"></script>
   <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/jquery-gauge.min.js"></script>
   <script src="../assets/js/main.js"></script>  
   <script src="../assets/js/common.js"></script>
 
