@@ -2617,3 +2617,10 @@ a.lt_text {
     margin: 0;
     padding: 0;
 }
+.txtnum {
+	position: absolute;
+	top: 43px;
+    left: 41%;
+    width: 50px;
+    text-align: center;
+}
