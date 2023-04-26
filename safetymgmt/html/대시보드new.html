@@ -310,12 +310,12 @@
         <div class="col-lg-8">
           <div class="card">
             <div class="card-body">
-              <div class="card-title">일 알림건수</div>
+              <div class="card-title mb-0 pb-0">일 알림건수</div>
               <div class="row">
                 <div class="col-6">
-                  <div class="card-title">심박수 이상</div>
+                  <div class="card-title mb-0">심박수 이상 <span class="text-danger fw-bold">123</span></div>
                   <!-- doughnut Chart -->
-                  <canvas id="doughnutChart1" style="max-height: 80px;"></canvas>
+                  <canvas id="doughnutChart1" style="max-height: 100px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#doughnutChart1'), {
@@ -342,9 +342,9 @@
                   <!-- End doughnut CHart -->
                 </div>
                 <div class="col-6">
-                  <div class="card-title">산소포화도 이상</div>
+                  <div class="card-title mb-0">산소포화도 이상 <span class="text-danger fw-bold">123</span></div>
                   <!-- doughnut Chart -->
-                  <canvas id="doughnutChart2" style="max-height: 80px;"></canvas>
+                  <canvas id="doughnutChart2" style="max-height: 100px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#doughnutChart2'), {
@@ -371,9 +371,9 @@
                   <!-- End doughnut CHart -->
                 </div>
                 <div class="col-6">
-                  <div class="card-title">혈압 이상</div>
+                  <div class="card-title mb-0">혈압 이상 <span class="text-danger fw-bold">123</span></div>
                   <!-- doughnut Chart -->
-                  <canvas id="doughnutChart3" style="max-height: 80px;"></canvas>
+                  <canvas id="doughnutChart3" style="max-height: 100px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#doughnutChart3'), {
@@ -400,9 +400,9 @@
                   <!-- End doughnut CHart -->
                 </div>
                 <div class="col-6">
-                  <div class="card-title">체온 이상</div>
+                  <div class="card-title mb-0">체온 이상 <span class="text-danger fw-bold">37</span></div>
                   <!-- doughnut Chart -->
-                  <canvas id="doughnutChart4" style="max-height: 80px;"></canvas>
+                  <canvas id="doughnutChart4" style="max-height: 100px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
                       new Chart(document.querySelector('#doughnutChart4'), {
@@ -444,22 +444,24 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <div class="card-title">위험알림</div>
+                      <div class="card-title">위험알림 <span class="text-danger fw-bold">3</span></div>
                       <!-- Pie Chart -->
-                      <canvas id="pieChart5" style="max-height: 80px;"></canvas>
+                      <canvas id="doughnutChart5" style="max-height: 80px;"></canvas>
                       <script>
                         document.addEventListener("DOMContentLoaded", () => {
-                          new Chart(document.querySelector('#pieChart5'), {
-                            type: 'pie',
+                          new Chart(document.querySelector('#doughnutChart5'), {
+                            type: 'doughnut',
                             data: {
                               // labels: [
-                              //   '조치',
-                              //   '미조치'
+                              //   'Red',
+                              //   'Blue',
+                              //   'Yellow'
                               // ],
                               datasets: [{
-                                label: '체온이상',
-                                data: [50, 50],
+                                label: '위험알림',
+                                data: [40, 37, 60],
                                 backgroundColor: [
+                                  'rgb(255, 99, 132)',
                                   'rgb(54, 162, 235)',
                                   'rgb(255, 205, 86)'
                                 ],
@@ -620,10 +622,10 @@
                 <div class="col">
                   <div class="card-title">알림유형</div>
                   <!-- Doughnut Chart -->
-                  <canvas id="doughnutChart" style="max-height: 400px;"></canvas>
+                  <canvas id="alertdoughnutChart" style="max-height: 400px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#doughnutChart'), {
+                      new Chart(document.querySelector('#alertdoughnutChart'), {
                         type: 'doughnut',
                         data: {
                           labels: [
@@ -658,10 +660,10 @@
                 <div class="col">
                   <div class="card-title">조치유형</div>
                   <!-- Doughnut Chart -->
-                  <canvas id="doughnutChart2" style="max-height: 400px;"></canvas>
+                  <canvas id="actiondoughnutChart2" style="max-height: 400px;"></canvas>
                   <script>
                     document.addEventListener("DOMContentLoaded", () => {
-                      new Chart(document.querySelector('#doughnutChart2'), {
+                      new Chart(document.querySelector('#actiondoughnutChart2'), {
                         type: 'doughnut',
                         data: {
                           labels: [
