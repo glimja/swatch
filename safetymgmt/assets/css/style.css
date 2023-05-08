@@ -2666,3 +2666,8 @@ gauge
 .table.tbl-type1 th.first {
     background-color: #ecf5ff;
 }
+.alerttxtnum {
+	padding-top: 5px;
+	font-size: 1.7rem;
+	text-align: center;
+}
