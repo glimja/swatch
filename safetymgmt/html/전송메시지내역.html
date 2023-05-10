@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CompanyName</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100;300;400;500;700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- datepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker.css">
+  <!-- datetimepicker css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="../html/index.html" class="logo d-flex align-items-center">
+        <img src="../assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">CompanyName</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item pe-3">
+          <strong class="pe-1">CompanyName</strong> 
+          <a href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-person-circle"></i> 관리자
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>홍길동</h6>
+              <span>관리자</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="사용자정보변경.html">
+                <i class="bi bi-gear"></i>
+                <span>회원 설정</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="로그인.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>로그아웃</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li>
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#모니터링-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-house-door"></i><span>모니터링</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="모니터링-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/대시보드.html">
+              <i class="bi bi-circle"></i><span>대시보드</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/개인모니터링.html">
+              <i class="bi bi-circle"></i><span>개인모니터링</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/모니터링현황.html">
+              <i class="bi bi-circle"></i><span>모니터링현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 모니터링 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#디바이스-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-box-seam"></i><span>디바이스</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="디바이스-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/디바이스관리.html">
+              <i class="bi bi-circle"></i><span>디바이스 관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/디바이스현황.html">
+              <i class="bi bi-circle"></i><span>디바이스 현황</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 디바이스 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#조직-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-calendar-check"></i><span>조직</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="조직-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/사용자관리.html" class="">
+              <i class="bi bi-circle"></i><span>사용자관리</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/그룹관리.html">
+              <i class="bi bi-circle"></i><span>그룹관리</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 조직 메뉴 -->
+
+      <li class="nav-item">
+        <a class="nav-link active" data-bs-target="#설정-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-sliders"></i><span>설정</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="설정-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="../html/모니터링설정.html">
+              <i class="bi bi-circle"></i><span>모니터링 설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/페이징설정.html">
+              <i class="bi bi-circle"></i><span>페이징 설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/보안설정.html">
+              <i class="bi bi-circle"></i><span>보안설정</span>
+            </a>
+          </li>
+          <li>
+            <a href="../html/알림설정.html" class="active">
+              <i class="bi bi-circle"></i><span>알림설정</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End 시스템관리 메뉴 -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <section id="" class="main">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pagetitle">
+          <h1>전송메시지 내역</h1>
+        </div><!-- End Page Title -->
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- content Area -->
+          <div class="card">
+            <div class="card-body">              
+              <form id="" name="" action="" method="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">그룹</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select" data-bs-toggle="modal" data-bs-target="#biggroupSelectPop">
+                            <option value="" selected="selected">그룹선택</option>
+                            <option value="" >그룹</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-form-label">유형</label>
+                        <div class="col-sm-8 px-1">
+                          <select id="" name="" class="form-select">
+                            <option value="" selected="selected">선택</option>
+                            <option value="" >사용자</option>
+                            <option value="" >관리자</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm mb-3">
+                      <div class="row">
+                        <label for="" class="col-lg-4 col-sm-12 col-form-label">내용</label>
+                        <div class="col-lg-8 col-sm-12 px-1">
+                          <input type="text" class="form-control" id="" name="" value="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col text-center">
+                      <button class="btn btn-primary w-50"><span class="bi bi-search me-1"></span>검색</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+          
+          
+          
+          <div class="card">
+            <!-- <div class="card-header py-3">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                     <h5 class="fs-18 font-bold color-default mr-5">전송메시지 내역정보</h5>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                  </div>
+               </div>
+            </div> -->
+            <div class="card-body">
+              <div class="my-2">
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary btn-small lh-100  mr-4"><i class="bi bi-file-earmark-arrow-down"></i> 다운로드</button>
+                </div>
+              </div>
+               <!--   table  -->
+               <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                  <colgroup>
+                    <col style="width: 5%">
+                    <col style="width: 15%">
+                    <col style="width: 10%">
+                    <col style="width: auto">
+                    <col style="width: 5%">
+                    <col style="width: 15%">
+                    <col style="width: 7%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="form-group mb-0">
+                          <div class="checkbox checkbox-primary p-0">
+                            <input type="checkbox" name="checkAll" id="checkAll" class="checkAll">
+                            <label for="checkAll" class="cr mb-0"></label>
+                          </div>
+                        </div>
+                      </th>
+                      <th>전송일시</th>
+                      <th>전송자</th>
+                      <th>제목</th>
+                      <th>전송건수</th>
+                      <th>전송결과</th>
+                      <th>그룹</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-group mb-0">
+                          <div class="checkbox checkbox-primary p-0">
+                            <input type="checkbox" name="checkAll" id="chkUserId389" value="389">
+                            <label for="chkUserId389" class="cr mb-0"></label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>2023.03.01 21:01:23</td>
+                      <td>시스템</td>
+                      <td>SOS호출 문자</td>
+                      <td>1</td>
+                      <td>2023.08.02</td>
+                      <td>자동</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-group mb-0">
+                          <div class="checkbox checkbox-primary p-0">
+                            <input type="checkbox" name="checkAll" id="chkUserId389" value="389">
+                            <label for="chkUserId389" class="cr mb-0"></label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>2023.03.01 21:01:23</td>
+                      <td>시스템</td>
+                      <td>SOS호출 문자</td>
+                      <td>1</td>
+                      <td>2023.08.02</td>
+                      <td>자동</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-group mb-0">
+                          <div class="checkbox checkbox-primary p-0">
+                            <input type="checkbox" name="checkAll" id="chkUserId389" value="389">
+                            <label for="chkUserId389" class="cr mb-0"></label>
+                          </div>
+                        </div>
+                      </td>
+                      <td>2023.03.01 21:01:23</td>
+                      <td>시스템</td>
+                      <td>SOS호출 문자</td>
+                      <td>1</td>
+                      <td>2023.08.02</td>
+                      <td>자동</td>
+                    </tr>
+                  </tbody>
+                </table>
+               </div>
+               <!--   //table  -->
+
+               <!-- paging_w -->
+               <div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">‹</span>
+                        </a>
+                     </li>
+                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item"><a class="page-link" href="#">4</a></li>
+                     <li class="page-item"><a class="page-link" href="#">5</a></li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">›</span>
+                        </a>
+                     </li>
+                     <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                     </li>
+                  </ul>
+                </nav>
+               </div>
+               <!-- // paging_w -->
+            </div>
+          </div>
+          <!--// content Area -->
+        </div>
+      </div>
+    </section>
+  </section><!-- End #section -->
+
+  <!-- ======= Popup ======= -->
+  <!-- Modal : 팝업 -->
+  <div id="alertMsgPop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div id="popupAreaContent2">
+            <!-- groupPop start -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLiveLabel">알림</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>알림 메시지를 입력하세요.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary mr-0" >확인</button>
+            </div>
+            <!-- // groupPop end -->
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <!-- Modal : 배포 팝업 -->
+  <div id="deployDevicePop" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">김계정(asd1234) 디바이스 배포</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="tab-content p-0" id="">
+            <div class="tab-pane fade show active" id="" role="tabpanel" aria-labelledby="list-tab">
+              <div class="search-area">
+                  <form id="" name="" action="">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="searchUserNmPop" class="form-label">유형</label>
+                        <select id="" name="" class="form-select">
+                          <option value="" selected="selected">선택</option>
+                          <option value="">스마트워치</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchadnumPop" class="form-label">관리번호</label>
+                        <input type="text" class="form-control mb-3" id="searchadnumPop" name="phone" placeholder="관리번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="searchPhonePop" class="form-label">일련번호</label>
+                        <input type="text" class="form-control mb-3" id="searchPhonePop" name="phone" placeholder="일련번호" value="" maxlength="20" oninput="this.value = this.value.replace(/[^0-9-]/g, '').replace(/(\..*)\./g, '');">
+                      </div>
+                    </div>
+                    <div class="row justify-content-center mt-1">
+                      <div class="col-6">
+                        <button type="button" class="btn btn-primary w-100"><i class="bi bi-search"></i> 검색</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="table-responsive user-list">
+                  <table class="table table-hover table-striped mt-4 text-center border-top minwid400">
+                    <thead>
+                        <tr>
+                          <th scope="col">유형</th>
+                          <th scope="col">관리번호</th>
+                          <th scope="col">일련번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>스마트워치</td>
+                          <td>asd123</td>
+                          <td>qwe123</td>
+                        </tr>
+                        <tr>
+                          <td>스마트워치</td>
+                          <td>asd123</td>
+                          <td>qwe123</td>
+                        </tr>
+                        <tr>
+                          <td>스마트워치</td>
+                          <td>asd123</td>
+                          <td>qwe123</td>
+                        </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <!-- paging_w -->
+              <div>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">«</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">‹</span>
+                          </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">›</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">»</span>
+                          </a>
+                        </li>
+                    </ul>
+                  </nav>
+              </div>
+              <!-- // paging_w -->
+              <h5 class="py-2 mt-4">배포 사유</h5>
+              <textarea name="" id="" cols="30" rows="5" class="w-100"></textarea>
+            </div>            
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">배포</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>CompanyName</span></strong>. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS File -->
+  <script src="../assets/js/jquery-1.12.3.min.js"></script>
+	<script src="../assets/js/jquery-ui.min.js"></script>
+
+  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="../assets/vendor/chart.js/chart.umd.js"></script>
+  <script type="text/javascript" src="../assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="../assets/js/main.js"></script>  
+  <script src="../assets/js/common.js"></script>
+
+  <script>
+    $(function(){
+      setDatepicker();
+    })
+  </script>
+
+</body>
+
+</html>
